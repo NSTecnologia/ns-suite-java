@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java" line="1387" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ffd43bb1-31c1-424f-9f10-b98ead9f08b9" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="1603" column="74" selection-start-line="1603" selection-start-column="74" selection-end-line="1603" selection-end-column="74" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#enviaConteudoParaAPI#0;class#NSSuite#0" />
+                <element signature="method#emitirBPeSincrono#0;class#NSSuite#0" />
+                <element signature="method#naoEmbarque#0;class#NSSuite#0" />
+                <element signature="method#naoEmbarqueESalvar#0;class#NSSuite#0" />
+                <element signature="method#emitirCTeSincrono#0;class#NSSuite#0" />
+                <element signature="method#informarGTV#0;class#NSSuite#0" />
+                <element signature="method#informatGTVESalvar#0;class#NSSuite#0" />
+                <element signature="method#emitirMDFeSincrono#0;class#NSSuite#0" />
+                <element signature="method#encerrarDocumento#0;class#NSSuite#0" />
+                <element signature="method#encerrarDocumentoESalvar#0;class#NSSuite#0" />
+                <element signature="method#incluirCondutor#0;class#NSSuite#0" />
+                <element signature="method#incluirCondutorESalvar#0;class#NSSuite#0" />
+                <element signature="method#consultarNaoEncerrados#0;class#NSSuite#0" />
+                <element signature="method#emitirNFCeSincrono#0;class#NSSuite#0" />
+                <element signature="method#emitirNFeSincrono#0;class#NSSuite#0" />
+                <element signature="method#emitirDocumento#0;class#NSSuite#0" />
+                <element signature="method#consultarStatusProcessamento#0;class#NSSuite#0" />
+                <element signature="method#downloadDocumento#0;class#NSSuite#0" />
+                <element signature="method#downloadDocumentoESalvar#0;class#NSSuite#0" />
+                <element signature="method#downloadEvento#0;class#NSSuite#0" />
+                <element signature="method#downloadEventoESalvar#0;class#NSSuite#0" />
+                <element signature="method#cancelarDocumento#0;class#NSSuite#0" />
+                <element signature="method#cancelarDocumentoESalvar#0;class#NSSuite#0" />
+                <element signature="method#corrigirDocumento#0;class#NSSuite#0" />
+                <element signature="method#corrigirDocumentoESalvar#0;class#NSSuite#0" />
+                <element signature="method#inutilizarNumeracao#0;class#NSSuite#0" />
+                <element signature="method#inutilizarNumeracaoESalvar#0;class#NSSuite#0" />
+                <element signature="method#consultarCadastroContribuinte#0;class#NSSuite#0" />
+                <element signature="method#consultarSituacaoDocumento#0;class#NSSuite#0" />
+                <element signature="method#listarNSNRecs#0;class#NSSuite#0" />
+                <element signature="method#enviarEmailDocumento#0;class#NSSuite#0" />
+                <element signature="method#manifestacao#0;class#NSSuite#0" />
+                <element signature="method#tratamentoManifestacao#0;class#NSSuite#0" />
+                <element signature="method#salvarDocManifestacao#0;class#NSSuite#0" />
+                <element signature="method#downloadUnico#0;class#NSSuite#0" />
+                <element signature="method#tratamentoDownloadUnico#0;class#NSSuite#0" />
+                <element signature="method#salvarDocUnico#0;class#NSSuite#0" />
+                <element signature="method#salvarDocsLote#0;class#NSSuite#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/ddfe/DownloadLoteRetDDFe.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>static</find>
+      <find>{ get; set; }</find>
+      <find>Resp</find>
+      <find>string</find>
+      <find>Endpoints</find>
+      <find>InfDoc</find>
+      <find>InfNF</find>
+      <find>class LacUnidTransp</find>
+      <find>class LacUnidCarga</find>
+      <find>IPI</find>
+      <find>public class</find>
+      <find>prop</find>
+      <find>Peri</find>
+      <find>class InfUnidTransp</find>
+      <find>class Peri</find>
+      <find>class InfUnidCarga</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>;</replace>
+      <replace>String</replace>
+      <replace>endpoints</replace>
+      <replace>class</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/cte/RetornoInutCTe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/cte/InutilizarRespCTe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/mdfe/CancelarRespMDFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/mdfe/RetEventoMDFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/mdfe/ConsNaoEncerradosRespMDFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/mdfe/ConsStatusProcessamentoRespMDFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/mdfe/DownloadRespMDFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/mdfe/EmitirRespMDFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/mdfe/EncerrarRespMDFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/mdfe/IncCondutorRespMDFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfce/CancelarRespNFCe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfce/RetEventoNFCe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfce/RetInutNFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfce/NfeProc.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfce/InutilizarRespNFCe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfce/EmitirRespNFCe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfce/DownloadRespNFCe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/CancelarRespNFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/RetEventoNFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/RetornoInutNFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/InutilizarRespNFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/EmitirRespNFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/DownloadRespNFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/CorrigirRespNFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/ConsStatusProcessamentoRespNFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/_genericos/EmitirSincronoRet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/frmTeste.form" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/DownloadEventoReq.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/NFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/CTe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/CTeJSON/CTe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/CTeJSON/CTeJSON.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/CTe/CTeJSON.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/NFe/NFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/MDFe/MDFeJSON.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/BPe/BPeJSON.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/frmTestes.form" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/frmTestes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/compartilhados/Parametros.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/DDFeAPI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/ddfe/ManifestacaoReq.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/ddfe/Manifestacao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/ddfe/ManifestDocReq.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/compartilhados/Endpoints.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/aaaaa.form" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/ddfe/DownloadUnicoReqDDFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/ddfe/DownloadLoteReqDDFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/DDFe/DownloadLoteRetDDFe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/aaaaa.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-11" />
+    <option name="width" value="1299" />
+    <option name="height" value="1043" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <hideEmptyPackages ProjectPane="false" />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="NSSuite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NSSuite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NSSuite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NSSuite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NSSuite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NSSuite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NSSuite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NSSuite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NSSuite" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NSSuite" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="nssuite" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558450048448" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../mazzoni/EscPosPrintJava/SampleNFCePrint" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\matheus.mazzoni\Documents\ExemplosLinguagens\Testes\NSSuite\src\main\java\Respostas" />
+      <recent name="C:\Users\matheus.mazzoni\Documents\ExemplosLinguagens\Testes\NSSuite\src\main\java\Requisicaos" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\matheus.mazzoni\Documents\ExemplosLinguagens\SUITE\NSSuiteClientJava\NSSuite\src\main\java\br\eti\ns\nssuite\JSON" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="top" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files\Java\jdk1.8.0_191\jre" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="br.eti.ns.nssuite.aaaaa" />
+      <module name="nssuite" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ffd43bb1-31c1-424f-9f10-b98ead9f08b9" name="Default Changelist" comment="" />
+      <created>1552051925466</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552051925466</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="2152" height="877" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15630975" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33016303" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4021739" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32880434" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32885906" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Maven" order="8" />
+    </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java</url>
+          <line>870</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java</url>
+          <line>925</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java</url>
+          <line>1094</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java</url>
+          <line>1141</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/CTe/CTeJSON.java</url>
+          <line>601</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/MDFe/MDFeJSON.java</url>
+          <line>320</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/MDFe/MDFeJSON.java</url>
+          <line>368</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/MDFe/MDFeJSON.java</url>
+          <line>281</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java</url>
+          <line>875</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java</url>
+          <line>1608</line>
+          <properties />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java</url>
+          <line>1619</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java</url>
+          <line>1454</line>
+          <properties />
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java</url>
+          <line>586</line>
+          <properties />
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/mdfe/IncCondutorRespMDFe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfce/RetEventoNFCe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfce/RetInutNFe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfce/CancelarRespNFCe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfce/NfeProc.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfce/InutilizarRespNFCe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfce/EmitirRespNFCe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfce/DownloadRespNFCe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/CancelarRespNFe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/RetEventoNFe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/RetornoInutNFe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/EmitirRespNFe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/CorrigirRespNFe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/ConsStatusProcessamentoRespNFe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/DownloadRespNFe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/nfe/InutilizarRespNFe.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/bpe/EmitirSincronoRetBPe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/ArrayList.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/frmTeste.form" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/frmTeste.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar!/com/fasterxml/jackson/databind/type/SimpleType.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/_genericos/EmitirSincronoRet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/respostas/_genericos/DownloadResp.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/DownloadEventoReq.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/cte/DownloadEventoReqCTe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="10" lean-forward="true" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/CTe/CTeJSON.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3760">
+          <caret line="854" selection-start-line="854" selection-end-line="854" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8028#8217#0" />
+            <element signature="e#8219#8316#0" />
+            <element signature="e#8318#8455#0" />
+            <element signature="e#8457#8512#0" />
+            <element signature="e#8514#8675#0" />
+            <element signature="e#8677#8733#0" />
+            <element signature="e#8955#9165#0" />
+            <element signature="e#9167#9691#0" />
+            <element signature="e#10403#10614#0" />
+            <element signature="e#11326#11597#0" />
+            <element signature="e#11599#11721#0" />
+            <element signature="e#11723#11875#0" />
+            <element signature="e#11877#11930#0" />
+            <element signature="e#11932#12041#0" />
+            <element signature="e#12043#12320#0" />
+            <element signature="e#12322#12383#0" />
+            <element signature="e#12385#12559#0" />
+            <element signature="e#12561#12679#0" />
+            <element signature="e#12681#12774#0" />
+            <element signature="e#12776#12843#0" />
+            <element signature="e#12845#13113#0" />
+            <element signature="e#13115#13216#0" />
+            <element signature="e#13218#13361#0" />
+            <element signature="e#13363#13418#0" />
+            <element signature="e#13420#13488#0" />
+            <element signature="e#13490#13570#0" />
+            <element signature="e#13572#13850#0" />
+            <element signature="e#13852#13904#0" />
+            <element signature="e#13906#13981#0" />
+            <element signature="e#13983#14104#0" />
+            <element signature="e#14106#14489#0" />
+            <element signature="e#14491#14537#0" />
+            <element signature="e#14539#14752#0" />
+            <element signature="e#14754#14873#0" />
+            <element signature="e#14875#14999#0" />
+            <element signature="e#15001#15079#0" />
+            <element signature="e#15081#15198#0" />
+            <element signature="e#15200#15278#0" />
+            <element signature="e#15280#15382#0" />
+            <element signature="e#15384#15569#0" />
+            <element signature="e#15571#15619#0" />
+            <element signature="e#15621#15669#0" />
+            <element signature="e#15671#15770#0" />
+            <element signature="e#15772#16010#0" />
+            <element signature="e#16012#16279#0" />
+            <element signature="e#16281#16485#0" />
+            <element signature="e#16487#16663#0" />
+            <element signature="e#16665#16767#0" />
+            <element signature="e#16769#16862#0" />
+            <element signature="e#16864#16961#0" />
+            <element signature="e#16963#17059#0" />
+            <element signature="e#17061#17191#0" />
+            <element signature="e#17193#17401#0" />
+            <element signature="e#17403#17502#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/BPe/BPeJSON.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/MDFe/MDFeJSON.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5517">
+          <caret line="59" column="11" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/NFe/NFeJSON.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="1180" column="13" selection-start-line="1180" selection-start-column="13" selection-end-line="1180" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#19559#19691#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/frmTestes.form" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/frmTestes.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/compartilhados/Parametros.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/DDFeAPI.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/Impressao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/EnviarEmailReqNFCe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/DownloadEventoReqNFCe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/CancelarReqMDFe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/compartilhados/Endpoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1072">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/ddfe/ManifestacaoReqDDFe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/ddfe/Manifestacao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/compartilhados/Genericos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1136">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/ddfe/DownloadUnicoReqDDFe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/aaaaa.form" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/ddfe/DownloadLoteReqDDFe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/javax/swing/AbstractButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="2021" selection-start-line="2021" selection-end-line="2021" />
+          <folding>
+            <element signature="e#83435#83436#0" expanded="true" />
+            <element signature="e#83485#83486#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="992" selection-start-line="992" selection-end-line="992" />
+          <folding>
+            <element signature="e#32606#32607#0" expanded="true" />
+            <element signature="e#32651#32652#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/aaaaa.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="1603" column="74" selection-start-line="1603" selection-start-column="74" selection-end-line="1603" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#enviaConteudoParaAPI#0;class#NSSuite#0" />
+            <element signature="method#emitirBPeSincrono#0;class#NSSuite#0" />
+            <element signature="method#naoEmbarque#0;class#NSSuite#0" />
+            <element signature="method#naoEmbarqueESalvar#0;class#NSSuite#0" />
+            <element signature="method#emitirCTeSincrono#0;class#NSSuite#0" />
+            <element signature="method#informarGTV#0;class#NSSuite#0" />
+            <element signature="method#informatGTVESalvar#0;class#NSSuite#0" />
+            <element signature="method#emitirMDFeSincrono#0;class#NSSuite#0" />
+            <element signature="method#encerrarDocumento#0;class#NSSuite#0" />
+            <element signature="method#encerrarDocumentoESalvar#0;class#NSSuite#0" />
+            <element signature="method#incluirCondutor#0;class#NSSuite#0" />
+            <element signature="method#incluirCondutorESalvar#0;class#NSSuite#0" />
+            <element signature="method#consultarNaoEncerrados#0;class#NSSuite#0" />
+            <element signature="method#emitirNFCeSincrono#0;class#NSSuite#0" />
+            <element signature="method#emitirNFeSincrono#0;class#NSSuite#0" />
+            <element signature="method#emitirDocumento#0;class#NSSuite#0" />
+            <element signature="method#consultarStatusProcessamento#0;class#NSSuite#0" />
+            <element signature="method#downloadDocumento#0;class#NSSuite#0" />
+            <element signature="method#downloadDocumentoESalvar#0;class#NSSuite#0" />
+            <element signature="method#downloadEvento#0;class#NSSuite#0" />
+            <element signature="method#downloadEventoESalvar#0;class#NSSuite#0" />
+            <element signature="method#cancelarDocumento#0;class#NSSuite#0" />
+            <element signature="method#cancelarDocumentoESalvar#0;class#NSSuite#0" />
+            <element signature="method#corrigirDocumento#0;class#NSSuite#0" />
+            <element signature="method#corrigirDocumentoESalvar#0;class#NSSuite#0" />
+            <element signature="method#inutilizarNumeracao#0;class#NSSuite#0" />
+            <element signature="method#inutilizarNumeracaoESalvar#0;class#NSSuite#0" />
+            <element signature="method#consultarCadastroContribuinte#0;class#NSSuite#0" />
+            <element signature="method#consultarSituacaoDocumento#0;class#NSSuite#0" />
+            <element signature="method#listarNSNRecs#0;class#NSSuite#0" />
+            <element signature="method#enviarEmailDocumento#0;class#NSSuite#0" />
+            <element signature="method#manifestacao#0;class#NSSuite#0" />
+            <element signature="method#tratamentoManifestacao#0;class#NSSuite#0" />
+            <element signature="method#salvarDocManifestacao#0;class#NSSuite#0" />
+            <element signature="method#downloadUnico#0;class#NSSuite#0" />
+            <element signature="method#tratamentoDownloadUnico#0;class#NSSuite#0" />
+            <element signature="method#salvarDocUnico#0;class#NSSuite#0" />
+            <element signature="method#salvarDocsLote#0;class#NSSuite#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/ddfe/DownloadLoteRetDDFe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>NSSuite</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
