@@ -34,6 +34,7 @@ Para realizar uma emissão completa de uma NFe (utilizada para exemplo), você p
 ##### Parametros:
 
 <strong>ATENÇÃO:</strong> o <strong>token</strong> também é um parâmetro necessário e você deve, primeiramente, defini-lo na classe <strong>NSSuite.java</strong>, como pode ver abaixo:
+
 ![dependency](https://confluence.ns.eti.br/download/attachments/25690625/image2019-3-18%208%3A27%3A54.png?version=1&modificationDate=1552909202040&api=v2)
 
 Parametros     | Descrição
