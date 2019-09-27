@@ -9,7 +9,7 @@ Utilizando a NS API, este exemplo - criado em Java - possui funcionalidades para
 
 Simplificando todos os projetos utilizados em um único exemplo, deixando mais pratica e facil a integração com a NS API.
 
-##Primeiros passos:
+## Primeiros passos:
 ### Integrando ao sistema:
 
 Para utilizar as funções de comunicação com a API, você precisa realizar os seguintes passos:
@@ -25,7 +25,7 @@ Para utilizar as funções de comunicação com a API, você precisa realizar os
 
 ------
 
-##Emissão Sincrona:
+## Emissão Sincrona:
 
 ### Realizando uma Emissão Sincrona:
 
@@ -46,7 +46,7 @@ tpAmb          | Ambiente onde foi autorizado o documento.Valores possíveis: *(
 caminho        | Caminho onde devem ser salvos os documentos baixados.
 exibeNaTela    |Se for baixado, exibir o PDF na tela após a autorização.Valores possíveis: (*True - será exibido  // False - não será exibido*) 
 
-#####Exemplo de chamada:
+##### Exemplo de chamada:
 
 Após ter todos os parâmetros listados acima, você deverá fazer a chamada da função. Veja o código de exemplo abaixo:
            
@@ -56,7 +56,7 @@ Após ter todos os parâmetros listados acima, você deverá fazer a chamada da 
 
 A função emitirNFeSincrono fará o envio, a consulta e download do documento, utilizando as funções emitirDocumento, consultarStatusProcessamento e downloadDocumentoESalvar, presentes na classe NSSuite.java. Por isso, o retorno será um JSON com os principais campos retornados pelos métodos citados anteriormente. No exemplo abaixo, veja como tratar o retorno da função emitirNFeSincrono:
 
-#####Exemplo de tratamento de retorno:
+##### Exemplo de tratamento de retorno:
 
 O JSON retornado pelo método terá os seguintes campos: statusEnvio, statusConsulta, statusDownload, cStat, chNFe, nProt, motivo, nsNRec, erros. Veja o exemplo abaixo:
 
