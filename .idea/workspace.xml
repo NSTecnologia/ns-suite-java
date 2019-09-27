@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ffd43bb1-31c1-424f-9f10-b98ead9f08b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/NSSuite-Java.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/NSSuiteClientJava.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__javax_ws_rs_javax_ws_rs_api_2_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__jgoodies_forms_1_0_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__org_glassfish_hk2_external_aopalliance_repackaged_2_5_0_b32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__org_glassfish_hk2_external_javax_inject_2_5_0_b32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__org_glassfish_hk2_hk2_api_2_5_0_b32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__org_glassfish_hk2_hk2_locator_2_5_0_b32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__org_glassfish_hk2_hk2_utils_2_5_0_b32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__org_glassfish_jersey_bundles_repackaged_jersey_guava_2_25_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_client_2_25_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_25_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/.idea/NSSuite-Java.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/nssuite.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/JSON/BPe/BPeJSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/JSON/CTe/CTeJSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/JSON/MDFe/MDFeJSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/JSON/NFe/NFeJSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/NSSuite.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/compartilhados/Endpoints.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/compartilhados/Genericos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/compartilhados/Parametros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/CancelarReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/ConsCadReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/ConsNaoEncerradosReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/ConsSitReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/ConsStatusProcessamentoReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/ConsStatusWS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/CorrigirReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/DownloadEventoReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/DownloadReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/EncerrarReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/EnviarEmailReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/IncCondutorReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/InutilizarReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/ListarNSNRecReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/_genericos/NaoEmbReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/bpe/CancelarReqBPe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/bpe/ConsSitReqBPe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/bpe/ConsStatusProcessamentoReqBPe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/bpe/DownloadEventoReqBPe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/bpe/DownloadReqBPe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/bpe/NaoEmbReqBPe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/cte/CancelarReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/cte/ConsCadReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/cte/ConsSitReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/cte/ConsStatusProcessamentoReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/cte/CorrigirReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/cte/DownloadEventoReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/cte/DownloadReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/cte/InfGTVReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/cte/InutilizarReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/cte/ListarNSNRecReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/ddfe/DownloadLoteReqDDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/ddfe/DownloadUnicoReqDDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/ddfe/Manifestacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/ddfe/ManifestacaoReqDDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/CancelarReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/ConsNaoEncerradosReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/ConsSitReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/ConsStatusProcessamentoReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/DownloadEventoReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/DownloadReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/EncerrarReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/IncCondutorReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/ListarNSNRecReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/CancelarReqNFCe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/ConsSitReqNFCe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/DownloadEventoReqNFCe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/DownloadReqNFCe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/EnviarEmailReqNFCe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/Impressao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/InutilizarReqNFCe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/CancelarReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/ConsCadReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/ConsSitReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/ConsStatusProcessamentoReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/CorrigirReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/DownloadEventoReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/DownloadReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/EnviarEmailReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/InutilizarReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/ListarNSNRecReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/retornos/_genericos/EmitirSincronoRet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/retornos/bpe/EmitirSincronoRetBPe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/retornos/cte/EmitirSincronoRetCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/retornos/ddfe/DownloadLoteRetDDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/retornos/mdfe/EmitirSincronoRetMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/retornos/nfce/EmitirSincronoRetNFCe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/src/main/java/br/eti/ns/nssuite/retornos/nfe/EmitirSincronoRetNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NSSuite/NSSuite/target/nssuite-1.0-SNAPSHOT.jar" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>static</find>
+      <find>{ get; set; }</find>
+      <find>Resp</find>
+      <find>string</find>
+      <find>Endpoints</find>
+      <find>InfDoc</find>
+      <find>InfNF</find>
+      <find>class LacUnidTransp</find>
+      <find>class LacUnidCarga</find>
+      <find>IPI</find>
+      <find>public class</find>
+      <find>prop</find>
+      <find>Peri</find>
+      <find>class InfUnidTransp</find>
+      <find>class Peri</find>
+      <find>class InfUnidCarga</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>;</replace>
+      <replace>String</replace>
+      <replace>endpoints</replace>
+      <replace>class</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556197926486" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.idea" />
+      <recent name="C:\Users\matheus.mazzoni\Documents\ExemplosLinguagens\SUITE\NSSuiteClientJava\NSSuite\src\main\java\br\eti\ns\nssuite\JSON" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.idea/inspectionProfiles" />
+      <recent name="C:\Users\matheus.mazzoni\Documents\ExemplosLinguagens\Testes\NSSuite\src\main\java\Respostas" />
+      <recent name="C:\Users\matheus.mazzoni\Documents\ExemplosLinguagens\Testes\NSSuite\src\main\java\Requisicaos" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ffd43bb1-31c1-424f-9f10-b98ead9f08b9" name="Default Changelist" comment="" />
+      <created>1552051925466</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552051925466</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java</url>
+          <line>868</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java</url>
+          <line>923</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java</url>
+          <line>377</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java</url>
+          <line>1092</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java</url>
+          <line>1139</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/CTe/CTeJSON.java</url>
+          <line>601</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/MDFe/MDFeJSON.java</url>
+          <line>320</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/MDFe/MDFeJSON.java</url>
+          <line>368</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/MDFe/MDFeJSON.java</url>
+          <line>281</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>NSSuite</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
