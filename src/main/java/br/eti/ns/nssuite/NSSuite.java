@@ -712,6 +712,23 @@ public class NSSuite {
             respostaJSON = objectMapper.readTree(resposta);
             statusConsulta = respostaJSON.get("status").asText();
 
+            if(statusConsulta.equals("-2")){
+                cStat = respostaJSON.get("cStat").asText();
+                if(cStat.equals("996")){
+                    motivo = respostaJSON.get("erro").get("xMotivo").asText();
+                    for (int i=1; i<=3; i++){
+                        try {
+                            Thread.sleep(6000 - (i*1000));
+                        } catch (InterruptedException ignored){}
+                        resposta = consultarStatusProcessamento(modelo, consStatusProcessamentoReqNFe);
+                        respostaJSON = objectMapper.readTree(resposta);
+                        statusConsulta = respostaJSON.get("status").asText();
+                        if(!statusConsulta.equals("-2")){ break; }
+                    }
+                } else {
+                    motivo = respostaJSON.get("motivo").asText();
+                }
+            }
             // Testa se a consulta foi feita com sucesso (200)
             if (statusConsulta.equals("200")){
 
