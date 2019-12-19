@@ -1,6 +1,6 @@
 # NSSuiteJava
 
-Utilizando a NS API, este exemplo - criado em Java - possui funcionalidades para consumir documentos fiscais eletrônicos em geral, como por exemplo: 
+ Utilizando a NS API, este exemplo - criado em Java - possui funcionalidades para consumir documentos fiscais eletrônicos em geral, como por exemplo: 
 + NFe; 
 + CTe; 
 + NFCe;
@@ -18,11 +18,9 @@ Para utilizar as funções de comunicação com a API, você precisa realizar os
 1. Extraia o conteúdo da pasta compactada que você baixou;
 2. Copie para sua aplicação a pasta src, na qual contem todos as classes que serão utilizadas;
 3. Abra o seu projeto e importe a pasta copiada.
-4. A aplicação utiliza as bibliotecas <strong>jersey-client</strong> e <strong>jackson-databind</strong> para realizar a comunicação com a API e fazer a manipulação de dados JSON, respectivamente. Ative as duas referencias em seu projeto, como mostrado abaixo:
+4. A aplicação utiliza as bibliotecas **jersey-client** e **jackson-databind** para realizar a comunicação com a API e fazer a manipulação de dados JSON, respectivamente. Ative as duas referencias em seu projeto, como mostrado abaixo:
 
-![dependency](https://confluence.ns.eti.br/download/attachments/25690610/image2019-3-18%208%3A24%3A8.png?version=1&modificationDate=1552908140508&api=v2)
-
-<strong>Pronto!</strong> Agora, você já pode consumir a NS Suite API através do seu sistema. Todas as funcionalidades de comunicação foram implementadas na classe NSSuite.java.
+**Pronto!** Agora, você já pode consumir a NS Suite API através do seu sistema. Todas as funcionalidades de comunicação foram implementadas na classe **NSSuite.java**.
 
 ------
 
@@ -34,9 +32,8 @@ Para realizar uma emissão completa de uma NFe (utilizada para exemplo), você p
 
 ##### Parâmetros:
 
-<strong>ATENÇÃO:</strong> o <strong>token</strong> também é um parâmetro necessário e você deve, primeiramente, defini-lo na classe <strong>NSSuite.java</strong>, como pode ver abaixo:
+**ATENÇÃO:** o **token** também é um parâmetro necessário e você deve, primeiramente, defini-lo na classe **NSSuite.java**, como pode ver abaixo:
 
-![dependency](https://confluence.ns.eti.br/download/attachments/25690625/image2019-3-18%208%3A27%3A54.png?version=1&modificationDate=1552909202040&api=v2)
 
 Parametros     | Descrição
 :-------------:|:-----------
@@ -56,7 +53,7 @@ Após ter todos os parâmetros listados acima, você deverá fazer a chamada da 
     
     JOptionPane.showMessageDialog(null, retorno);
 
-A função emitirNFeSincrono fará o envio, a consulta e download do documento, utilizando as funções emitirDocumento, consultarStatusProcessamento e downloadDocumentoESalvar, presentes na classe NSSuite.java. Por isso, o retorno será um JSON com os principais campos retornados pelos métodos citados anteriormente. No exemplo abaixo, veja como tratar o retorno da função emitirNFeSincrono:
+A função emitirNFeSincrono fará o envio, a consulta e download do documento, utilizando as funções emitirDocumento, consultarStatusProcessamento e downloadDocumentoESalvar, presentes na classe **NSSuite.java**. Por isso, o retorno será um JSON com os principais campos retornados pelos métodos citados anteriormente. No exemplo abaixo, veja como tratar o retorno da função emitirNFeSincrono:
 
 ##### Exemplo de tratamento de retorno:
 
@@ -116,9 +113,7 @@ tilizando NFe como exemplo para o cancelamento deve-se ter em mente que você de
 
 ##### Parâmetros:
 
-<strong>ATENÇÃO:</strong> o <strong>token</strong> também é um parâmetro necessário e você deve, primeiramente, defini-lo na classe <strong>NSSuite.java</strong>, como pode ver abaixo:
-
-![dependency](https://confluence.ns.eti.br/download/attachments/25690625/image2019-3-18%208%3A27%3A54.png?version=1&modificationDate=1552909202040&api=v2)
+**ATENÇÃO:** o **token** também é um parâmetro necessário e você deve, primeiramente, defini-lo na classe **NSSuite.java**, como pode ver abaixo:
 
 Parametros     | Descrição
 :-------------:|:-----------
@@ -126,7 +121,7 @@ Parametros     | Descrição
 **CancelarReq**       | JSON contendo as informações de uma requisição de cancelamento de documento
 **DownloadEventoReq** | JSON contendo as informações de uma requisição de Download de Evento
 **caminho**           | Caminho onde devem ser salvos os documentos baixados.
-**chave**             | Ambiente onde foi autorizado o documento.Valores possíveis:<ul> <li>1 - produção</li> <li>2 - homologação</li> </ul> 
+**chave**             | Ambiente onde foi autorizado o documento.Valores possíveis:<ul> <li>**1** - produção</li> <li>**2** - homologação</li> </ul> 
 **exibeNaTela**       | Se for baixado, exibir o PDF na tela após a autorização.Valores possíveis: <ul> <li>**True** - será exibido</li> <li>**False** - não será exibido</li> </ul> 
 
 ##### Exemplo de chamada:
@@ -152,7 +147,7 @@ Após ter todos os parâmetros listados acima, você deverá fazer a chamada da 
         e1.printStackTrace();
     }
     
-A função **cancelarDocumentoESalvar** fará o cancelamento de qualquer documento que possa ser cancelado e fazendo o download do evento feito, neste caso hipotético, uma NFe, utilizando as funções cancelarDocumento e downloadEventoESalvar, presentes na classe NSSuite.java. Dessa forma, o retorno será um JSON com os principais campos retornados pelos métodos citados anteriormente. No exemplo abaixo, veja o retorno da nossa API em um cancelamento:
+A função **cancelarDocumentoESalvar** fará o cancelamento de qualquer documento que possa ser cancelado e fazendo o download do evento feito, neste caso hipotético, uma NFe, utilizando as funções cancelarDocumento e downloadEventoESalvar, presentes na classe **NSSuite.java**. Dessa forma, o retorno será um JSON com os principais campos retornados pelos métodos citados anteriormente. No exemplo abaixo, veja o retorno da nossa API em um cancelamento:
 
 ##### Exemplo de retorno de cancelamento:
 
@@ -178,9 +173,8 @@ Utilizando NFe como exemplo para a criação de uma carta de correção, deve-se
 
 ##### Parâmetros:
 
-<strong>ATENÇÃO:</strong> o <strong>token</strong> também é um parâmetro necessário e você deve, primeiramente, defini-lo na classe <strong>NSSuite.java</strong>, como pode ver abaixo:
+**ATENÇÃO:** o **token** também é um parâmetro necessário e você deve, primeiramente, defini-lo na classe **NSSuite.java**, como pode ver abaixo:
 
-![dependency](https://confluence.ns.eti.br/download/attachments/25690625/image2019-3-18%208%3A27%3A54.png?version=1&modificationDate=1552909202040&api=v2)
 
 Parametros     | Descrição
 :-------------:|:-----------
@@ -188,7 +182,7 @@ Parametros     | Descrição
 **CorrigirReq**       | JSON contendo as informações de uma requisição de carta de correção
 **DownloadEventoReq** | JSON contendo as informações de uma requisição de Download de Evento
 **caminho**           | Caminho onde devem ser salvos os documentos baixados.
-**chave**             | Ambiente onde foi autorizado o documento.Valores possíveis:<ul> <li>1 - produção</li> <li>2 - homologação</li> </ul> 
+**chave**             | Ambiente onde foi autorizado o documento.Valores possíveis:<ul> <li>**1** - produção</li> <li>**2** - homologação</li> </ul> 
 **nSeqEvento**        | Número sequencial do evento
 **exibeNaTela**       | Se for baixado, exibir o PDF na tela após a autorização.Valores possíveis: <ul> <li>**True** - será exibido</li> <li>**False** - não será exibido</li> </ul> 
 

@@ -42,6 +42,7 @@ public class Endpoints {
     public String MDFeConsSit  = "https://mdfe.ns.eti.br/mdfe/stats";
     public String MDFePrevia  = "https://mdfe.ns.eti.br/util/preview/mdfe";
     public String MDFeListarNSNRecs  = "https://mdfe.ns.eti.br/util/list/nsnrecs";
+    public String MDFeIncluirDFe = "https://mdfe.ns.eti.br/mdfe/adddfe";
 
     // NFC-e
     public String NFCeEnvio  = "https://nfce.ns.eti.br/v1/nfce/issue";

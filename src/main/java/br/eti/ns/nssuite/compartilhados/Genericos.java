@@ -47,8 +47,8 @@ public class Genericos {
         }
     }
 
-    public static void salvarXML(String xml, String caminho, String nome, String tpEvento, String nSeqEvento) throws IOException{
-        String localParaSalvar = caminho + tpEvento + nome + nSeqEvento + ".xml";
+    public static void salvarXML(String xml, String caminho, String nome) throws IOException{
+        String localParaSalvar = caminho + nome + ".xml";
         String conteudoReplace = xml.replace("\\","");
         File arq = new File(localParaSalvar);
         if(arq.exists()){
@@ -62,8 +62,8 @@ public class Genericos {
         }
     }
 
-    public static void salvarPDF(String pdf, String caminho, String nome, String tpEvento, String nSeqEvento) throws FileNotFoundException, IOException{
-        String localParaSalvar = caminho + tpEvento + nome + nSeqEvento + ".pdf";
+    public static void salvarPDF(String pdf, String caminho, String nome) throws FileNotFoundException, IOException{
+        String localParaSalvar = caminho + nome + ".pdf";
         File arq = new File(localParaSalvar);
         if(arq.exists()){
             arq.delete();

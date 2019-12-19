@@ -11,6 +11,7 @@ import br.eti.ns.nssuite.requisicoes.cte.DownloadReqCTe;
 import br.eti.ns.nssuite.requisicoes.cte.InfGTVReqCTe;
 import br.eti.ns.nssuite.requisicoes.mdfe.ConsStatusProcessamentoReqMDFe;
 import br.eti.ns.nssuite.requisicoes.mdfe.DownloadReqMDFe;
+import br.eti.ns.nssuite.requisicoes.mdfe.IncluirDFeReqMDFe;
 import br.eti.ns.nssuite.requisicoes.nfce.DownloadReqNFCe;
 import br.eti.ns.nssuite.requisicoes.nfce.Impressao;
 import br.eti.ns.nssuite.requisicoes.nfe.ConsStatusProcessamentoReqNFe;
@@ -104,6 +105,24 @@ public class NSSuite {
             respostaJSON = objectMapper.readTree(resposta);
             statusConsulta = respostaJSON.get("status").asText();
 
+            if(statusConsulta.equals("-2")){
+                cStat = respostaJSON.get("cStat").asText();
+                if(cStat.equals("996")){
+                    motivo = respostaJSON.get("erro").get("xMotivo").asText();
+                    for (int i=1; i<=3; i++){
+                        try {
+                            Thread.sleep(6000 - (i*1000));
+                        } catch (InterruptedException ignored){}
+                        resposta = consultarStatusProcessamento(modelo, consStatusProcessamentoBPeReq);
+                        respostaJSON = objectMapper.readTree(resposta);
+                        statusConsulta = respostaJSON.get("status").asText();
+                        if(!statusConsulta.equals("-2")){ break; }
+                    }
+                } else {
+                    motivo = respostaJSON.get("motivo").asText();
+                }
+            }
+
             if(statusConsulta.equals("200")){
 
                 cStat = respostaJSON.get("cStat").asText();
@@ -131,14 +150,12 @@ public class NSSuite {
                 }
 
             }else if (statusConsulta.equals("-2")){
-
                 cStat = respostaJSON.get("cStat").asText();
                 motivo = respostaJSON.get("erro").get("motivo").asText();
 
             }else{
                 motivo = respostaJSON.get("motivo").asText();
             }
-
 
         } else if (statusEnvio.equals("-5")) {
             cStat = respostaJSON.get("erro").get("cStat").asText();
@@ -606,6 +623,51 @@ public class NSSuite {
         return resposta;
     }
 
+    public static String incluirDFes(String modelo, IncluirDFeReqMDFe incluirDFeReqMDFe) throws Exception {
+        String urlIncluirDFe;
+
+        switch (modelo)
+        {
+            case "58":
+            {
+                urlIncluirDFe = endpoints.MDFeIncluirDFe;
+                break;
+            }
+
+            default:
+            {
+                throw new Exception("Não definido endpoint de inclusão de DFe para o modelo " + modelo);
+            }
+        }
+        String json = objectMapper.writeValueAsString(incluirDFeReqMDFe);
+
+        Genericos.gravarLinhaLog(modelo, "[INCLUIR_DFE_DADOS]");
+        Genericos.gravarLinhaLog(modelo, json);
+
+        String resposta = enviaConteudoParaAPI(json, urlIncluirDFe, "json");
+
+        Genericos.gravarLinhaLog(modelo, "[INCLUIR_DFE_RESPOSTA]");
+        Genericos.gravarLinhaLog(modelo, resposta);
+
+        return resposta;
+    }
+
+    public static String incluirDFesESalvar(String modelo, IncluirDFeReqMDFe incluirDFeReqMDFe, DownloadEventoReq DownloadEventoReq, String caminho, String chave, boolean exibeNaTela) throws Exception {
+        String resposta = incluirDFes(modelo, incluirDFeReqMDFe);
+        JsonNode respostaJSON = objectMapper.readTree(resposta);
+        String status = respostaJSON.get("status").asText();
+
+        if (status.equals("200"))
+        {
+            String respostaDownloadEvento = downloadEventoESalvar(modelo, DownloadEventoReq, caminho, chave, "", exibeNaTela);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro ao incluir o(s) DFe(s), veja o retorno da API para mais informações");
+        }
+
+        return resposta;
+    }
 
     // Métodos específicos de NFCe
     public static String emitirNFCeSincrono(String conteudo, String tpConteudo, String tpAmb, String caminho, boolean exibeNaTela) throws Exception {
@@ -961,12 +1023,12 @@ public class NSSuite {
             if(!modelo.equals("65")){
                 if (downloadReq.tpDown.toUpperCase().contains("X")){
                     String xml = respostaJSON.get("xml").asText();
-                    Genericos.salvarXML(xml, caminho, nome, "", "");
+                    Genericos.salvarXML(xml, caminho, nome);
                 }
                 if (downloadReq.tpDown.toUpperCase().contains("P"))
                 {
                     String pdf = respostaJSON.get("pdf").asText();
-                    Genericos.salvarPDF(pdf, caminho, nome, "", "");
+                    Genericos.salvarPDF(pdf, caminho, nome);
 
                     if (exibeNaTela)
                     {
@@ -976,10 +1038,10 @@ public class NSSuite {
                 }
             }else{
                 String xml = respostaJSON.get("nfeProc").get("xml").asText();
-                Genericos.salvarXML(xml, caminho, nome, "", "");
+                Genericos.salvarXML(xml, caminho, nome);
 
                 String pdf = respostaJSON.get("pdf").asText();
-                Genericos.salvarPDF(pdf, caminho, nome, "", "");
+                Genericos.salvarPDF(pdf, caminho, nome);
 
                 if (exibeNaTela){
                     File arq = new File(caminho + nome + ".pdf");
@@ -1079,12 +1141,12 @@ public class NSSuite {
                 //Verifica quais arquivos deve salvar
                 if (downloadEventoReq.tpDown.toUpperCase().contains("X")){
                     String xml = respostaJSON.get("xml").asText();
-                    Genericos.salvarXML(xml, caminho, tpEventoSalvar + chave + nSeqEvento + "-procEven", "", "");
+                    Genericos.salvarXML(xml, caminho, tpEventoSalvar + chave + nSeqEvento + "-procEven");
                 }
                 if (downloadEventoReq.tpDown.toUpperCase().contains("P")){
                     String pdf = respostaJSON.get("pdf").asText();
                     if (pdf != null && !pdf.equals("")){
-                        Genericos.salvarPDF(pdf, caminho, tpEventoSalvar + chave + nSeqEvento + "-procEven", "", "");
+                        Genericos.salvarPDF(pdf, caminho, tpEventoSalvar + chave + nSeqEvento + "-procEven");
                         if (exibeNaTela){
                             File arq = new File(caminho + tpEventoSalvar + chave + nSeqEvento + "procEven.pdf");
                             Desktop.getDesktop().open(arq);
@@ -1093,10 +1155,10 @@ public class NSSuite {
                 }
             }else{
                 String xml = respostaJSON.get("nfeProc").get("xml").asText();
-                Genericos.salvarXML(xml, caminho, tpEventoSalvar + chave + nSeqEvento + "-procEven", "", "");
+                Genericos.salvarXML(xml, caminho, tpEventoSalvar + chave + nSeqEvento + "-procEven");
 
                 String pdf = respostaJSON.get("pdfCancelamento").asText();
-                Genericos.salvarPDF(pdf, caminho, tpEventoSalvar + chave + nSeqEvento + "procEven", "", "");
+                Genericos.salvarPDF(pdf, caminho, tpEventoSalvar + chave + nSeqEvento + "procEven");
 
                 if (exibeNaTela){
                     File arq = new File(caminho + tpEventoSalvar + chave + nSeqEvento + "procEven.pdf");
@@ -1296,7 +1358,7 @@ public class NSSuite {
             File diretorio = new File(caminho);
             if(!diretorio.exists()) diretorio.mkdirs();
             if(!caminho.endsWith("\\")) caminho += "\\";
-            Genericos.salvarXML(xml, caminho, chave, "", "");
+            Genericos.salvarXML(xml, caminho, chave);
         }
 
         return resposta;
