@@ -1,6 +1,6 @@
 package br.eti.ns.nssuite.requisicoes._genericos;
 
-import br.eti.ns.nssuite.requisicoes.cte.InfGTVReqCTe;
+//import br.eti.ns.nssuite.requisicoes.cte.InfGTVReqCTe;
 
 import java.util.ArrayList;
 

@@ -39,7 +39,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 public class NSSuite {
-    private static String token = "COLOQUE_TOKEN";
+    private static String token = "COLOQUE_SEU_TOKEN_AQUI";
     private static ObjectMapper objectMapper = new ObjectMapper();
     private static Endpoints endpoints = new Endpoints();
     private static Parametros parametros = new Parametros();
@@ -804,7 +804,7 @@ public class NSSuite {
 
                     DownloadReqNFe downloadReqNFe = new DownloadReqNFe();
                     downloadReqNFe.chNFe = chNFe;
-                    downloadReqNFe.tpAmb = tpDown;
+                    downloadReqNFe.tpAmb = tpAmb; //aqui tava downloadReqNfe.tpAmb = tpDown
                     downloadReqNFe.tpDown = tpDown;
 
                     resposta = downloadDocumentoESalvar(modelo, downloadReqNFe, caminho, chNFe + "-NFe", exibeNaTela);

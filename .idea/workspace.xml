@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6060879f-d038-4cfa-8cb2-11c0a58c0878" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,12 +30,34 @@
   <component name="ProjectId" id="1VD8NkbsOU6Zg25oOQoSDPTyc18" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="false" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunManager">
+    <configuration name="frmemissaoTeste" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.eti.ns.formsns.frmemissaoTeste" />
+      <module name="NSSuiteClientJava-master" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.eti.ns.formsns.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.frmemissaoTeste" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -46,6 +71,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -64,22 +90,11 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1641" y="23" key="#Notifications" timestamp="1576782578257">
-      <screen x="1366" y="0" width="1366" height="728" />
-    </state>
-    <state x="1641" y="23" key="#Notifications/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1576782578257" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1576776834700">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1576776834700" />
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
