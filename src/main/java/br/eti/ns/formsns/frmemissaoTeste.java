@@ -76,9 +76,9 @@ public class frmemissaoTeste {
             ide.procEmi = "0";
             ide.verProc = "4.00";
             infNFe.emit = emit;
-            emit.cNPJ = "07364617000135";
+            emit.cNPJ = "11111111111111";
             emit.xNome = "NF-E EMITIDA EM AMBIENTE DE HOMOLOGAÇÃO - SEM VALOR FISCAL";
-            emit.iE = "0170108708";
+            emit.iE = "1111111111";
             emit.cRT = "1";
             emit.enderEmit = enderEmit;
             enderEmit.xLgr = "Rua Bento Osvaldo Triisch, 777";
@@ -91,10 +91,10 @@ public class frmemissaoTeste {
             enderEmit.cEP = "95046600";
             enderEmit.fone = "005432200200";
             infNFe.dest = dest;
-            dest.cNPJ = "07364617000135";
+            dest.cNPJ = "11111111111111";
             dest.xNome = "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL";
             dest.indIEDest = "1";
-            dest.iE = "0170108708";
+            dest.iE = "1111111111";
             dest.email = "email@email.com.br";
             dest.enderDest = enderDest;
             enderDest.xLgr = "AV ANTONIO DURO";
