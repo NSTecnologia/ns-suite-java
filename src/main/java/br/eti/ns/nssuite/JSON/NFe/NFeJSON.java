@@ -1,6 +1,9 @@
 package br.eti.ns.nssuite.JSON.NFe;
 
+import br.eti.ns.nssuite.JSON.NF3e.NF3eJSON;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class NFeJSON {
@@ -1076,7 +1079,7 @@ public class NFeJSON {
     public Retirada retirada;
     public Entrega entrega;
     public List<AutXML> autXML;
-    public List<Det> det;
+    public ArrayList<NF3eJSON.Det> det;
     public Total total;
     public Transp transp;
     public Cobr cobr;

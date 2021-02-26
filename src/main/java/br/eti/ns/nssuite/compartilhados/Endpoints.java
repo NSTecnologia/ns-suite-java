@@ -67,4 +67,14 @@ public class Endpoints {
     public String NFeListarNSNRecs  = "https://nfe.ns.eti.br/util/list/nsnrecs";
     public String NFePrevia  = "https://nfe.ns.eti.br/util/preview/nfe";
 
+    //NF3e
+
+    public String NF3eEnvio = "https://nf3e.ns.eti.br/v1/nf3e/issue";
+    public String NF3eConsStatusProcessamento = "https://nf3e.ns.eti.br/v1/nf3e/issue/status";
+    public String NF3eDownload = "https://nf3e.ns.eti.br/v1/nf3e/get";
+    public String NF3eDownloadEvento = "https://nf3e.ns.eti.br/v1/nf3e/get/event";
+    public String NF3eCancelamento = "https://nf3e.ns.eti.br/v1/nf3e/cancel";
+    public String NF3eConsStatusSefaz = "https://nf3e.ns.eti.br/v1/nf3e/status";
+    public String NF3eListarNSNRecs = "https://nf3e.ns.eti.br/v1/util/list/nsnrecs";
+
 }

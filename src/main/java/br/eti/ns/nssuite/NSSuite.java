@@ -1,4 +1,5 @@
 package br.eti.ns.nssuite;
+
 import br.eti.ns.nssuite.compartilhados.Endpoints;
 import br.eti.ns.nssuite.compartilhados.Genericos;
 import br.eti.ns.nssuite.compartilhados.Parametros;
@@ -12,6 +13,8 @@ import br.eti.ns.nssuite.requisicoes.cte.InfGTVReqCTe;
 import br.eti.ns.nssuite.requisicoes.mdfe.ConsStatusProcessamentoReqMDFe;
 import br.eti.ns.nssuite.requisicoes.mdfe.DownloadReqMDFe;
 import br.eti.ns.nssuite.requisicoes.mdfe.IncluirDFeReqMDFe;
+import br.eti.ns.nssuite.requisicoes.nf3e.ConsStatusProcessamentoReqNF3e;
+import br.eti.ns.nssuite.requisicoes.nf3e.DownloadReqNF3e;
 import br.eti.ns.nssuite.requisicoes.nfce.DownloadReqNFCe;
 import br.eti.ns.nssuite.requisicoes.nfce.Impressao;
 import br.eti.ns.nssuite.requisicoes.nfe.ConsStatusProcessamentoReqNFe;
@@ -19,6 +22,7 @@ import br.eti.ns.nssuite.requisicoes.nfe.DownloadReqNFe;
 import br.eti.ns.nssuite.retornos.bpe.EmitirSincronoRetBPe;
 import br.eti.ns.nssuite.retornos.cte.EmitirSincronoRetCTe;
 import br.eti.ns.nssuite.retornos.mdfe.EmitirSincronoRetMDFe;
+import br.eti.ns.nssuite.retornos.nf3e.EmitirSincronoRetNF3e;
 import br.eti.ns.nssuite.retornos.nfce.EmitirSincronoRetNFCe;
 import br.eti.ns.nssuite.retornos.nfe.EmitirSincronoRetNFe;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -39,7 +43,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 public class NSSuite {
-    private static String token = "COLOQUE_SEU_TOKEN_AQUI";
+    private static String token = "4EB15D6DEDAEBAE3FD0B7B5E5B0AD6D4";
     private static ObjectMapper objectMapper = new ObjectMapper();
     private static Endpoints endpoints = new Endpoints();
     private static Parametros parametros = new Parametros();
@@ -55,23 +59,30 @@ public class NSSuite {
                 respostaServidor = target.request(MediaType.TEXT_PLAIN)
                         .header("X-AUTH-TOKEN", token)
                         .post(Entity.text(conteudo));
-            } else if (tpConteudo.equals("xml")) {
+            } 
+            else if (tpConteudo.equals("xml")) {
                 respostaServidor = target.request(MediaType.APPLICATION_XML)
+
                         // pode ser enviado também no json junto com os dados da nfce
                         .header("X-AUTH-TOKEN", token)
                         .post(Entity.xml(conteudo));
-            } else {
+
+            } 
+            else {
                 respostaServidor = target.request(MediaType.APPLICATION_JSON)
+
                         // pode ser enviado também no json junto com os dados da nfce
+
                         .header("X-AUTH-TOKEN", token)
                         .post(Entity.json(conteudo));
+
             }
-        } catch (Exception e) {
+        } 
+        catch (Exception e) {
             return Response.serverError().entity(e.getMessage()).build().toString();
         }
         return respostaServidor.readEntity(String.class);
     }
-
 
     // Métodos específicos de BPe
     public static String emitirBPeSincrono(String conteudo, String tpConteudo, String CNPJ, String tpDown, String tpAmb, String caminho, boolean exibeNaTela) throws Exception {
@@ -235,7 +246,6 @@ public class NSSuite {
         return resposta;
     }
 
-
     // Métodos específicos de CTe
     public static String emitirCTeSincrono(String conteudo, String mod, String tpConteudo, String CNPJ, String tpDown, String tpAmb, String caminho, boolean exibeNaTela) throws Exception {
         ArrayList<String> erros = new ArrayList<>();
@@ -293,31 +303,39 @@ public class NSSuite {
                     statusDownload = respostaJSON.get("status").asText();
 
                     if (!statusDownload.equals("200")) motivo = respostaJSON.get("motivo").asText();
-                }else{
+                }
+                else
+                {
 
                     motivo = respostaJSON.get("xMotivo").asText();
                 }
-            }else {
+            }
+            else {
 
                 motivo = respostaJSON.get("motivo").asText();
                 erros = objectMapper.readValue(respostaJSON.get("erros").toString(), new TypeReference<ArrayList<String>>(){});
             }
-        }else if (statusEnvio.equals("-7")){
+        }
+        else if (statusEnvio.equals("-7")){
 
             motivo = respostaJSON.get("motivo").asText();
             nsNRec = respostaJSON.get("nsNRec").asText();
 
-        }else if (statusEnvio.equals("-4")){
+        }
+        else if (statusEnvio.equals("-4")){
 
             motivo = respostaJSON.get("motivo").asText();
             erros = objectMapper.readValue(respostaJSON.get("erros").toString(), new TypeReference<ArrayList<String>>(){});
 		
-		}else if (statusEnvio.equals("-9")){
+		}
+        else if (statusEnvio.equals("-9")){
 			
 			motivo = respostaJSON.get("erro").get("xMotivo").asText();
 			cStat = respostaJSON.get("erro").get("cStat").asText();
 			
-        }else{
+        }
+        else
+        {
 
             try
             {
@@ -392,7 +410,6 @@ public class NSSuite {
         return resposta;
     }
 
-
     // Métodos específicos de MDFe
     public static String emitirMDFeSincrono(String conteudo, String tpConteudo, String CNPJ, String tpDown, String tpAmb, String caminho, boolean exibeNaTela) throws Exception {
         ArrayList<String> erros = new ArrayList<>();
@@ -453,33 +470,42 @@ public class NSSuite {
 
                     // Testa se houve problema no download
                     if (!statusDownload.equals("200")) motivo = respostaJSON.get("motivo").asText();
-                }else{
+                }
+                else
+                {
                     motivo = respostaJSON.get("xMotivo").asText();
                 }
-            }else if (statusConsulta.equals("-2")){
+            }
+            else if (statusConsulta.equals("-2")){
 
                 cStat = respostaJSON.get("erro").get("cStat").asText();
                 motivo = respostaJSON.get("erro").get("xMotivo").asText();
 
-            }else{
+            }
+            else{
 
                 motivo = respostaJSON.get("motivo").asText();
             }
-        }else if (statusEnvio.equals("-5")){
+        }
+        else if (statusEnvio.equals("-5")){
 
             cStat = respostaJSON.get("erro").get("cStat").asText();
             motivo = respostaJSON.get("erro").get("xMotivo").asText();
 
-        }else if (statusEnvio.equals("-4") || statusEnvio.equals("-2")){
+        }
+        else if (statusEnvio.equals("-4") || statusEnvio.equals("-2")){
 
             motivo = respostaJSON.get("motivo").asText();
             erros = objectMapper.readValue(respostaJSON.get("erros").toString(), new TypeReference<ArrayList<String>>(){});
 
-        }else if (statusEnvio.equals("-999")){
+        }
+        else if (statusEnvio.equals("-999")){
 
             motivo = respostaJSON.get("erro").get("xMotivo").asText();
 
-        }else{
+        }
+        else
+        {
             try
             {
                 motivo = respostaJSON.get("motivo").asText();
@@ -736,7 +762,6 @@ public class NSSuite {
         return retorno;
     }
 
-
     // Métodos específicos de NFe
     public static String emitirNFeSincrono(String conteudo, String tpConteudo, String CNPJ, String tpDown, String tpAmb, String caminho, boolean exibeNaTela) throws Exception {
         ArrayList<String> erros = new ArrayList<>();
@@ -864,6 +889,139 @@ public class NSSuite {
         return retorno;
     }
 
+    // Métodos específicos de NF3e
+    public static String emitirNF3eSincrono(String conteudo, String tpConteudo, String CNPJ, String tpDown, String tpAmb, String caminho, boolean exibeNaTela) throws Exception {
+        ArrayList<String> erros = new ArrayList<>();
+
+        String modelo = "66";
+        String statusEnvio = "";
+        String statusConsulta = "";
+        String statusDownload = "";
+        String motivo = "";
+        String nsNRec = "";
+        String chNF3e = "";
+        String cStat = "";
+        String nProt = "";
+
+        Genericos.gravarLinhaLog(modelo, "[EMISSAO_SINCRONA_INICIO]");
+
+        String resposta = emitirDocumento(modelo, conteudo, tpConteudo);
+        JsonNode respostaJSON = objectMapper.readTree(resposta);
+        statusEnvio = respostaJSON.get("status").asText();
+
+        // Testa se o envio foi feito com sucesso (200) ou se é para reconsultar (-6)
+        if (statusEnvio.equals("200") || statusEnvio.equals("-6")) {
+
+            nsNRec = respostaJSON.get("nsNRec").asText();
+
+            // É necessário aguardar alguns milisegundos antes de consultar o status de
+            // processamento
+            Thread.sleep(parametros.TEMPO_ESPERA);
+
+            ConsStatusProcessamentoReqNF3e consStatusProcessamentoReqNF3e = new ConsStatusProcessamentoReqNF3e();
+            consStatusProcessamentoReqNF3e.CNPJ = CNPJ;
+            consStatusProcessamentoReqNF3e.nsNRec = nsNRec;
+            consStatusProcessamentoReqNF3e.tpAmb = tpAmb;
+
+            resposta = consultarStatusProcessamento(modelo, consStatusProcessamentoReqNF3e);
+            respostaJSON = objectMapper.readTree(resposta);
+            statusConsulta = respostaJSON.get("status").asText();
+
+            if (statusConsulta.equals("-2")) {
+                cStat = respostaJSON.get("cStat").asText();
+                if (cStat.equals("996")) {
+                    motivo = respostaJSON.get("erro").get("xMotivo").asText();
+                    for (int i = 1; i <= 3; i++) {
+                        try {
+                            Thread.sleep(6000 - (i * 1000));
+                        } catch (InterruptedException ignored) {
+                        }
+                        resposta = consultarStatusProcessamento(modelo, consStatusProcessamentoReqNF3e);
+                        respostaJSON = objectMapper.readTree(resposta);
+                        statusConsulta = respostaJSON.get("status").asText();
+                        if (!statusConsulta.equals("-2")) {
+                            break;
+                        }
+                    }
+                } else {
+                    motivo = respostaJSON.get("motivo").asText();
+                }
+            }
+            // Testa se a consulta foi feita com sucesso (200)
+            if (statusConsulta.equals("200")) {
+
+                cStat = respostaJSON.get("cStat").asText();
+
+                if (cStat.equals("100") || cStat.equals("150")) {
+
+                    chNF3e = respostaJSON.get("chNFe").asText();
+                    nProt = respostaJSON.get("nProt").asText();
+                    motivo = respostaJSON.get("xMotivo").asText();
+
+                    DownloadReqNF3e downloadReqNF3e = new DownloadReqNF3e();
+                    downloadReqNF3e.chNF3e = chNF3e;
+                    downloadReqNF3e.tpAmb = tpAmb; // aqui tava downloadReqNfe.tpAmb = tpDown
+                    downloadReqNF3e.tpDown = tpDown;
+
+                    resposta = downloadDocumentoESalvar(modelo, downloadReqNF3e, caminho, chNF3e + "-NFe", exibeNaTela);
+                    respostaJSON = objectMapper.readTree(resposta);
+                    statusDownload = respostaJSON.get("status").asText();
+
+                    if (!statusDownload.equals("200"))
+                        motivo = respostaJSON.get("motivo").asText();
+                } else {
+                    motivo = respostaJSON.get("motivo").asText();
+                }
+            } else if (statusConsulta.equals("-2")) {
+
+                cStat = respostaJSON.get("cStat").asText();
+                motivo = respostaJSON.get("erro").get("xMotivo").asText();
+
+            } else {
+                motivo = respostaJSON.get("motivo").asText();
+            }
+        } else if (statusEnvio.equals("-7")) {
+
+            motivo = respostaJSON.get("motivo").asText();
+            nsNRec = respostaJSON.get("nsNRec").asText();
+
+        } else if (statusEnvio.equals("-4") || statusEnvio.equals("-2")) {
+
+            motivo = respostaJSON.get("motivo").asText();
+            erros = objectMapper.readValue(respostaJSON.get("erros").toString(),
+                    new TypeReference<ArrayList<String>>() {
+                    });
+
+        } else if (statusEnvio.equals("-999") || statusEnvio.equals("-5")) {
+
+            motivo = respostaJSON.get("erro").get("xMotivo").asText();
+
+        } else {
+            try {
+                motivo = respostaJSON.get("motivo").asText();
+            } catch (Exception ex) {
+                motivo = respostaJSON.toString();
+            }
+        }
+        EmitirSincronoRetNF3e emitirSincronoRetNF3e = new EmitirSincronoRetNF3e();
+        emitirSincronoRetNF3e.statusEnvio = statusEnvio;
+        emitirSincronoRetNF3e.statusConsulta = statusConsulta;
+        emitirSincronoRetNF3e.statusDownload = statusDownload;
+        emitirSincronoRetNF3e.cStat = cStat;
+        emitirSincronoRetNF3e.chNF3e = chNF3e;
+        emitirSincronoRetNF3e.nProt = nProt;
+        emitirSincronoRetNF3e.motivo = motivo;
+        emitirSincronoRetNF3e.nsNRec = nsNRec;
+        emitirSincronoRetNF3e.erros = erros;
+
+        String retorno = objectMapper.writeValueAsString(emitirSincronoRetNF3e);
+
+        Genericos.gravarLinhaLog(modelo, "[JSON_RETORNO]");
+        Genericos.gravarLinhaLog(modelo, retorno);
+        Genericos.gravarLinhaLog(modelo, "[EMISSAO_SINCRONA_FIM]");
+
+        return retorno;
+    }
 
     // Métodos genéricos, compartilhados entre diversas funções
     public static String emitirDocumento(String modelo, String conteudo, String tpConteudo) throws Exception {
@@ -892,6 +1050,10 @@ public class NSSuite {
             }
             case "55": {
                 urlEnvio = endpoints.NFeEnvio;
+                break;
+            }
+            case "66": {
+                urlEnvio = endpoints.NF3eEnvio;
                 break;
             }
             default: {
@@ -931,6 +1093,10 @@ public class NSSuite {
                 urlConsulta = endpoints.NFeConsStatusProcessamento;
                 break;
             }
+            case "66": {
+                urlConsulta = endpoints.NF3eConsStatusProcessamento;
+                break;
+            }
             default: {
                 throw new Exception("Não definido endpoint de consulta para o modelo " + modelo);
             }
@@ -955,7 +1121,6 @@ public class NSSuite {
                 urlDownload = endpoints.BPeDownload;
                 break;
             }
-            case "57":
             case "67": {
                 urlDownload = endpoints.CTeDownload;
                 break;
@@ -970,6 +1135,10 @@ public class NSSuite {
             }
             case "55": {
                 urlDownload = endpoints.NFeDownload;
+                break;
+            }
+            case "66": {
+                urlDownload = endpoints.NF3eDownload;
                 break;
             }
             default: {
@@ -1063,7 +1232,6 @@ public class NSSuite {
                 break;
             }
 
-            case "57":
             case "67":{
                 urlDownloadEvento = endpoints.CTeDownloadEvento;
                 break;
@@ -1081,6 +1249,11 @@ public class NSSuite {
 
             case "55":{
                 urlDownloadEvento = endpoints.NFeDownloadEvento;
+                break;
+            }
+
+            case "66": {
+                urlDownloadEvento = endpoints.NF3eDownloadEvento;
                 break;
             }
 
@@ -1179,11 +1352,11 @@ public class NSSuite {
                 break;
             }
 
-            case "57":
             case "67":{
                 urlCancelamento = endpoints.CTeCancelamento;
                 break;
             }
+            
 
             case "58":{
                 urlCancelamento = endpoints.MDFeCancelamento;
@@ -1197,6 +1370,11 @@ public class NSSuite {
 
             case "55":{
                 urlCancelamento = endpoints.NFeCancelamento;
+                break;
+            }
+
+            case "66": {
+                urlCancelamento = endpoints.NF3eCancelamento;
                 break;
             }
 
@@ -1238,7 +1416,6 @@ public class NSSuite {
         String urlCCe;
 
         switch (modelo){
-            case "57":
             case "67":{
                 urlCCe = endpoints.CTeCCe;
                 break;
@@ -1406,7 +1583,6 @@ public class NSSuite {
                 break;
             }
 
-            case "57":
             case "67":{
                 urlConsSit = endpoints.CTeConsSit;
                 break;
@@ -1450,7 +1626,6 @@ public class NSSuite {
 
         switch (modelo)
         {
-            case "57":
             case "67":
             {
                 urlListarNSNRecs = endpoints.CTeListarNSNRecs;
@@ -1466,6 +1641,11 @@ public class NSSuite {
             case "55":
             {
                 urlListarNSNRecs = endpoints.NFeListarNSNRecs;
+                break;
+            }
+
+            case "66": {
+                urlListarNSNRecs = endpoints.CTeListarNSNRecs;
                 break;
             }
 
