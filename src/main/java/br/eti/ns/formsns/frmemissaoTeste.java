@@ -444,6 +444,7 @@ public class frmemissaoTeste {
             GFat gFat = new GFat();
             EnderCorresp enderCorresp = new EnderCorresp();
             GANEEL gANEEL = new GANEEL();
+            NF3eJSON.GHistFat gHistFat = new NF3eJSON.GHistFat();
             NF3eJSON.GGrandFat gGrandFat = new NF3eJSON.GGrandFat();
             ArrayList<GGrandFat> listgGrandFat = new ArrayList<GGrandFat>();
             NF3eJSON.AutXML autXML = new NF3eJSON.AutXML();
@@ -460,20 +461,20 @@ public class frmemissaoTeste {
             ide.tpAmb = "2";
             ide.mod = "66";
             ide.serie = "0";
-            ide.nNF = "19";
+            ide.nNF = "21";
             ide.cNF = "00000001";
             ide.cDV = "";
-            ide.dhEmi = "2021-02-22T15:09:33-03:00";
+            ide.dhEmi = "2021-03-09T18:29:33-03:00";
             ide.tpEmis = "1";
             ide.cMunFG = "4303509";
             ide.finNF3e = "1";
             ide.verProc = "1.0.0";
 
             infNF3e.emit = emit;
-            emit.cNPJ = "07364617000135";
-            emit.iE = "0170108708";
+            emit.cNPJ = "CNPJ DO EMITENTE";
+            emit.iE = "IE DO EMITENTE";
             emit.xNome = "News Systems Ltda";
-            emit.xFant = "NS Tecnologia";
+            emit.xFant = "TESTE DE EMISSAO";
             emit.enderEmit = enderEmit;
             enderEmit.xLgr = "Av. Antonio Duro";
             enderEmit.nro = "870";
@@ -483,10 +484,10 @@ public class frmemissaoTeste {
             enderEmit.cEP = "96785200";
             enderEmit.uF = "RS";
             enderEmit.fone = "5136712053";
-            enderEmit.email = "newssystems@newssystems.eti.br";
+            enderEmit.email = "email@email.com.br";
 
             infNF3e.dest = dest;
-            dest.xNome = "Thiago Dummer";
+            dest.xNome = "Teste de Emissão da Silva";
             dest.cPF = "00269925074";
             dest.indIEDest = "9";
             dest.enderDest = enderDest;
@@ -498,8 +499,8 @@ public class frmemissaoTeste {
             enderDest.xMun = "Camaqua";
             enderDest.cEP = "96785200";
             enderDest.uF = "RS";
-            enderDest.fone = "51984459435";
-            enderDest.email = "thiago@nstecnologia.com.br";
+            enderDest.fone = "51999999999";
+            enderDest.email = "fernando.konflanz@nstecnologia.com.br";
 
             infNF3e.acessante = acessante;
             acessante.idAcesso = "43037003";
@@ -536,7 +537,7 @@ public class frmemissaoTeste {
             gAdBand.vAdBandAplic = "3000.80";
             gAdBand.motDifBand = "03";
 
-            detItem.Prod = prod;
+            detItem.prod = prod;
             prod.indOrigemQtd = "1";
             prod.cProd = "5555555";
             prod.xProd = "Consumo de Teste";
@@ -555,7 +556,7 @@ public class frmemissaoTeste {
             iCMS90.vICMS = "5.40";
 
             imposto.PIS = PIS;
-            PIS.cST = "90";
+            PIS.cST = "01";
             PIS.vBC = "30.00";
             PIS.pPIS = "1.650";
             PIS.vPIS = "0.49";
@@ -596,12 +597,13 @@ public class frmemissaoTeste {
             enderCorresp.xMun = "Camaqua";
             enderCorresp.cEP = "96785200";
             enderCorresp.uF = "RS";
-            enderCorresp.fone = "51984459435";
-            enderCorresp.email = "thiago@nstecnologia.com.br";
+            enderCorresp.fone = "51999999999";
+            enderCorresp.email = "fernando.konflanz@nstecnologia.com.br";
 
             infNF3e.gANEEL = gANEEL;
-            gANEEL.xGrandFat = "Consumo Meses Anteriores";
-            gANEEL.gGrandFat = gGrandFat;
+            gANEEL.gHistFat = gHistFat;
+            gHistFat.xGrandFat = "Consumo Meses Anteriores";
+            gHistFat.gGrandFat = gGrandFat;
             gGrandFat.add(gGrandFat);
             gGrandFat.CompetFat = "201911";
             gGrandFat.vFat = "30.00";

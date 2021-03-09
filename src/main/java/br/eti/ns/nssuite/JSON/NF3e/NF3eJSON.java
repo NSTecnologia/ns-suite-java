@@ -57,7 +57,6 @@ public class NF3eJSON {
     public String cNPJ;
     @JsonProperty("IE")
     public String iE;
-    @JsonProperty("CPF")
     public String xNome;
     public String xFant;
     public EnderEmit enderEmit;
@@ -217,7 +216,7 @@ public class NF3eJSON {
     public String nItemAnt;
     public GTarif gTarif;
     public GAdBand gAdBand;
-    public prod Prod;
+    public prod prod;
     public Imposto imposto; //4
     public GProcRef gProcRef; 
     public GContab gContab;
@@ -432,7 +431,7 @@ public class NF3eJSON {
 
   public static class EnderCorresp {
     public String xLgr;
-    @JsonProperty("Nro")
+    @JsonProperty("nro")
     public String nro;
     public String xCpl;
     public String xBairro;
@@ -442,13 +441,17 @@ public class NF3eJSON {
     public String cEP;
     @JsonProperty("UF")
     public String uF;
-    @JsonProperty("Fone")
+    @JsonProperty("fone")
     public String fone;
-    @JsonProperty("Email")
+    @JsonProperty("email")
     public String email;
   }
 
   public static class GANEEL {
+    public GHistFat gHistFat;
+  }
+
+  public static class GHistFat {
     public String xGrandFat;
     public GGrandFat gGrandFat;
   }
@@ -499,9 +502,9 @@ public class NF3eJSON {
     @JsonProperty("CNPJ")
     public String cNPJ;
     public String xContato;
-    @JsonProperty("Email")
+    @JsonProperty("email")
     public String email;
-    @JsonProperty("Fone")
+    @JsonProperty("fone")
     public String fone;
     public String idCSRT;
     public String hashCSRT;
