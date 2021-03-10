@@ -43,7 +43,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 public class NSSuite {
-    private static String token = "ADQWREQW561D32AWS1D6";
+    private static String token = "SEU_TOKEN_AQUI";
     private static ObjectMapper objectMapper = new ObjectMapper();
     private static Endpoints endpoints = new Endpoints();
     private static Parametros parametros = new Parametros();

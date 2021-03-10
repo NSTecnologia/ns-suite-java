@@ -86,9 +86,9 @@ public class frmemissaoTeste {
             ide.procEmi = "0";
             ide.verProc = "4.00";
             infNFe.emit = emit;
-            emit.cNPJ = "07364617000135";
+            emit.cNPJ = "CNPJ DO EMITENTE";
             emit.xNome = "NF-E EMITIDA EM AMBIENTE DE HOMOLOGAÇÃO - SEM VALOR FISCAL";
-            emit.iE = "0170108708";
+            emit.iE = "IE DO EMITENTE";
             emit.cRT = "1";
             emit.enderEmit = enderEmit;
             enderEmit.xLgr = "Rua Bento Osvaldo Triisch, 777";
@@ -101,10 +101,10 @@ public class frmemissaoTeste {
             enderEmit.cEP = "95046600";
             enderEmit.fone = "005432200200";
             infNFe.dest = dest;
-            dest.cNPJ = "07364617000135";
+            dest.cNPJ = "CNPJ DO DESTINATARIO";
             dest.xNome = "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL";
             dest.indIEDest = "1";
-            dest.iE = "0170108708";
+            dest.iE = "IE DO DESTINATARIO";
             dest.email = "email@email.com.br";
             dest.enderDest = enderDest;
             enderDest.xLgr = "AV ANTONIO DURO";
@@ -186,7 +186,7 @@ public class frmemissaoTeste {
             infNFe.transp = transp;
             transp.modFrete = "0";
             transp.transporta = transporta;
-            transporta.cNPJ = "07364617000135";
+            transporta.cNPJ = "CNPJ TRANSPORTADORA";
             transporta.xNome = "TRANSPORTADORA TESTE";
             transporta.iE = "0170108708";
             transporta.xEnder = "ESTR BENTO OSVALDO TRISCH 777";
@@ -475,8 +475,8 @@ public class frmemissaoTeste {
             ide.verProc = "1.0.0";
 
             infNF3e.emit = emit;
-            emit.cNPJ = "07364617000135";
-            emit.iE = "0170108708";
+            emit.cNPJ = "CNPJ DO EMITENTE";
+            emit.iE = "IE DO EMITENTE";
             emit.xNome = "News Systems Ltda";
             emit.xFant = "TESTE DE EMISSAO";
             emit.enderEmit = enderEmit;
