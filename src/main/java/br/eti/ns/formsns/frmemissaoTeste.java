@@ -18,6 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import javax.swing.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class frmemissaoTeste {
 
@@ -71,7 +72,7 @@ public class frmemissaoTeste {
             ide.mod = "55";
             ide.serie = "0";
             ide.nNF = "21252";
-            ide.dhEmi = "2021-02-19T15:33:00-03:00";
+            ide.dhEmi = "2021-03-10T09:51:00-03:00";
             ide.tpNF = "1";
             ide.idDest = "1";
             ide.cMunFG = "4305108";
@@ -115,6 +116,7 @@ public class frmemissaoTeste {
             enderDest.cEP = "96180000";
             enderDest.cPais = "1058";
             enderDest.xPais = "Brasil";
+
             infNFe.det = listDet;
             listDet.addAll(listDet);
             det.nItem = "1";
@@ -135,6 +137,7 @@ public class frmemissaoTeste {
             prod.vUnTrib = "3.00";
             prod.indTot = "1";
             prod.nItemPed = "0";
+
             det.imposto = imposto;
             imposto.iCMS = iCMS;
             iCMS.iCMSSN102 = iCMSSN102;
@@ -451,6 +454,7 @@ public class frmemissaoTeste {
             ArrayList<NF3eJSON.AutXML> listautXML = new ArrayList<NF3eJSON.AutXML>();
             NF3eJSON.InfAdic infAdic = new NF3eJSON.InfAdic();
             GRespTec gRespTec = new GRespTec();
+            int i = 1; //variavel para ser utilizada com contador no loop
 
             nF3eJSON.nF3e = nF3e;
             nF3e.infNF3e = infNF3e;
@@ -461,18 +465,18 @@ public class frmemissaoTeste {
             ide.tpAmb = "2";
             ide.mod = "66";
             ide.serie = "0";
-            ide.nNF = "21";
+            ide.nNF = "2109";
             ide.cNF = "00000001";
             ide.cDV = "";
-            ide.dhEmi = "2021-03-09T18:29:33-03:00";
+            ide.dhEmi = "2021-03-10T10:54:33-03:00";
             ide.tpEmis = "1";
             ide.cMunFG = "4303509";
             ide.finNF3e = "1";
             ide.verProc = "1.0.0";
 
             infNF3e.emit = emit;
-            emit.cNPJ = "CNPJ DO EMITENTE";
-            emit.iE = "IE DO EMITENTE";
+            emit.cNPJ = "07364617000135";
+            emit.iE = "0170108708";
             emit.xNome = "News Systems Ltda";
             emit.xFant = "TESTE DE EMISSAO";
             emit.enderEmit = enderEmit;
@@ -513,6 +517,7 @@ public class frmemissaoTeste {
 
             infNF3e.NFdet = NFdet;
             NFdet.det = det;
+
             det.add(det);
             det.nItem = "1";
             det.detItem = detItem;
@@ -603,12 +608,15 @@ public class frmemissaoTeste {
             infNF3e.gANEEL = gANEEL;
             gANEEL.gHistFat = gHistFat;
             gHistFat.xGrandFat = "Consumo Meses Anteriores";
-            gHistFat.gGrandFat = gGrandFat;
-            gGrandFat.add(gGrandFat);
-            gGrandFat.CompetFat = "201911";
-            gGrandFat.vFat = "30.00";
-            gGrandFat.uMed = "2";
-            gGrandFat.qtdDias = "10";
+            gHistFat.gGrandFat = listgGrandFat;
+            while (i <= 13) {
+                listgGrandFat.add(gGrandFat); 
+                gGrandFat.CompetFat = "201911";
+                gGrandFat.vFat = "30.00";
+                gGrandFat.uMed = "2";
+                gGrandFat.qtdDias = "10";
+                i++;
+            }
 
             infNF3e.autXML = autXML;
             autXML.add(autXML);
@@ -635,7 +643,7 @@ public class frmemissaoTeste {
             System.out.println(json);
             String retorno = null;
             try {
-                retorno = NSSuite.emitirNF3eSincrono(json, "json", "07364617000135", "XP", "2", "./Notas", false);
+                retorno = NSSuite.emitirNF3eSincrono(json, "json", "07364617000135", "X", "2", "./Notas", false);
             } catch (Exception exception) {
                 exception.printStackTrace();
             }

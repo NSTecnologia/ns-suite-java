@@ -1,6 +1,8 @@
 package br.eti.ns.nssuite.JSON.NF3e;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class NF3eJSON {
@@ -453,7 +455,7 @@ public class NF3eJSON {
 
   public static class GHistFat {
     public String xGrandFat;
-    public GGrandFat gGrandFat;
+    public List<GGrandFat> gGrandFat;
   }
 
 
@@ -462,8 +464,9 @@ public class NF3eJSON {
     public String vFat;
     public String uMed;
     public String qtdDias;
-	public void add(GGrandFat gGrandFat) {
-	}
+
+    public void add(ArrayList<GGrandFat> listgGrandFat) {
+    }
   }
 
   public static class AutXML {
