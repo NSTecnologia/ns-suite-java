@@ -1356,7 +1356,6 @@ public class NSSuite {
                 urlCancelamento = endpoints.CTeCancelamento;
                 break;
             }
-            
 
             case "58":{
                 urlCancelamento = endpoints.MDFeCancelamento;
@@ -1645,7 +1644,7 @@ public class NSSuite {
             }
 
             case "66": {
-                urlListarNSNRecs = endpoints.CTeListarNSNRecs;
+                urlListarNSNRecs = endpoints.NF3eListarNSNRecs;
                 break;
             }
 
