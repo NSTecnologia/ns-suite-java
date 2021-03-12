@@ -67,6 +67,7 @@ class Ide
   public String finNFe;
   public String indFinal;
   public String indPres;
+  public String indIntermed;
   public String procEmi;
   public String verProc;
   public String dhCont;
@@ -1085,6 +1086,12 @@ class Pag
   public String vTroco;
 }
 
+class InfIntermed {
+  @JsonProperty("CNPJ")
+  public String cNPJ;
+  public String idCadIntTran;
+}
+
 class ObsCont
 {
   public String xCampo;
@@ -1167,6 +1174,7 @@ class InfNFe
   public Transp transp;
   public Cobr cobr;
   public Pag pag;
+  public InfIntermed infIntermed;
   public InfAdic infAdic;
   public Exporta exporta;
   public Compra compra;
