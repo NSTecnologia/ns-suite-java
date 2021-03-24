@@ -69,7 +69,6 @@ public class NFeJSON {
     public String finNFe;
     public String indFinal;
     public String indPres;
-    public String indIntermed;
     public String procEmi;
     public String verProc;
     public String dhCont;
@@ -1013,12 +1012,6 @@ public class NFeJSON {
     public String vTroco;
   }
 
-  class InfIntermed {
-  @JsonProperty("CNPJ")
-  public String cNPJ;
-  public String idCadIntTran;
-}
-
   public static class ObsCont {
     public String xCampo;
     public String xTexto;
@@ -1091,7 +1084,6 @@ public class NFeJSON {
     public Transp transp;
     public Cobr cobr;
     public Pag pag;
-    public InfIntermed infIntermed;
     public InfAdic infAdic;
     public Exporta exporta;
     public Compra compra;

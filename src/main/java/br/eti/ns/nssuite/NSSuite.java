@@ -1356,6 +1356,7 @@ public class NSSuite {
                 urlCancelamento = endpoints.CTeCancelamento;
                 break;
             }
+            
 
             case "58":{
                 urlCancelamento = endpoints.MDFeCancelamento;
@@ -1602,6 +1603,11 @@ public class NSSuite {
                 break;
             }
 
+            case "66":{
+                urlConsSit = endpoints.NF3eConsSit;
+                break;
+            }
+
             default:{
                 throw new Exception("Não definido endpoint de consulta de situação para o modelo " + modelo);
             }
@@ -1644,7 +1650,7 @@ public class NSSuite {
             }
 
             case "66": {
-                urlListarNSNRecs = endpoints.NF3eListarNSNRecs;
+                urlListarNSNRecs = endpoints.CTeListarNSNRecs;
                 break;
             }
 

@@ -13,22 +13,40 @@ import br.eti.ns.nssuite.JSON.NF3e.NF3eJSON.EnderEmit;
 import br.eti.ns.nssuite.JSON.NF3e.NF3eJSON.Ide;
 import br.eti.ns.nssuite.JSON.CTe.CTeJSON;
 import br.eti.ns.nssuite.JSON.CTe.CTeJSON.*;
+import br.eti.ns.nssuite.requisicoes._genericos.CancelarReq;
+import br.eti.ns.nssuite.requisicoes.nf3e.CancelarReqNF3e;
+import br.eti.ns.nssuite.requisicoes.nf3e.ConsSitReqNF3e;
+import br.eti.ns.nssuite.requisicoes.nf3e.DownloadEventoReqNF3e;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javax.swing.*;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
 public class frmemissaoTeste {
 
-    private JButton btnEnviarNFe;
     private JPanel panelMain;
+    private JButton btnEnviarNFe;
     private JButton btnEnviarCTe;
     private JButton btnEnviarNF3e;
+    private JButton btnCancelarNF3e;
+    private JButton btnCancelarNFe;
+    private JButton btnDownEventoNF3e;
+    private JButton btnDownEventoNFe;
+    private JButton btnCancelarCTe;
+    private JButton btnDownEventoCTe;
+    private JButton btnConSituaçãoCTe;
+    private JButton btnConSituaçãoNFe;
+    private JButton btnConSituaçãoNF3e;
 
     public frmemissaoTeste() {
-
+        
+        // Métodos específos da NFe
         btnEnviarNFe.addActionListener(e -> {
             JOptionPane.showMessageDialog(null, "Teste de emissão - NFe");
 
@@ -59,7 +77,6 @@ public class frmemissaoTeste {
             Vol vol = new Vol();
             ArrayList<Vol> listVol = new ArrayList<>();
             Pag pag = new Pag();
-            NFeJSON.InfIntermed infIntermed = new NFeJSON.InfIntermed();
             DetPag detPag = new DetPag();
             ArrayList<DetPag> listdetPag = new ArrayList<>();
             NFeJSON.InfAdic infAdic = new NFeJSON.InfAdic();
@@ -84,13 +101,12 @@ public class frmemissaoTeste {
             ide.finNFe = "1";
             ide.indFinal = "0";
             ide.indPres = "1";
-            ide.indIntermed = "";
             ide.procEmi = "0";
             ide.verProc = "4.00";
             infNFe.emit = emit;
-            emit.cNPJ = "CNPJ DO EMITENTE";
+            emit.cNPJ = "11111111111111";
             emit.xNome = "NF-E EMITIDA EM AMBIENTE DE HOMOLOGAÇÃO - SEM VALOR FISCAL";
-            emit.iE = "IE DO EMITENTE";
+            emit.iE = "11111111111";
             emit.cRT = "1";
             emit.enderEmit = enderEmit;
             enderEmit.xLgr = "Rua Bento Osvaldo Triisch, 777";
@@ -103,10 +119,10 @@ public class frmemissaoTeste {
             enderEmit.cEP = "95046600";
             enderEmit.fone = "005432200200";
             infNFe.dest = dest;
-            dest.cNPJ = "CNPJ DO DESTINATARIO";
+            dest.cNPJ = "11111111111111";
             dest.xNome = "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL";
             dest.indIEDest = "1";
-            dest.iE = "IE DO DESTINATARIO";
+            dest.iE = "11111111111";
             dest.email = "email@email.com.br";
             dest.enderDest = enderDest;
             enderDest.xLgr = "AV ANTONIO DURO";
@@ -188,7 +204,7 @@ public class frmemissaoTeste {
             infNFe.transp = transp;
             transp.modFrete = "0";
             transp.transporta = transporta;
-            transporta.cNPJ = "CNPJ TRANSPORTADORA";
+            transporta.cNPJ = "11111111111111";
             transporta.xNome = "TRANSPORTADORA TESTE";
             transporta.iE = "0170108708";
             transporta.xEnder = "ESTR BENTO OSVALDO TRISCH 777";
@@ -208,10 +224,6 @@ public class frmemissaoTeste {
             detPag.tPag = "01";
             detPag.vPag = "5.00";
             pag.vTroco = "2.00";
-
-            infNFe.infIntermed = infIntermed;
-            infIntermed.cNPJ = "11111111111111";
-            infIntermed.idCadIntTran = "IDENTIFICACAO DO INTERMEDIADOR";
 
             infNFe.infAdic = infAdic;
             infAdic.infCpl = "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005";
@@ -236,6 +248,11 @@ public class frmemissaoTeste {
             System.out.println(retorno);
 
         });
+        btnCancelarNFe.addActionListener(e ->{});
+        btnDownEventoNFe.addActionListener(e -> {});
+
+        // CTe
+
         btnEnviarCTe.addActionListener(e -> {
             JOptionPane.showMessageDialog(null, "Teste de emissão - CTe");
 
@@ -409,7 +426,7 @@ public class frmemissaoTeste {
             // System.out.println(json);
             String tpConteudo = "json";
             String modelo = "57";
-            String cnpjEmit = "07364617000135";
+            String cnpjEmit = "11111111111111";
             String tpDown = "XP";
             String tpAmb = "2";
             String caminho = "./notas";
@@ -424,6 +441,11 @@ public class frmemissaoTeste {
             JOptionPane.showMessageDialog(null, retorno);
 
         });
+        btnCancelarCTe.addActionListener(e ->{});
+        btnDownEventoCTe.addActionListener(e -> {});
+
+        // Métodos específco NF3e
+
         btnEnviarNF3e.addActionListener(e -> {
             JOptionPane.showMessageDialog(null,
                     "Teste de emissão - NF3e");
@@ -471,18 +493,18 @@ public class frmemissaoTeste {
             ide.tpAmb = "2";
             ide.mod = "66";
             ide.serie = "0";
-            ide.nNF = "2109";
+            ide.nNF = "2112";
             ide.cNF = "00000001";
             ide.cDV = "";
-            ide.dhEmi = "2021-03-10T10:54:33-03:00";
+            ide.dhEmi = "2021-03-24T16:59:33-03:00";
             ide.tpEmis = "1";
             ide.cMunFG = "4303509";
             ide.finNF3e = "1";
             ide.verProc = "1.0.0";
 
             infNF3e.emit = emit;
-            emit.cNPJ = "CNPJ DO EMITENTE";
-            emit.iE = "IE DO EMITENTE";
+            emit.cNPJ = "11111111111111";
+            emit.iE = "11111111111";
             emit.xNome = "News Systems Ltda";
             emit.xFant = "TESTE DE EMISSAO";
             emit.enderEmit = enderEmit;
@@ -626,14 +648,14 @@ public class frmemissaoTeste {
 
             infNF3e.autXML = autXML;
             autXML.add(autXML);
-            autXML.cNPJ = "07364617000135";
+            autXML.cNPJ = "11111111111111";
 
             infNF3e.infAdic = infAdic;
             infAdic.infAdFisco = "Dados de interesse do fiscal";
             infAdic.infCpl = "Observacoes, emissao de teste da NS";
 
             infNF3e.gRespTec = gRespTec;
-            gRespTec.cNPJ = "07364617000135";
+            gRespTec.cNPJ = "11111111111111";
             gRespTec.xContato = "Fernando Konflanz";
             gRespTec.email = "fernando.konflanz@nstecnologia.com.br";
             gRespTec.fone = "51996359538";
@@ -649,8 +671,34 @@ public class frmemissaoTeste {
             System.out.println(json);
             String retorno = null;
             try {
-                retorno = NSSuite.emitirNF3eSincrono(json, "json", "07364617000135", "X", "2", "./Notas", false);
-            } catch (Exception exception) {
+                retorno = NSSuite.emitirNF3eSincrono(json, "json", "11111111111111", "X", "2", "./Notas", false);
+                JsonNode respostaJSON = mapper.readTree(retorno);
+                String statusEnvio = respostaJSON.get("statusEnvio").asText();
+                String statusConsulta = respostaJSON.get("statusConsulta").asText();
+                String statusDownload = respostaJSON.get("statusDownload").asText();
+                String cStat = respostaJSON.get("cStat").asText();
+                String chNF3e = respostaJSON.get("chNF3e").asText();
+                String nProt = respostaJSON.get("nProt").asText();
+                String motivo = respostaJSON.get("motivo").asText();
+                String nsNRec = respostaJSON.get("nsNRec").asText();
+                ArrayList<String> erros = mapper.readValue(respostaJSON.get("erros").toString(), new TypeReference<ArrayList<String>>(){});
+                if (statusEnvio.equals("200") || statusEnvio.equals("-6")){
+                    if (statusConsulta.equals("200")) {
+                        if (cStat.equals("100")) {
+                            JOptionPane.showMessageDialog(null, motivo);
+                            if (!statusDownload.equals("200")) {
+                                JOptionPane.showMessageDialog(null, "Erro Download");
+                            }
+                        } else {
+                            JOptionPane.showMessageDialog(null, motivo);
+                        }
+                    }
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, motivo + "\n" + erros.toString());
+                }
+            }
+            catch (Exception exception) {
                 exception.printStackTrace();
             }
 
@@ -658,7 +706,75 @@ public class frmemissaoTeste {
             System.out.println(retorno);
 
         });
-    }
+
+        btnCancelarNF3e.addActionListener(e -> {
+            JOptionPane.showMessageDialog(null,
+                    "Cancelamento - NF3e");
+            CancelarReqNF3e cancelarReqNF3e = new CancelarReqNF3e();
+            cancelarReqNF3e.dhEvento = "2021-03-24T17:29:33-03:00";
+            cancelarReqNF3e.nProt = "143210003700592";
+            cancelarReqNF3e.tpAmb = "2";
+            cancelarReqNF3e.xJust = "Cancelamento de NF3e para fins de teste em homologação";
+            cancelarReqNF3e.chNF3e = "43210307364617000135660000000021121000000010";
+
+
+            try {
+                String retorno = NSSuite.cancelarDocumento("66", cancelarReqNF3e);
+                JOptionPane.showMessageDialog(null, retorno);
+                System.out.println(retorno);
+            }
+            catch (Exception exception) {
+                exception.printStackTrace();
+
+            }
+
+
+        });
+
+        btnDownEventoNF3e.addActionListener(e -> {
+            JOptionPane.showMessageDialog(null,
+                    "Download de Evento - NF3e");
+            DownloadEventoReqNF3e downloadEventoReqNF3e = new DownloadEventoReqNF3e();
+            downloadEventoReqNF3e.nSeqEvento = "1";
+            downloadEventoReqNF3e.chNF3e = "43210307364617000135660000000021121000000010";
+            downloadEventoReqNF3e.tpDown = "X";
+            downloadEventoReqNF3e.tpAmb = "2";
+            downloadEventoReqNF3e.tpEvento = "CANC";
+
+
+            try {
+                String retorno = NSSuite.downloadEvento("66", downloadEventoReqNF3e);
+                JOptionPane.showMessageDialog(null, retorno);
+                System.out.println(retorno);
+            }
+            catch (Exception exception) {
+                exception.printStackTrace();
+
+            }
+        });
+
+        btnConSituaçãoNF3e.addActionListener(e -> {
+            JOptionPane.showMessageDialog(null,
+                    "Consulta Situação - NF3e");
+            ConsSitReqNF3e consSitReqNF3e = new ConsSitReqNF3e();
+            consSitReqNF3e.chNF3e = "43210307364617000135660000000021121000000010";
+            consSitReqNF3e.licencaCNPJ = "11111111111111";
+            consSitReqNF3e.tpAmb = "2";
+
+
+            try {
+                String retorno = NSSuite.consultarSituacaoDocumento("66", consSitReqNF3e);
+                JOptionPane.showMessageDialog(null, retorno);
+                System.out.println(retorno);
+            }
+            catch (Exception exception) {
+                exception.printStackTrace();
+
+            }
+        });
+
+
+    };
     public static void main (String[] args) {
         JFrame frame = new JFrame("frmEmissaoTeste");
         frame.setContentPane(new frmemissaoTeste().panelMain);
@@ -666,6 +782,4 @@ public class frmemissaoTeste {
         frame.pack();
         frame.setVisible(true);
     }
-
-
 }
