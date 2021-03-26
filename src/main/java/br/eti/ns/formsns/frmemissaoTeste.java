@@ -77,6 +77,7 @@ public class frmemissaoTeste {
             Vol vol = new Vol();
             ArrayList<Vol> listVol = new ArrayList<>();
             Pag pag = new Pag();
+            NFeJSON.InfIntermed infIntermed = new NFeJSON.InfIntermed();
             DetPag detPag = new DetPag();
             ArrayList<DetPag> listdetPag = new ArrayList<>();
             NFeJSON.InfAdic infAdic = new NFeJSON.InfAdic();
@@ -101,6 +102,7 @@ public class frmemissaoTeste {
             ide.finNFe = "1";
             ide.indFinal = "0";
             ide.indPres = "1";
+            ide.indIntermed = "";
             ide.procEmi = "0";
             ide.verProc = "4.00";
             infNFe.emit = emit;
@@ -224,6 +226,10 @@ public class frmemissaoTeste {
             detPag.tPag = "01";
             detPag.vPag = "5.00";
             pag.vTroco = "2.00";
+
+            infNFe.infIntermed = infIntermed;
+            infIntermed.cNPJ = "11111111111111";
+            infIntermed.idCadIntTran = "IDENTIFICACAO DO INTERMEDIADOR";
 
             infNFe.infAdic = infAdic;
             infAdic.infCpl = "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005";
