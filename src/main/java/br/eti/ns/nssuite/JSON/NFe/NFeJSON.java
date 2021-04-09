@@ -1013,7 +1013,7 @@ public class NFeJSON {
     public String vTroco;
   }
 
-  class InfIntermed {
+  public static class InfIntermed {
   @JsonProperty("CNPJ")
   public String cNPJ;
   public String idCadIntTran;

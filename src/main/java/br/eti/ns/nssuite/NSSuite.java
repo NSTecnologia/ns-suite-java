@@ -43,7 +43,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 public class NSSuite {
-    private static String token = "SEU_TOKEN_AQUI";
+    private static String token = "ADQWREQW561D32AWS1D6";
     private static ObjectMapper objectMapper = new ObjectMapper();
     private static Endpoints endpoints = new Endpoints();
     private static Parametros parametros = new Parametros();
@@ -944,7 +944,7 @@ public class NSSuite {
                         }
                     }
                 } else {
-                    motivo = respostaJSON.get("motivo").asText();
+                    motivo = respostaJSON.get("xMotivo").asText();
                 }
             }
             // Testa se a consulta foi feita com sucesso (200)
@@ -963,7 +963,7 @@ public class NSSuite {
                     downloadReqNF3e.tpAmb = tpAmb; 
                     downloadReqNF3e.tpDown = tpDown;
 
-                    resposta = downloadDocumentoESalvar(modelo, downloadReqNF3e, caminho, chNF3e + "-NFe", exibeNaTela);
+                    resposta = downloadDocumentoESalvar(modelo, downloadReqNF3e, caminho, chNF3e + "-NF3e", exibeNaTela);
                     respostaJSON = objectMapper.readTree(resposta);
                     statusDownload = respostaJSON.get("status").asText();
 
@@ -1650,7 +1650,7 @@ public class NSSuite {
             }
 
             case "66": {
-                urlListarNSNRecs = endpoints.CTeListarNSNRecs;
+                urlListarNSNRecs = endpoints.NF3eListarNSNRecs;
                 break;
             }
 
