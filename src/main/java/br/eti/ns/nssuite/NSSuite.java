@@ -969,10 +969,12 @@ public class NSSuite {
 
                     if (!statusDownload.equals("200"))
                         motivo = respostaJSON.get("motivo").asText();
-                } else {
-                    motivo = respostaJSON.get("motivo").asText();
                 }
-            } else if (statusConsulta.equals("-2")) {
+                else {
+                    motivo = respostaJSON.get("xMotivo").asText();
+                }
+            }
+            else if (statusConsulta.equals("-2")) {
 
                 cStat = respostaJSON.get("cStat").asText();
                 motivo = respostaJSON.get("erro").get("xMotivo").asText();
