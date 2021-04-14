@@ -78,10 +78,10 @@ public class frmemissaoTeste {
             ide.tpAmb = "2"; // Homologação
             ide.mod = "66";
             ide.serie = "0";
-            ide.nNF = "51002";
+            ide.nNF = "51010";
             ide.cNF = "00000001";
             ide.cDV = "";
-            ide.dhEmi = "2021-04-14T11:22:33-03:00";
+            ide.dhEmi = "2021-04-14T14:44:33-03:00";
             ide.tpEmis = "1";
             ide.cMunFG = "4303509";
             ide.finNF3e = "1";
@@ -311,7 +311,7 @@ public class frmemissaoTeste {
             }
 
             // Para fins de teste, apresenta o retorno da API
-            JOptionPane.showMessageDialog(null, retorno);
+            //JOptionPane.showMessageDialog(null, retorno);
 
             // Para fins de teste, apresenta o json retornado pela API
             System.out.println(retorno);
@@ -337,7 +337,7 @@ public class frmemissaoTeste {
                 String retorno = NSSuite.cancelarDocumento("66", cancelarReqNF3e);
 
                 // Para fins de teste, apresenta o json retornado pela API
-                JOptionPane.showMessageDialog(null, retorno);
+                //JOptionPane.showMessageDialog(null, retorno);
                 System.out.println(retorno);
 
             }
@@ -368,7 +368,7 @@ public class frmemissaoTeste {
                 String retorno = NSSuite.downloadEventoESalvar("66",downloadEventoReqNF3e,"C:/Notas/NF3e",downloadEventoReqNF3e.chNF3e,downloadEventoReqNF3e.nSeqEvento,false);
 
                 // Para fins de teste, apresenta o json retornado pela API
-                JOptionPane.showMessageDialog(null, retorno);
+                //JOptionPane.showMessageDialog(null, retorno);
                 System.out.println(retorno);
             }
 
@@ -395,7 +395,7 @@ public class frmemissaoTeste {
                 String retorno = NSSuite.consultarSituacaoDocumento("66", consSitReqNF3e);
 
                 // Para fins de teste, apresenta o json retornado pela API
-                JOptionPane.showMessageDialog(null, retorno);
+                //JOptionPane.showMessageDialog(null, retorno);
                 System.out.println(retorno);
             }
 
@@ -421,7 +421,7 @@ public class frmemissaoTeste {
                 String retorno = NSSuite.listarNSNRecs("66", listarNSNRecReqNF3e);
 
                 // Para fins de teste, apresenta o json retornado pela API
-                JOptionPane.showMessageDialog(null, retorno);
+                //JOptionPane.showMessageDialog(null, retorno);
                 System.out.println(retorno);
             }
 
@@ -448,7 +448,7 @@ public class frmemissaoTeste {
                 String retorno = NSSuite.downloadDocumentoESalvar("66", downloadReqNF3e,"C:/Notas/NF3e",downloadReqNF3e.chNF3e+"-NF3e",false);
 
                 // Para fins de teste, apresenta o json retornado pela API
-                JOptionPane.showMessageDialog(null, retorno);
+                //JOptionPane.showMessageDialog(null, retorno);
                 System.out.println(retorno);
             }
 

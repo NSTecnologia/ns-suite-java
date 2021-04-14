@@ -5,7 +5,9 @@
     <constraints>
       <xy x="83" y="152" width="859" height="444"/>
     </constraints>
-    <properties/>
+    <properties>
+      <enabled value="true"/>
+    </properties>
     <border type="empty">
       <font/>
       <size top="125" left="125" bottom="125" right="125"/>
