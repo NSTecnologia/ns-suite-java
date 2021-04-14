@@ -25,7 +25,7 @@ public class frmemissaoTeste {
     private JButton btnEnviarNF3e;
     private JButton btnCancelarNF3e;
     private JButton btnDownEventoNF3e;
-    private JButton btnConSituaçãoNF3e;
+    private JButton btnConSituacaoNF3e;
     private JButton btnListarNSNrec;
     private JButton btnDownloadNF3e;
 
@@ -78,10 +78,10 @@ public class frmemissaoTeste {
             ide.tpAmb = "2"; // Homologação
             ide.mod = "66";
             ide.serie = "0";
-            ide.nNF = "2105";
+            ide.nNF = "51002";
             ide.cNF = "00000001";
             ide.cDV = "";
-            ide.dhEmi = "2021-04-12T10:25:33-03:00";
+            ide.dhEmi = "2021-04-14T11:22:33-03:00";
             ide.tpEmis = "1";
             ide.cMunFG = "4303509";
             ide.finNF3e = "1";
@@ -325,11 +325,11 @@ public class frmemissaoTeste {
             // Atribuicao dos parametros
             CancelarReqNF3e cancelarReqNF3e = new CancelarReqNF3e();
 
-            cancelarReqNF3e.dhEvento = "2021-03-24T17:29:33-03:00";
-            cancelarReqNF3e.nProt = "143210003700592";
+            cancelarReqNF3e.dhEvento = "2021-04-14T11:23:00-03:00";
+            cancelarReqNF3e.nProt = "143210003704655";
             cancelarReqNF3e.tpAmb = "2";
             cancelarReqNF3e.xJust = "Cancelamento de NF3e para fins de teste em homologação";
-            cancelarReqNF3e.chNF3e = "43210307364617000135660000000021121000000010";
+            cancelarReqNF3e.chNF3e = "43210407364617000135660000000510021000000016";
 
 
             try {
@@ -357,7 +357,7 @@ public class frmemissaoTeste {
             // Atribuicao dos parametros
             DownloadEventoReqNF3e downloadEventoReqNF3e = new DownloadEventoReqNF3e();
             downloadEventoReqNF3e.nSeqEvento = "1";
-            downloadEventoReqNF3e.chNF3e = "43210307364617000135660000000021121000000010";
+            downloadEventoReqNF3e.chNF3e = "43210407364617000135660000000510021000000016";
             downloadEventoReqNF3e.tpDown = "X";
             downloadEventoReqNF3e.tpAmb = "2";
             downloadEventoReqNF3e.tpEvento = "CANC";
@@ -365,7 +365,7 @@ public class frmemissaoTeste {
 
             try {
                 // Chamada da funcao
-                String retorno = NSSuite.downloadEvento("66", downloadEventoReqNF3e);
+                String retorno = NSSuite.downloadEventoESalvar("66",downloadEventoReqNF3e,"C:/Notas/NF3e",downloadEventoReqNF3e.chNF3e,downloadEventoReqNF3e.nSeqEvento,false);
 
                 // Para fins de teste, apresenta o json retornado pela API
                 JOptionPane.showMessageDialog(null, retorno);
@@ -380,12 +380,12 @@ public class frmemissaoTeste {
         });
 
         // Exemplo de como consultar a situacao da NF3e
-        btnConSituaçãoNF3e.addActionListener(e -> {
+        btnConSituacaoNF3e.addActionListener(e -> {
             JOptionPane.showMessageDialog(null,"Consulta Situação - NF3e");
 
             // Atribuicao dos parametros
             ConsSitReqNF3e consSitReqNF3e = new ConsSitReqNF3e();
-            consSitReqNF3e.chNF3e = "43210307364617000135660000000021121000000010";
+            consSitReqNF3e.chNF3e = "43210407364617000135660000000510021000000016";
             consSitReqNF3e.licencaCNPJ = "07364617000135";
             consSitReqNF3e.tpAmb = "2";
 
@@ -412,7 +412,7 @@ public class frmemissaoTeste {
 
             // Atribuicao dos parametros
             ListarNSNRecReqNF3e listarNSNRecReqNF3e = new ListarNSNRecReqNF3e();
-            listarNSNRecReqNF3e.chNF3e = "43210307364617000135660000000021121000000010";
+            listarNSNRecReqNF3e.chNF3e = "43210407364617000135660000000510021000000016";
             listarNSNRecReqNF3e.tpAmb = "2";
 
 
@@ -437,15 +437,15 @@ public class frmemissaoTeste {
             JOptionPane.showMessageDialog(null,"Download de nsNRec - NF3e");
 
             // Atribuicao dos parametros
-            DownloadReqNF3e DownloadReqNF3e = new DownloadReqNF3e();
-            DownloadReqNF3e.chNF3e = "43210307364617000135660000000021121000000010";
-            DownloadReqNF3e.tpDown = "X";
-            DownloadReqNF3e.tpAmb = "2";
+            DownloadReqNF3e downloadReqNF3e = new DownloadReqNF3e();
+            downloadReqNF3e.chNF3e = "43210407364617000135660000000510021000000016";
+            downloadReqNF3e.tpDown = "X";
+            downloadReqNF3e.tpAmb = "2";
 
 
             try {
                 // Chamada da funcao
-                String retorno = NSSuite.downloadDocumentoESalvar("66", DownloadReqNF3e,"C:/Notas/NF3e","-NF3e",false);
+                String retorno = NSSuite.downloadDocumentoESalvar("66", downloadReqNF3e,"C:/Notas/NF3e",downloadReqNF3e.chNF3e+"-NF3e",false);
 
                 // Para fins de teste, apresenta o json retornado pela API
                 JOptionPane.showMessageDialog(null, retorno);
