@@ -14,6 +14,7 @@ public class Genericos {
         if (!localSalvar.exists()) {
             localSalvar.mkdirs();
         }
+        
         //Data atual ddmmyy
         Date data = new Date();
         SimpleDateFormat formatador = new SimpleDateFormat("yyyyMMdd");
@@ -73,7 +74,4 @@ public class Genericos {
             fop.flush();
         }
     }
-
-
-
 }
