@@ -1,46 +1,41 @@
 package br.eti.ns.formsns;
 
+import br.eti.ns.nssuite.JSON.GTVe.GTVeJSON;
 import br.eti.ns.nssuite.NSSuite;
-import br.eti.ns.nssuite.JSON.NF3e.NF3eJSON;
-import br.eti.ns.nssuite.JSON.NF3e.NF3eJSON.*;
-import br.eti.ns.nssuite.JSON.NF3e.NF3eJSON.Dest;
-import br.eti.ns.nssuite.JSON.NF3e.NF3eJSON.Emit;
-import br.eti.ns.nssuite.JSON.NF3e.NF3eJSON.EnderDest;
-import br.eti.ns.nssuite.JSON.NF3e.NF3eJSON.EnderEmit;
-import br.eti.ns.nssuite.JSON.NF3e.NF3eJSON.Ide;
-import br.eti.ns.nssuite.requisicoes.nf3e.*;
+import br.eti.ns.nssuite.requisicoes.gtve.CancelarReqGTVe;
+import br.eti.ns.nssuite.requisicoes.gtve.DownloadReqGTVe;
+import br.eti.ns.nssuite.requisicoes.gtve.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.List;
 
-public class frmemissaoTesteGTVe {
+public class frmEmissaoTesteGTVe {
 
     private JPanel panelMain;
-    private JButton btnEnviarNF3e;
-    private JButton btnCancelarNF3e;
-    private JButton btnDownEventoNF3e;
-    private JButton btnConSituacaoNF3e;
+    private JButton btnEnviarGTVe;
+    private JButton btnCancelarGTVe;
+    private JButton btnDownEventoGTVe;
+    private JButton btnConSituacaoGTVe;
     private JButton btnListarNSNrec;
-    private JButton btnDownloadNF3e;
+    private JButton btnDownloadGTVe;
 
-    public frmemissaoTesteGTVe() {
+    public frmEmissaoTesteGTVe() {
 
-        // NF3e
-        btnEnviarNF3e.addActionListener(e -> {
+        btnEnviarGTVe.addActionListener(e -> {
             JOptionPane.showMessageDialog(null,"Teste de emissão - GTVe");
 
             // Faz a serializacao do objeto JSON que foi populado
 
+            GTVeJSON gtVeJSON = new GTVeJSON();
+
+
             ObjectMapper mapper = new ObjectMapper();
             String json = "";
             try {
-                json = mapper.writeValueAsString(GTVeJSON);
+                json = mapper.writeValueAsString(gtVeJSON);
             } catch (JsonProcessingException jsonProcessingException) {
                 jsonProcessingException.printStackTrace();
             }
@@ -61,7 +56,7 @@ public class frmemissaoTesteGTVe {
                 String statusConsulta = respostaJSON.get("statusConsulta").asText();
                 String statusDownload = respostaJSON.get("statusDownload").asText();
                 String cStat = respostaJSON.get("cStat").asText();
-                String chNF3e = respostaJSON.get("chNF3e").asText();
+                String chNF3e = respostaJSON.get("chGTVe").asText();
                 String nProt = respostaJSON.get("nProt").asText();
                 String motivo = respostaJSON.get("motivo").asText();
                 String nsNRec = respostaJSON.get("nsNRec").asText();
@@ -223,7 +218,7 @@ public class frmemissaoTesteGTVe {
 
             try {
                 // Chamada da funcao
-                String retorno = NSSuite.downloadDocumentoESalvar("64", downloadReqGTVe,"C:/Notas/GTVe",downloadReqNF3e.chNF3e+"-NF3e",false);
+                String retorno = NSSuite.downloadDocumentoESalvar("64", downloadReqGTVe,"C:/Notas/GTVe",downloadReqGTVe.chGTVe+"-GTVe",false);
 
                 // Para fins de teste, apresenta o json retornado pela API
                 //JOptionPane.showMessageDialog(null, retorno);
@@ -239,7 +234,7 @@ public class frmemissaoTesteGTVe {
     };
     public static void main (String[] args) {
         JFrame frame = new JFrame("frmEmissaoTesteGTVe");
-        frame.setContentPane(new frmemissaoTesteGTVe().panelMain);
+        frame.setContentPane(new frmEmissaoTesteGTVe().panelMain);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);

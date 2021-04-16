@@ -7,14 +7,14 @@ import java.util.List;
 
 public class GTVeJSON {
     @JsonProperty("GTVe")
-    public Gtve GTVe;
+    public GTVe GTVe;
     
-    public Class Gtve{
+    public static class GTVe{
         public String versao;
         public InfCTe infCTe;
     }
 
-    public class InfCTe {
+    public static class InfCTe {
         public String versao;
         public String Id;
         public Ide ide;
@@ -30,7 +30,7 @@ public class GTVeJSON {
         public InfCTeSupl infCTeSupl;
     }
 
-    public Class Ide {
+    public static class Ide {
         public String cUF;
         public String cCT;
         @JsonProperty("CFOP")
@@ -54,23 +54,23 @@ public class GTVeJSON {
         public String indIEToma;
         public String dhSaidaOrig;
         public String dhChegadaDest;
-        public Toma toma
+        public Toma toma;
         public TomaTerceiro tomaTerceiro;
         public String dhCont;
         public String xJust;
     }
 
-    public Class Toma {
+    public static class Toma {
         public String toma;
     }
 
-    public Class TomaTerceiro {
+    public static class TomaTerceiro {
         public String toma;
         @JsonProperty("CNPJ")
         public String CNPJ;
-        @JsonProperty("CPF");
+        @JsonProperty("CPF")
         public String CPF;
-        @JsonProperty("IE");
+        @JsonProperty("IE")
         public String IE;
         public String xNome;
         public String xFant;
@@ -78,23 +78,23 @@ public class GTVeJSON {
         public EnderToma enderToma;
     }
 
-    public Class EnderToma {
+    public static class EnderToma {
         public String xLgr;
         public String nro;
         public String xCpl;
         public String xBairo;
         public String cMun;
         public String xMun;
-        @JsonProperty("CEP");
+        @JsonProperty("CEP")
         public String CEP;
-        @JsonProperty("UF");
+        @JsonProperty("UF")
         public String UF;
         public String cPais;
         public String xPais;
         public String email;
     }
 
-    public Class Compl {
+    public static class Compl {
         public String xCaracAd;
         public String xCaracSer;
         public String xEmi;
@@ -103,48 +103,48 @@ public class GTVeJSON {
         public OBSFisco ObsFisco;
     }
 
-    public Class OBSCont {
+    public static class OBSCont {
         public String xCampo;
         public String xTexto;
     }
 
-    public Class OBSFisco {
+    public static class OBSFisco {
         public String xCampo;
         public String xTexto;
     }
 
-    public Class Emit {
-        @JsonProperty("CNPJ");
+    public static class Emit{
+        @JsonProperty("CNPJ")
         public String CNPJ;
-        @JsonProperty("IE");
+        @JsonProperty("IE")
         public String IE;
-        @JsonProperty("IEST");
+        @JsonProperty("IEST")
         public String IEST;
         public String xNome;
         public String xFant;
         public EnderEmit enderEmit;
     }
 
-    public Class EnderEmit {
+    public static class EnderEmit {
         public String xLgr;
         public String nro;
         public String xCpl;
         public String xBairro;
         public String cMun;
         public String xMun;
-        @JsonProperty("CEP");
+        @JsonProperty("CEP")
         public String CEP;
-        @JsonProperty("UF");
+        @JsonProperty("UF")
         public String UF;
         public String fone;
     }
 
-    public Class Rem {
-        @JsonProperty("CNPJ");
+    public static class Rem {
+        @JsonProperty("CNPJ")
         public String CNPJ;
-        @JsonProperty("CPF");
+        @JsonProperty("CPF")
         public String CPF;
-        @JsonProperty("IE");
+        @JsonProperty("IE")
         public String IE;
         public String xNome;
         public String xFant;
@@ -153,27 +153,27 @@ public class GTVeJSON {
         public EnderReme enderReme;
     }
 
-    public Class EnderReme {
+    public static class EnderReme {
         public String xLgr;
         public String nro;
         public String xCpl;
         public String xBairro;
         public String cMun;
         public String xMun;
-        @JsonProperty("CEP");
+        @JsonProperty("CEP")
         public String CEP;
-        @JsonProperty("UF");
+        @JsonProperty("UF")
         public String UF;
         public String cPais;
         public String xPais;
     }
 
-    public Class Dest {
-        @JsonProperty("CNPJ");
+    public static class Dest {
+        @JsonProperty("CNPJ")
         public String CNPJ;
-        @JsonProperty("CPF");
+        @JsonProperty("CPF")
         public String CPF;
-        @JsonProperty("IE");
+        @JsonProperty("IE")
         public String IE;
         public String xNome;
         public String fone;
@@ -183,78 +183,85 @@ public class GTVeJSON {
         public EnderDest enderDest;
     }
 
-    public Class EnderDest {
+    public static class EnderDest {
         public String xLgr;
         public String nro;
         public String xCpl;
         public String xBairro;
         public String cMun;
         public String xMun;
-        @JsonProperty("CEP");
+        @JsonProperty("CEP")
         public String CEP;
-        @JsonProperty("UF");
+        @JsonProperty("UF")
         public String UF;
         public String cPais;
         public String xPais;
     }
 
-    public Class Origem {
+    public static class Origem {
         public String xLgr;
         public String nro;
         public String xCpl;
         public String xBairro;
         public String cMun;
         public String xMun;
-        @JsonProperty("CEP");
+        @JsonProperty("CEP")
         public String CEP;
-        @JsonProperty("UF");
+        @JsonProperty("UF")
         public String UF;
         public String fone;
     }
 
-    public Class Destino {
+    public static class Destino {
         public String xLgr;
         public String nro;
         public String xCpl;
         public String xBairro;
         public String cMun;
         public String xMun;
-        @JsonProperty("CEP");
+        @JsonProperty("CEP")
         public String CEP;
-        @JsonProperty("UF");
+        @JsonProperty("UF")
         public String UF;
         public String fone;
     }
 
-    public Class DetGTV {
+    public static class DetGTV {
         public InfEspecie infEspecie;
         public String qCarga;
         public InfVeiculo infVeiculo;
     }
 
-    public Class InfEspecie {
-        public String tpEspecie;
-        public String vEspecie;
-        public String tpNumerario;
-        public String xMoedaEstr
-    }
-
-    public Class InfVeiculo {
-        public String placa;
-        @JsonProperty("UF");
-        public String UF;
-        @JsonProperty("RNTRC");
-        public String RNTRC;
-    }
-
-    public Class AuXMl {
-        @JsonProperty("CNPJ");
+    public static class AutXML {
+        @JsonProperty("CNPJ")
         public String CNPJ;
-        @JsonProperty("CPF");
+        @JsonProperty("CPF")
         public String CPF;
     }
 
-    public Class InfRespTec {
+    public static class InfEspecie {
+        public String tpEspecie;
+        public String vEspecie;
+        public String tpNumerario;
+        public String xMoedaEstr;
+    }
+
+    public static class InfVeiculo {
+        public String placa;
+        @JsonProperty("UF")
+        public String UF;
+        @JsonProperty("RNTRC")
+        public String RNTRC;
+    }
+
+    public static class AuXMl {
+        @JsonProperty("CNPJ")
+        public String CNPJ;
+        @JsonProperty("CPF")
+        public String CPF;
+    }
+
+    public static class InfRespTec {
         @JsonProperty("CNPJ")
         public String CNPJ;
         public String xContato;
@@ -263,8 +270,8 @@ public class GTVeJSON {
         public String idCSRT;
         public String hashCSRT;
     }
-    
-    public Class InfCTeSupl {
+
+    public static class InfCTeSupl {
         public String qrCodCTe;
     }
 }

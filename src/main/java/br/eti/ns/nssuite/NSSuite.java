@@ -1,8 +1,6 @@
 package br.eti.ns.nssuite;
 
-import br.eti.ns.nssuite.compartilhados.Endpoints;
-import br.eti.ns.nssuite.compartilhados.Genericos;
-import br.eti.ns.nssuite.compartilhados.Parametros;
+import br.eti.ns.nssuite.compartilhados.*;
 import br.eti.ns.nssuite.requisicoes._genericos.*;
 import br.eti.ns.nssuite.requisicoes.bpe.ConsStatusProcessamentoReqBPe;
 import br.eti.ns.nssuite.requisicoes.bpe.DownloadReqBPe;
@@ -10,6 +8,8 @@ import br.eti.ns.nssuite.requisicoes.bpe.NaoEmbReqBPe;
 import br.eti.ns.nssuite.requisicoes.cte.ConsStatusProcessamentoReqCTe;
 import br.eti.ns.nssuite.requisicoes.cte.DownloadReqCTe;
 import br.eti.ns.nssuite.requisicoes.cte.InfGTVReqCTe;
+import br.eti.ns.nssuite.requisicoes.gtve.ConsStatusProcessamentoReqGTVe;
+import br.eti.ns.nssuite.requisicoes.gtve.DownloadReqGTVe;
 import br.eti.ns.nssuite.requisicoes.mdfe.ConsStatusProcessamentoReqMDFe;
 import br.eti.ns.nssuite.requisicoes.mdfe.DownloadReqMDFe;
 import br.eti.ns.nssuite.requisicoes.mdfe.IncluirDFeReqMDFe;
@@ -21,6 +21,7 @@ import br.eti.ns.nssuite.requisicoes.nfe.ConsStatusProcessamentoReqNFe;
 import br.eti.ns.nssuite.requisicoes.nfe.DownloadReqNFe;
 import br.eti.ns.nssuite.retornos.bpe.EmitirSincronoRetBPe;
 import br.eti.ns.nssuite.retornos.cte.EmitirSincronoRetCTe;
+import br.eti.ns.nssuite.retornos.gtve.EmitirSincronoRetGTVe;
 import br.eti.ns.nssuite.retornos.mdfe.EmitirSincronoRetMDFe;
 import br.eti.ns.nssuite.retornos.nf3e.EmitirSincronoRetNF3e;
 import br.eti.ns.nssuite.retornos.nfce.EmitirSincronoRetNFCe;
@@ -389,7 +390,7 @@ public class NSSuite {
         return resposta;
     }
 
-    public static String informatGTVESalvar(String modelo, InfGTVReqCTe infGTVReqCTe, DownloadEventoReq downloadEventoReq, String caminho, String chave, boolean exibeNaTela) throws Exception {
+    public static String informarGTVESalvar(String modelo, InfGTVReqCTe infGTVReqCTe, DownloadEventoReq downloadEventoReq, String caminho, String chave, boolean exibeNaTela) throws Exception {
         String resposta = informarGTV(modelo, infGTVReqCTe);
         JsonNode respostaJSON = objectMapper.readTree(resposta);
         String status = respostaJSON.get("status").asText();
@@ -1030,7 +1031,7 @@ public class NSSuite {
         String statusDownload = "";
         String motivo = "";
         String nsNRec = "";
-        String chGVTe = "";
+        String chGTVe = "";
         String cStat = "";
         String nProt = "";
 
@@ -1085,16 +1086,16 @@ public class NSSuite {
 
                 if (cStat.equals("100") || cStat.equals("150")) {
 
-                    chNF3e = respostaJSON.get("chNF3e").asText(); 
+                    chGTVe = respostaJSON.get("chGTVe").asText();
                     nProt = respostaJSON.get("nProt").asText();
                     motivo = respostaJSON.get("xMotivo").asText();
 
                     DownloadReqGTVe downloadReqGTVe = new DownloadReqGTVe();
-                    downloadReqGTVe.chGTVe = chGTVe;
+                    downloadReqGTVe.chGTVe= chGTVe;
                     downloadReqGTVe.tpAmb = tpAmb; 
                     downloadReqGTVe.tpDown = tpDown;
 
-                    resposta = downloadDocumentoESalvar(modelo, downloadReqNF3e, caminho, chGTVe + "-GTVe", exibeNaTela);
+                    resposta = downloadDocumentoESalvar(modelo, downloadReqGTVe, caminho, chGTVe + "-GTVe", exibeNaTela);
                     respostaJSON = objectMapper.readTree(resposta);
                     statusDownload = respostaJSON.get("status").asText();
 
@@ -1136,16 +1137,16 @@ public class NSSuite {
                 motivo = respostaJSON.toString();
             }
         }
-        EmitirSincronoRetGTVe emitirSincronoRetNF3e = new EmitirSincronoRetNF3e();
-        emitirSincronoRetGTVe.statusEnvio = statusEnvio;
-        emitirSincronoRetGTVe.statusConsulta = statusConsulta;
-        emitirSincronoRetGTVe.statusDownload = statusDownload;
-        emitirSincronoRetGTVe.cStat = cStat;
-        emitirSincronoRetGTVe.chGTVe = chGTVe;
-        emitirSincronoRetGTVe.nProt = nProt;
-        emitirSincronoRetGTVe.motivo = motivo;
-        emitirSincronoRetGTVe.nsNRec = nsNRec;
-        emitirSincronoRetGTVe.erros = erros;
+        EmitirSincronoRetGTVe emitirSincronoRetNF3e = new EmitirSincronoRetGTVe();
+        emitirSincronoRetNF3e.statusEnvio = statusEnvio;
+        emitirSincronoRetNF3e.statusConsulta = statusConsulta;
+        emitirSincronoRetNF3e.statusDownload = statusDownload;
+        emitirSincronoRetNF3e.cStat = cStat;
+        emitirSincronoRetNF3e.chGTVe = chGTVe;
+        emitirSincronoRetNF3e.nProt = nProt;
+        emitirSincronoRetNF3e.motivo = motivo;
+        emitirSincronoRetNF3e.nsNRec = nsNRec;
+        emitirSincronoRetNF3e.erros = erros;
 
         String retorno = objectMapper.writeValueAsString(emitirSincronoRetNF3e);
 
@@ -1235,7 +1236,7 @@ public class NSSuite {
                 break;
             }
             case "64": {
-                urlEnvio = endpoints.GTVeEnvio;
+                urlConsulta = endpoints.GTVeConsStatusProcessamento;
                 break;
             }
             default: {
@@ -1283,7 +1284,7 @@ public class NSSuite {
                 break;
             }
             case "64": {
-                urlEnvio = endpoints.GTVeEnvio;
+                urlDownload = endpoints.GTVeDownload;
                 break;
             }
             default: {
@@ -1407,7 +1408,7 @@ public class NSSuite {
             }
 
             case "64": {
-                urlEnvio = endpoints.GTVeEnvio;
+                urlDownloadEvento = endpoints.GTVeDownloadEvento;
                 break;
             }
 
@@ -1537,7 +1538,7 @@ public class NSSuite {
             }
 
             case "64": {
-                urlEnvio = endpoints.GTVeEnvio;
+                urlCancelamento = endpoints.GTVeCancelamento;
                 break;
             }
 
@@ -1631,8 +1632,7 @@ public class NSSuite {
 
             case "65":{
                 urlInutilizacao = endpoints.NFCeInutilizacao;
-                brea
-                k;
+                break;
             }
             case "55":{
                 urlInutilizacao = endpoints.NFeInutilizacao;
@@ -1777,7 +1777,7 @@ public class NSSuite {
             }
 
             case "64": {
-                urlEnvio = endpoints.GTVeEnvio;
+                urlConsSit = endpoints.GTVeConsSit;
                 break;
             }
 
@@ -1828,7 +1828,7 @@ public class NSSuite {
             }
 
             case "64": {
-                urlEnvio = endpoints.GTVeEnvio;
+                urlListarNSNRecs = endpoints.GTVeListarNSNRecs;
                 break;
             }
 
@@ -1867,7 +1867,7 @@ public class NSSuite {
                 urlEnviarEmail = endpoints.NFeEnvioEmail;
                 break;
             }
-            
+
             default:
             {
                 throw new Exception("Não definido endpoint de envio de e-mail para o modelo " + modelo);
