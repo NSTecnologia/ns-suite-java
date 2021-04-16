@@ -62,20 +62,16 @@ public class NSSuite {
             } 
             else if (tpConteudo.equals("xml")) {
                 respostaServidor = target.request(MediaType.APPLICATION_XML)
-
                         // pode ser enviado também no json junto com os dados da nfce
                         .header("X-AUTH-TOKEN", token)
                         .post(Entity.xml(conteudo));
-
             } 
             else {
                 respostaServidor = target.request(MediaType.APPLICATION_JSON)
 
                         // pode ser enviado também no json junto com os dados da nfce
-
                         .header("X-AUTH-TOKEN", token)
                         .post(Entity.json(conteudo));
-
             }
         } 
         catch (Exception e) {
@@ -116,7 +112,7 @@ public class NSSuite {
             respostaJSON = objectMapper.readTree(resposta);
             statusConsulta = respostaJSON.get("status").asText();
 
-            if(statusConsulta.equals("-2")){
+            if (statusConsulta.equals("-2")) {
                 cStat = respostaJSON.get("cStat").asText();
                 if(cStat.equals("996")){
                     motivo = respostaJSON.get("erro").get("xMotivo").asText();
@@ -129,16 +125,17 @@ public class NSSuite {
                         statusConsulta = respostaJSON.get("status").asText();
                         if(!statusConsulta.equals("-2")){ break; }
                     }
-                } else {
+                } 
+                else {
                     motivo = respostaJSON.get("motivo").asText();
                 }
             }
 
-            if(statusConsulta.equals("200")){
+            if (statusConsulta.equals("200")) {
 
                 cStat = respostaJSON.get("cStat").asText();
 
-                if(cStat.equals("100")){
+                if (cStat.equals("100")){
 
                     chBPe = respostaJSON.get("chBPe").asText();
                     nProt = respostaJSON.get("nProt").asText();
@@ -371,7 +368,6 @@ public class NSSuite {
         String urlInfGTV;
         switch (modelo)
         {
-            case "57":
             case "67":{
                 urlInfGTV = endpoints.CTeCancelamento;
                 break;
@@ -1025,6 +1021,141 @@ public class NSSuite {
         return retorno;
     }
 
+    public static String emitirGTVeSincrono(String conteudo, String tpConteudo, String CNPJ, String tpDown, String tpAmb, String caminho, boolean exibeNaTela) throws Exception {
+        ArrayList<String> erros = new ArrayList<>();
+
+        String modelo = "64";
+        String statusEnvio = "";
+        String statusConsulta = "";
+        String statusDownload = "";
+        String motivo = "";
+        String nsNRec = "";
+        String chGVTe = "";
+        String cStat = "";
+        String nProt = "";
+
+        Genericos.gravarLinhaLog(modelo, "[EMISSAO_SINCRONA_INICIO]");
+
+        String resposta = emitirDocumento(modelo, conteudo, tpConteudo);
+        JsonNode respostaJSON = objectMapper.readTree(resposta);
+        statusEnvio = respostaJSON.get("status").asText();
+
+        // Testa se o envio foi feito com sucesso (200) ou se é para reconsultar (-6)
+        if (statusEnvio.equals("200") || statusEnvio.equals("-6")) {
+
+            nsNRec = respostaJSON.get("nsNRec").asText();
+
+            // É necessário aguardar alguns milisegundos antes de consultar o status de
+            // processamento
+            Thread.sleep(parametros.TEMPO_ESPERA);
+
+            ConsStatusProcessamentoReqGTVe consStatusProcessamentoReqGTVe = new ConsStatusProcessamentoReqGTVe();
+            consStatusProcessamentoReqGTVe.CNPJ = CNPJ;
+            consStatusProcessamentoReqGTVe.nsNRec = nsNRec;
+            consStatusProcessamentoReqGTVe.tpAmb = tpAmb;
+
+            resposta = consultarStatusProcessamento(modelo, consStatusProcessamentoReqGTVe);
+            respostaJSON = objectMapper.readTree(resposta);
+            statusConsulta = respostaJSON.get("status").asText();
+
+            if (statusConsulta.equals("-2")) {
+                cStat = respostaJSON.get("cStat").asText();
+                if (cStat.equals("996")) {
+                    motivo = respostaJSON.get("erro").get("xMotivo").asText();
+                    for (int i = 1; i <= 3; i++) {
+                        try {
+                            Thread.sleep(6000 - (i * 1000));
+                        } catch (InterruptedException ignored) {
+                        }
+                        resposta = consultarStatusProcessamento(modelo, consStatusProcessamentoReqGTVe);
+                        respostaJSON = objectMapper.readTree(resposta);
+                        statusConsulta = respostaJSON.get("status").asText();
+                        if (!statusConsulta.equals("-2")) {
+                            break;
+                        }
+                    }
+                } else {
+                    motivo = respostaJSON.get("xMotivo").asText();
+                }
+            }
+            // Testa se a consulta foi feita com sucesso (200)
+            if (statusConsulta.equals("200")) {
+
+                cStat = respostaJSON.get("cStat").asText();
+
+                if (cStat.equals("100") || cStat.equals("150")) {
+
+                    chNF3e = respostaJSON.get("chNF3e").asText(); 
+                    nProt = respostaJSON.get("nProt").asText();
+                    motivo = respostaJSON.get("xMotivo").asText();
+
+                    DownloadReqGTVe downloadReqGTVe = new DownloadReqGTVe();
+                    downloadReqGTVe.chGTVe = chGTVe;
+                    downloadReqGTVe.tpAmb = tpAmb; 
+                    downloadReqGTVe.tpDown = tpDown;
+
+                    resposta = downloadDocumentoESalvar(modelo, downloadReqNF3e, caminho, chGTVe + "-GTVe", exibeNaTela);
+                    respostaJSON = objectMapper.readTree(resposta);
+                    statusDownload = respostaJSON.get("status").asText();
+
+                    if (!statusDownload.equals("200"))
+                        motivo = respostaJSON.get("motivo").asText();
+                }
+                else {
+                    motivo = respostaJSON.get("xMotivo").asText();
+                }
+            }
+            else if (statusConsulta.equals("-2")) {
+
+                cStat = respostaJSON.get("cStat").asText();
+                motivo = respostaJSON.get("erro").get("xMotivo").asText();
+
+            } else {
+                motivo = respostaJSON.get("motivo").asText();
+            }
+        } else if (statusEnvio.equals("-7")) {
+
+            motivo = respostaJSON.get("motivo").asText();
+            nsNRec = respostaJSON.get("nsNRec").asText();
+
+        } else if (statusEnvio.equals("-4") || statusEnvio.equals("-2")) {
+
+            motivo = respostaJSON.get("motivo").asText();
+            erros = objectMapper.readValue(respostaJSON.get("erros").toString(),
+                    new TypeReference<ArrayList<String>>() {
+                    });
+
+        } else if (statusEnvio.equals("-999") || statusEnvio.equals("-5")) {
+
+            motivo = respostaJSON.get("erro").get("xMotivo").asText();
+
+        } else {
+            try {
+                motivo = respostaJSON.get("motivo").asText();
+            } catch (Exception ex) {
+                motivo = respostaJSON.toString();
+            }
+        }
+        EmitirSincronoRetGTVe emitirSincronoRetNF3e = new EmitirSincronoRetNF3e();
+        emitirSincronoRetGTVe.statusEnvio = statusEnvio;
+        emitirSincronoRetGTVe.statusConsulta = statusConsulta;
+        emitirSincronoRetGTVe.statusDownload = statusDownload;
+        emitirSincronoRetGTVe.cStat = cStat;
+        emitirSincronoRetGTVe.chGTVe = chGTVe;
+        emitirSincronoRetGTVe.nProt = nProt;
+        emitirSincronoRetGTVe.motivo = motivo;
+        emitirSincronoRetGTVe.nsNRec = nsNRec;
+        emitirSincronoRetGTVe.erros = erros;
+
+        String retorno = objectMapper.writeValueAsString(emitirSincronoRetNF3e);
+
+        Genericos.gravarLinhaLog(modelo, "[JSON_RETORNO]");
+        Genericos.gravarLinhaLog(modelo, retorno);
+        Genericos.gravarLinhaLog(modelo, "[EMISSAO_SINCRONA_FIM]");
+
+        return retorno;
+    }
+
     // Métodos genéricos, compartilhados entre diversas funções
     public static String emitirDocumento(String modelo, String conteudo, String tpConteudo) throws Exception {
         String urlEnvio;
@@ -1058,6 +1189,11 @@ public class NSSuite {
                 urlEnvio = endpoints.NF3eEnvio;
                 break;
             }
+            case "64": {
+                urlEnvio = endpoints.GTVeEnvio;
+                break;
+            }
+
             default: {
                 throw new Exception("Não definido endpoint de envio para o modelo " + modelo);
             }
@@ -1082,7 +1218,6 @@ public class NSSuite {
                 urlConsulta = endpoints.BPeConsStatusProcessamento;
                 break;
             }
-            case "57":
             case "67": {
                 urlConsulta = endpoints.CTeConsStatusProcessamento;
                 break;
@@ -1097,6 +1232,10 @@ public class NSSuite {
             }
             case "66": {
                 urlConsulta = endpoints.NF3eConsStatusProcessamento;
+                break;
+            }
+            case "64": {
+                urlEnvio = endpoints.GTVeEnvio;
                 break;
             }
             default: {
@@ -1143,6 +1282,10 @@ public class NSSuite {
                 urlDownload = endpoints.NF3eDownload;
                 break;
             }
+            case "64": {
+                urlEnvio = endpoints.GTVeEnvio;
+                break;
+            }
             default: {
                 throw new Exception("Não definido endpoint de Download para o modelo " + modelo);
             }
@@ -1185,7 +1328,8 @@ public class NSSuite {
                 File diretorio = new File(caminho);
                 if(!diretorio.exists()) diretorio.mkdirs();
                 if(!caminho.endsWith("\\")) caminho += "\\";
-            }catch (Exception ex){
+            }
+            catch (Exception ex){
                 Genericos.gravarLinhaLog(modelo, "[CRIAR_DIRETORIO]" + caminho);
                 Genericos.gravarLinhaLog(modelo, ex.getMessage());
                 throw new Exception("Erro: " + ex.getMessage());
@@ -1207,7 +1351,8 @@ public class NSSuite {
                         Desktop.getDesktop().open(arq);
                     }
                 }
-            }else{
+            }
+            else {
                 String xml = respostaJSON.get("nfeProc").get("xml").asText();
                 Genericos.salvarXML(xml, caminho, nome);
 
@@ -1219,8 +1364,9 @@ public class NSSuite {
                     Desktop.getDesktop().open(arq);
                 }
             }
-        }else{
-            JOptionPane.showMessageDialog(null,"Ocorreu um erro, veja o retorno da API para mais informaçõe");
+        }
+        else {
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro, veja o retorno da API para mais informações");
         }
         return resposta;
     }
@@ -1229,6 +1375,7 @@ public class NSSuite {
         String urlDownloadEvento;
 
         switch (modelo){
+
             case "63":{
                 urlDownloadEvento = endpoints.BPeDownloadEvento;
                 break;
@@ -1259,6 +1406,11 @@ public class NSSuite {
                 break;
             }
 
+            case "64": {
+                urlEnvio = endpoints.GTVeEnvio;
+                break;
+            }
+
             default:{
                 throw new Exception("Não definido endpoint de download de evento para o modelo " + modelo);
             }
@@ -1279,7 +1431,8 @@ public class NSSuite {
         if ((!status.equals("200")) && (!status.equals("100"))){
             Genericos.gravarLinhaLog(modelo, "[DOWNLOAD_EVENTO_RESPOSTA]");
             Genericos.gravarLinhaLog(modelo, resposta);
-        }else{
+        }
+        else {
             Genericos.gravarLinhaLog(modelo, "[DOWNLOAD_EVENTO_STATUS]");
             Genericos.gravarLinhaLog(modelo, status);
         }
@@ -1328,7 +1481,8 @@ public class NSSuite {
                         }
                     }
                 }
-            }else{
+            } 
+            else {
                 String xml = respostaJSON.get("nfeProc").get("xml").asText();
                 Genericos.salvarXML(xml, caminho, tpEventoSalvar + chave + nSeqEvento + "-procEven");
 
@@ -1340,15 +1494,18 @@ public class NSSuite {
                     Desktop.getDesktop().open(arq);
                 }
             }
-        }else{
+        } 
+        else {
             JOptionPane.showMessageDialog(null, "Ocorreu um erro, veja o retorno da API para mais informações");
         }
+
         return resposta;
     }
 
     public static String cancelarDocumento(String modelo, CancelarReq cancelarReq) throws Exception {
         String urlCancelamento;
         switch (modelo){
+
             case "63":{
                 urlCancelamento = endpoints.BPeCancelamento;
                 break;
@@ -1358,7 +1515,6 @@ public class NSSuite {
                 urlCancelamento = endpoints.CTeCancelamento;
                 break;
             }
-            
 
             case "58":{
                 urlCancelamento = endpoints.MDFeCancelamento;
@@ -1377,6 +1533,11 @@ public class NSSuite {
 
             case "66": {
                 urlCancelamento = endpoints.NF3eCancelamento;
+                break;
+            }
+
+            case "64": {
+                urlEnvio = endpoints.GTVeEnvio;
                 break;
             }
 
@@ -1408,7 +1569,8 @@ public class NSSuite {
             if (cStat.equals("135")){
                 String respostaDownloadEvento = downloadEventoESalvar(modelo, downloadEventoReq, caminho, chave, "1", exibeNaTela);
             }
-        }else{
+        } 
+        else {
             JOptionPane.showMessageDialog(null, "Ocorreu um erro ao cancelar, veja o retorno da API para mais informações");
         }
         return resposta;
@@ -1461,19 +1623,22 @@ public class NSSuite {
         String urlInutilizacao;
 
         switch (modelo){
-            case "57":
+
             case "67":{
                 urlInutilizacao = endpoints.CTeInutilizacao;
                 break;
             }
+
             case "65":{
                 urlInutilizacao = endpoints.NFCeInutilizacao;
-                break;
+                brea
+                k;
             }
             case "55":{
                 urlInutilizacao = endpoints.NFeInutilizacao;
                 break;
             }
+
             default:{
                 throw new Exception("Não definido endpoint de inutilização para o modelo " + modelo);
             }
@@ -1502,8 +1667,8 @@ public class NSSuite {
         if (status.equals("102") || status.equals("200")){
             String cStat = respostaJSON.get("cStat").asText();
             if (cStat.equals("102")){
-                switch (modelo){
-                    case "57":
+                switch (modelo) {
+
                     case "67":{
                         xml = respostaJSON.get("retornoInutCTe").get("xmlInut").asText();
                         chave = respostaJSON.get("retornoInutCTe").get("chave").asText();
@@ -1528,7 +1693,8 @@ public class NSSuite {
                     }
                 }
             }
-        }else{
+        } 
+        else {
             JOptionPane.showMessageDialog(null, "Ocorreu um erro ao inutilizar a numeração, veja o retorno da API para mais informações");
         }
 
@@ -1547,7 +1713,7 @@ public class NSSuite {
         String urlConsCad;
 
         switch (modelo){
-            case "57":
+
             case "67":{
                 urlConsCad = endpoints.CTeConsCad;
                 break;
@@ -1610,6 +1776,11 @@ public class NSSuite {
                 break;
             }
 
+            case "64": {
+                urlEnvio = endpoints.GTVeEnvio;
+                break;
+            }
+
             default:{
                 throw new Exception("Não definido endpoint de consulta de situação para o modelo " + modelo);
             }
@@ -1656,6 +1827,11 @@ public class NSSuite {
                 break;
             }
 
+            case "64": {
+                urlEnvio = endpoints.GTVeEnvio;
+                break;
+            }
+
             default:
             {
                 throw new Exception("Não definido endpoint de listagem de nsNRec para o modelo " + modelo);
@@ -1691,7 +1867,7 @@ public class NSSuite {
                 urlEnviarEmail = endpoints.NFeEnvioEmail;
                 break;
             }
-
+            
             default:
             {
                 throw new Exception("Não definido endpoint de envio de e-mail para o modelo " + modelo);
@@ -1704,7 +1880,7 @@ public class NSSuite {
         Genericos.gravarLinhaLog(modelo, json);
 
         String resposta = enviaConteudoParaAPI(json, urlEnviarEmail, "json");
-
+        
         Genericos.gravarLinhaLog(modelo, "[ENVIAR_EMAIL_RESPOSTA]");
         Genericos.gravarLinhaLog(modelo, resposta);
 
