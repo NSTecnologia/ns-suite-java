@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6060879f-d038-4cfa-8cb2-11c0a58c0878" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmEmissaoTesteGTVe.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmEmissaoTesteGTVe.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmEmissaoTesteGTVe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmEmissaoTesteGTVe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/GTVe/GTVeJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/GTVe/GTVeJSON.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/ConsSitReqGVTe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/ConsStatusProcessamentoReqGVTe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/DownloadEventoReqGVTe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/DownloadReqGVTe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/ListarNSNRecReqGVTe.java" beforeDir="false" />
-    </list>
+    <list default="true" id="6060879f-d038-4cfa-8cb2-11c0a58c0878" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,9 +26,6 @@
         <option name="jdkForImporter" value="1.8" />
       </MavenImportingSettings>
     </option>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1VD8NkbsOU6Zg25oOQoSDPTyc18" />
   <component name="ProjectViewState">
@@ -106,7 +92,21 @@
       <option name="project" value="LOCAL" />
       <updated>1618411131035</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- Implementado o form para realizar testes com a GTVe;&#10;- Corrigido erros nas funcoes e classes da GTVe">
+      <created>1618608128504</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1618608128504</updated>
+    </task>
+    <task id="LOCAL-00004" summary="- Implementado o form para realizar testes com a GTVe;&#10;- Corrigido erros nas funcoes e classes da GTVe">
+      <created>1618608139723</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1618608139723</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,7 +124,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Atualizando Classes e Métodos" />
     <MESSAGE value="Ajustes na função que realiza o download de evento" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustes na função que realiza o download de evento" />
+    <MESSAGE value="- Implementado o form para realizar testes com a GTVe;&#10;- Corrigido erros nas funcoes e classes da GTVe" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Implementado o form para realizar testes com a GTVe;&#10;- Corrigido erros nas funcoes e classes da GTVe" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/nssuite$frmemissaoTeste.ic" NAME="frmemissaoTeste Coverage Results" MODIFIED="1614263985123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
