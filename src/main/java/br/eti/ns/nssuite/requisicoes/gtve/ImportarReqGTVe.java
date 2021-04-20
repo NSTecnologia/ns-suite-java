@@ -1,5 +1,5 @@
 package br.eti.ns.nssuite.requisicoes.gtve;
 
 public class ImportarReqGTVe {
-    public String chCTe;
+    public String xml
 }

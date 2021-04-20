@@ -154,33 +154,40 @@ public class NSSuite {
 
                     //Testa se houve problema no download
                     if (!statusDownload.equals("200")) motivo = respostaJSON.get("motivo").asText();
-                }else{
+                }
+                else{
                     motivo = respostaJSON.get("xMotivo").asText();
                 }
 
-            }else if (statusConsulta.equals("-2")){
+            }
+            else if (statusConsulta.equals("-2")){
                 cStat = respostaJSON.get("cStat").asText();
                 motivo = respostaJSON.get("erro").get("motivo").asText();
 
-            }else{
+            }
+            else{
                 motivo = respostaJSON.get("motivo").asText();
             }
 
-        } else if (statusEnvio.equals("-5")) {
+        } 
+        else if (statusEnvio.equals("-5")) {
             cStat = respostaJSON.get("erro").get("cStat").asText();
             motivo = respostaJSON.get("erro").get("xMotivo").asText();
 
-        } else if (statusEnvio.equals("-4") || statusEnvio.equals("-2")) {
+        } 
+        else if (statusEnvio.equals("-4") || statusEnvio.equals("-2")) {
             motivo = respostaJSON.get("motivo").asText();
             erros = objectMapper.readValue(respostaJSON.get("erros").toString(), new TypeReference<ArrayList<String>>(){});
 
-        } else {
+        } 
+        else {
             try {
                 motivo = respostaJSON.get("motivo").asText();
             } catch (Exception ex) {
                 motivo = respostaJSON.toString();
             }
         }
+
         EmitirSincronoRetBPe emitirSincronoRetBPe = new EmitirSincronoRetBPe();
         emitirSincronoRetBPe.statusEnvio = statusEnvio;
         emitirSincronoRetBPe.statusConsulta = statusConsulta;
@@ -238,7 +245,8 @@ public class NSSuite {
             if (cStat.equals("135")){
                 String respostaDownloadEvento = downloadEventoESalvar(modelo, downloadEventoReq, caminho, chave, "", exibeNaTela);
             }
-        }else{
+        }
+        else{
             JOptionPane.showMessageDialog(null, "Ocorreu um erro ao não embarcar, veja o retorno da API para mais informaçõe");
         }
         return resposta;
@@ -370,7 +378,7 @@ public class NSSuite {
         switch (modelo)
         {
             case "67":{
-                urlInfGTV = endpoints.CTeCancelamento;
+                urlInfGTV = endpoints.CTeInfGTV;
                 break;
             }
             default: {
@@ -911,8 +919,7 @@ public class NSSuite {
 
             nsNRec = respostaJSON.get("nsNRec").asText();
 
-            // É necessário aguardar alguns milisegundos antes de consultar o status de
-            // processamento
+            // É necessário aguardar alguns milisegundos antes de consultar o status de processamento
             Thread.sleep(parametros.TEMPO_ESPERA);
 
             ConsStatusProcessamentoReqNF3e consStatusProcessamentoReqNF3e = new ConsStatusProcessamentoReqNF3e();
@@ -1002,6 +1009,7 @@ public class NSSuite {
                 motivo = respostaJSON.toString();
             }
         }
+
         EmitirSincronoRetNF3e emitirSincronoRetNF3e = new EmitirSincronoRetNF3e();
         emitirSincronoRetNF3e.statusEnvio = statusEnvio;
         emitirSincronoRetNF3e.statusConsulta = statusConsulta;
@@ -1022,6 +1030,7 @@ public class NSSuite {
         return retorno;
     }
 
+    // Metodos especifico da GTVe
     public static String emitirGTVeSincrono(String conteudo, String tpConteudo, String CNPJ, String tpDown, String tpAmb, String caminho, boolean exibeNaTela) throws Exception {
         ArrayList<String> erros = new ArrayList<>();
 
@@ -1155,6 +1164,25 @@ public class NSSuite {
         Genericos.gravarLinhaLog(modelo, "[EMISSAO_SINCRONA_FIM]");
 
         return retorno;
+    }
+
+    public static String ImportarGTVe(String conteudo, String tpConteudo,) throws Exception {
+
+        String modelo = "64";
+        String urlEnvio = endpoints.GTVeImportar;
+        
+        String json = objectMapper.writeValueAsString(ImportarReqGTVe);
+
+        Genericos.gravarLinhaLog(modelo, "[IMPORTAR_GTVE_ENVIO_DADOS]");
+        Genericos.gravarLinhaLog(modelo, json);
+
+        String resposta = enviaConteudoParaAPI(json, urlEnvio, "xml")
+
+        Genericos.gravarLinhaLog(modelo, "[IMPORTAR_GTVE_RESPOSTA]");
+        Genericos.gravarLinhaLog(modelo, resposta);
+
+        return resposta;
+        
     }
 
     // Métodos genéricos, compartilhados entre diversas funções
