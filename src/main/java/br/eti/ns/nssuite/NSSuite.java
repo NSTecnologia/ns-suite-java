@@ -1031,7 +1031,7 @@ public class NSSuite {
         String statusDownload = "";
         String motivo = "";
         String nsNRec = "";
-        String chGTVe = "";
+        String chCTe = "";
         String cStat = "";
         String nProt = "";
 
@@ -1086,16 +1086,16 @@ public class NSSuite {
 
                 if (cStat.equals("100") || cStat.equals("150")) {
 
-                    chGTVe = respostaJSON.get("chGTVe").asText();
+                    chCTe = respostaJSON.get("chCTe").asText();
                     nProt = respostaJSON.get("nProt").asText();
                     motivo = respostaJSON.get("xMotivo").asText();
 
                     DownloadReqGTVe downloadReqGTVe = new DownloadReqGTVe();
-                    downloadReqGTVe.chGTVe= chGTVe;
+                    downloadReqGTVe.chCTe= chCTe;
                     downloadReqGTVe.tpAmb = tpAmb; 
                     downloadReqGTVe.tpDown = tpDown;
 
-                    resposta = downloadDocumentoESalvar(modelo, downloadReqGTVe, caminho, chGTVe + "-GTVe", exibeNaTela);
+                    resposta = downloadDocumentoESalvar(modelo, downloadReqGTVe, caminho, chCTe + "-GTVe", exibeNaTela);
                     respostaJSON = objectMapper.readTree(resposta);
                     statusDownload = respostaJSON.get("status").asText();
 
@@ -1138,15 +1138,15 @@ public class NSSuite {
             }
         }
         EmitirSincronoRetGTVe emitirSincronoRetNF3e = new EmitirSincronoRetGTVe();
-        emitirSincronoRetNF3e.statusEnvio = statusEnvio;
-        emitirSincronoRetNF3e.statusConsulta = statusConsulta;
-        emitirSincronoRetNF3e.statusDownload = statusDownload;
-        emitirSincronoRetNF3e.cStat = cStat;
-        emitirSincronoRetNF3e.chGTVe = chGTVe;
-        emitirSincronoRetNF3e.nProt = nProt;
-        emitirSincronoRetNF3e.motivo = motivo;
-        emitirSincronoRetNF3e.nsNRec = nsNRec;
-        emitirSincronoRetNF3e.erros = erros;
+        emitirSincronoRetGTVe.statusEnvio = statusEnvio;
+        emitirSincronoRetGTVe.statusConsulta = statusConsulta;
+        emitirSincronoRetGTVe.statusDownload = statusDownload;
+        emitirSincronoRetGTVe.cStat = cStat;
+        emitirSincronoRetGTVe.chCTe = chCTe;
+        emitirSincronoRetGTVe.nProt = nProt;
+        emitirSincronoRetGTVe.motivo = motivo;
+        emitirSincronoRetGTVe.nsNRec = nsNRec;
+        emitirSincronoRetGTVe.erros = erros;
 
         String retorno = objectMapper.writeValueAsString(emitirSincronoRetNF3e);
 

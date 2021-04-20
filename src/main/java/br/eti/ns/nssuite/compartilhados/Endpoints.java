@@ -86,12 +86,12 @@ public class Endpoints {
 
     // GTVe
 
-    public String GTVeEnvio = "https://gtve.ns.eti.br/v1/issue";
-    public String GTVeConsStatusProcessamento = "https://gtve.ns.eti.br/v1/issue/status";
-    public String GTVeDownload = "https://gtve.ns.eti.br/v1/issue/get";
-    public String GTVeCancelamento = "https://gtve.ns.eti.br/v1/event/cancel";
-    public String GTVeDownloadEvento = "https://gtve.ns.eti.br/v1/event/get/";
-    public String GTVeConsSit = "https://gtve.ns.eti.br/v1/util/situation";
-    public String GTVeListarNSNRecs = "https://gtve.ns.eti.br/v1/util/nsnrecslist";
-    public String GTVeImportar = "https://gtve.ns.eti.br/v1/util/imports";
+    public String GTVeEnvio = "https://gtve.ns.eti.br/v1/gtve/issue";
+    public String GTVeConsStatusProcessamento = "https://gtve.ns.eti.br/v1/gtve/issue/status";
+    public String GTVeDownload = "https://gtve.ns.eti.br/v1/gtve/get";
+    public String GTVeCancelamento = "https://gtve.ns.eti.br/v1/gtve/cancel";
+    public String GTVeDownloadEvento = "https://gtve.ns.eti.br/v1/gtve/get/event";
+    public String GTVeConsSit = "https://gtve.ns.eti.br/v1/gtve/status";
+    public String GTVeListarNSNRecs = "https://gtve.ns.eti.br/v1/util/nsnrecs";
+    public String GTVeImportar = "https://gtve.ns.eti.br/v1/gtve/import";
 }

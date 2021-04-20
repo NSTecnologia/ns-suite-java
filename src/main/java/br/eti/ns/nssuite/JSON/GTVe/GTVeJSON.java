@@ -7,14 +7,14 @@ import java.util.List;
 
 public class GTVeJSON {
     @JsonProperty("GTVe")
-    public GTVe GTVe;
+    public GTVe gtVe;
     
-    public static class GTVe{
+    public static class GTVe {
         public String versao;
         public InfCTe infCTe;
     }
-
-    public static class InfCTe {
+		
+	public static class InfCTe {
         public String versao;
         public String Id;
         public Ide ide;
@@ -252,13 +252,6 @@ public class GTVeJSON {
         public String UF;
         @JsonProperty("RNTRC")
         public String RNTRC;
-    }
-
-    public static class AuXMl {
-        @JsonProperty("CNPJ")
-        public String CNPJ;
-        @JsonProperty("CPF")
-        public String CPF;
     }
 
     public static class InfRespTec {
