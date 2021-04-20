@@ -19,7 +19,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class frmemissaoTesteNF3e {
+public class frmEmissaoTesteNF3e {
 
     private JPanel panelNF3e;
     private JButton btnEnviarNF3e;
@@ -29,7 +29,7 @@ public class frmemissaoTesteNF3e {
     private JButton btnListarNSNrec;
     private JButton btnDownloadNF3e;
 
-    public frmemissaoTesteNF3e() {
+    public frmEmissaoTesteNF3e() {
 
         // NF3e
         btnEnviarNF3e.addActionListener(e -> {
@@ -461,7 +461,7 @@ public class frmemissaoTesteNF3e {
     };
     public static void main (String[] args) {
         JFrame frame = new JFrame("frmEmissaoTesteNF3e");
-        frame.setContentPane(new frmemissaoTesteNF3e().panelNF3e);
+        frame.setContentPane(new frmEmissaoTesteNF3e().panelNF3e);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);

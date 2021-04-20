@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6060879f-d038-4cfa-8cb2-11c0a58c0878" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/log/20210420.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/20210420.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmEmissaoTesteGTVe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmEmissaoTesteGTVe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmEmissaoTesteGTVe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmEmissaoTesteGTVe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmemissaoTesteNF3e.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmemissaoTesteNF3e.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmemissaoTesteNF3e.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmemissaoTesteNF3e.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="415" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
