@@ -1166,6 +1166,25 @@ public class NSSuite {
         return retorno;
     }
 
+    public static String ImportarGTVe(String conteudo, String tpConteudo,) throws Exception {
+
+        String modelo = "64";
+        String urlEnvio = endpoints.GTVeImportar;
+        
+        String json = objectMapper.writeValueAsString(ImportarReqGTVe);
+
+        Genericos.gravarLinhaLog(modelo, "[IMPORTAR_GTVE_ENVIO_DADOS]");
+        Genericos.gravarLinhaLog(modelo, json);
+
+        String resposta = enviaConteudoParaAPI(json, urlEnvio, "xml")
+
+        Genericos.gravarLinhaLog(modelo, "[IMPORTAR_GTVE_RESPOSTA]");
+        Genericos.gravarLinhaLog(modelo, resposta);
+
+        return resposta;
+        
+    }
+
     // Métodos genéricos, compartilhados entre diversas funções
     public static String emitirDocumento(String modelo, String conteudo, String tpConteudo) throws Exception {
         String urlEnvio;
