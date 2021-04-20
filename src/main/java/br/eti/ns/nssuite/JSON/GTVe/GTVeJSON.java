@@ -11,10 +11,10 @@ public class GTVeJSON {
     
     public static class GTVe {
         public String versao;
-        public InfCTe infCTe;
+        public InfCte infCte;
     }
 		
-	public static class InfCTe {
+	public static class InfCte {
         public String versao;
         public String Id;
         public Ide ide;

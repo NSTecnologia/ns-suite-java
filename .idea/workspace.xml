@@ -6,21 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6060879f-d038-4cfa-8cb2-11c0a58c0878" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmEmissaoTesteGTVe.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmEmissaoTesteGTVe.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmEmissaoTesteGTVe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmEmissaoTesteGTVe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmemissaoTesteNF3e.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmemissaoTesteNF3e.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmemissaoTesteNF3e.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmemissaoTesteNF3e.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/GTVe/GTVeJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/GTVe/GTVeJSON.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/compartilhados/Endpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/compartilhados/Endpoints.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/compartilhados/Genericos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/compartilhados/Genericos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/CancelarReqGTVe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/CancelarReqGTVe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/ConsSitReqGTVe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/ConsSitReqGTVe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/ConsStatusProcessamentoReqGTVe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/ConsStatusProcessamentoReqGTVe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/DownloadEventoReqGTVe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/DownloadEventoReqGTVe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/DownloadReqGTVe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/DownloadReqGTVe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/ImportarReqGTVe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/ImportarReqGTVe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/ListarNSNRecReqGTVe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/ListarNSNRecReqGTVe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/gtve/EmitirSincronoRetGTVe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/gtve/EmitirSincronoRetGTVe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmEmissaoTesteGTVe$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmEmissaoTesteGTVe$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmEmissaoTesteGTVe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmEmissaoTesteGTVe.class" afterDir="false" />
     </list>

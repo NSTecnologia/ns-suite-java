@@ -1137,7 +1137,7 @@ public class NSSuite {
                 motivo = respostaJSON.toString();
             }
         }
-        EmitirSincronoRetGTVe emitirSincronoRetNF3e = new EmitirSincronoRetGTVe();
+        EmitirSincronoRetGTVe emitirSincronoRetGTVe = new EmitirSincronoRetGTVe();
         emitirSincronoRetGTVe.statusEnvio = statusEnvio;
         emitirSincronoRetGTVe.statusConsulta = statusConsulta;
         emitirSincronoRetGTVe.statusDownload = statusDownload;
@@ -1148,7 +1148,7 @@ public class NSSuite {
         emitirSincronoRetGTVe.nsNRec = nsNRec;
         emitirSincronoRetGTVe.erros = erros;
 
-        String retorno = objectMapper.writeValueAsString(emitirSincronoRetNF3e);
+        String retorno = objectMapper.writeValueAsString(emitirSincronoRetGTVe);
 
         Genericos.gravarLinhaLog(modelo, "[JSON_RETORNO]");
         Genericos.gravarLinhaLog(modelo, retorno);
