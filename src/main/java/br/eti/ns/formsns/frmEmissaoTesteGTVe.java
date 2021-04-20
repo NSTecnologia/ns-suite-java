@@ -195,14 +195,14 @@ public class frmEmissaoTesteGTVe {
             JOptionPane.showMessageDialog(null,"Cancelamento - GTVe");
 
             CancelarReqGTVe cancelarReqGTVe = new CancelarReqGTVe();
-            cancelarReqGTVe.dhEvento = "2021-04-14T11:23:00-03:00";
+            cancelarReqGTVe.dhEvento = "2021-04-20T12:04:00-03:00";
             cancelarReqGTVe.nProt = "143210000248200";
             cancelarReqGTVe.tpAmb = "2";
             cancelarReqGTVe.xJust = "Cancelamento de GTVe para fins de teste em homologação";
             cancelarReqGTVe.chCTe = "43210407364617000135640000000021011000010507";
 
             try {
-                String retorno = NSSuite.cancelarDocumento("66", cancelarReqGTVe);
+                String retorno = NSSuite.cancelarDocumento("64", cancelarReqGTVe);
                 JOptionPane.showMessageDialog(null, retorno);
                 System.out.println(retorno);
             }

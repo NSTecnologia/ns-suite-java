@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6060879f-d038-4cfa-8cb2-11c0a58c0878" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/20210420.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/20210420.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmEmissaoTesteGTVe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmEmissaoTesteGTVe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/GTVe/GTVeJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/GTVe/GTVeJSON.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/gtve/EmitirSincronoRetGTVe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/gtve/EmitirSincronoRetGTVe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmEmissaoTesteGTVe$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmEmissaoTesteGTVe$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmEmissaoTesteGTVe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmEmissaoTesteGTVe.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
