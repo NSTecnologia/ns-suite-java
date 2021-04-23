@@ -8,18 +8,19 @@ import java.util.Date;
 public class Genericos {
     public static void gravarLinhaLog(String modelo, String conteudo) throws IOException, IOException {
 
-        //Lendo Path do computador utlilizado e criando a pasta log
+        // Lendo Path do computador utlilizado e criando a pasta log
         String path = System.getProperty("user.dir");
         File localSalvar = new File(path + "\\log");
         if (!localSalvar.exists()) {
             localSalvar.mkdirs();
         }
-        //Data atual ddmmyy
+        
+        // Data atual ddmmyy
         Date data = new Date();
         SimpleDateFormat formatador = new SimpleDateFormat("yyyyMMdd");
         String dataAtual = formatador.format(data);
 
-        //Cria .txt com a data atual
+        // Cria .txt com a data atual
         FileWriter txt = new FileWriter( localSalvar + "\\" + dataAtual + ".txt", true);
         BufferedWriter gravarArq = new BufferedWriter(txt);
 
@@ -37,7 +38,7 @@ public class Genericos {
     public static void salvarJSON(String json, String caminho, String nome, String tpEvento, String nSeqEvento) throws IOException{
         String localParaSalvar = caminho + tpEvento + nome + nSeqEvento + ".json";
         File arq = new File(localParaSalvar);
-        if(arq.exists()){
+        if (arq.exists()) {
             arq.delete();
         }
         FileWriter fileEdit = new FileWriter(arq);
@@ -51,7 +52,7 @@ public class Genericos {
         String localParaSalvar = caminho + nome + ".xml";
         String conteudoReplace = xml.replace("\\","");
         File arq = new File(localParaSalvar);
-        if(arq.exists()){
+        if (arq.exists()) {
             arq.delete();
         }
         FileOutputStream fop = new FileOutputStream(arq);
@@ -65,7 +66,7 @@ public class Genericos {
     public static void salvarPDF(String pdf, String caminho, String nome) throws FileNotFoundException, IOException{
         String localParaSalvar = caminho + nome + ".pdf";
         File arq = new File(localParaSalvar);
-        if(arq.exists()){
+        if (arq.exists()) {
             arq.delete();
         }
         try (FileOutputStream fop = new FileOutputStream(arq)) {
@@ -73,7 +74,4 @@ public class Genericos {
             fop.flush();
         }
     }
-
-
-
 }

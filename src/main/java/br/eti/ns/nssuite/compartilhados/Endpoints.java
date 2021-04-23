@@ -2,6 +2,8 @@ package br.eti.ns.nssuite.compartilhados;
 
 public class Endpoints {
 
+    // BP-e
+
     public String BPeEnvio = "https://bpe.ns.eti.br/v1/bpe/issue";
     public String BPeConsStatusProcessamento  = "https://bpe.ns.eti.br/v1/bpe/issue/status";
     public String BPeDownload  = "https://bpe.ns.eti.br/v1/bpe/get";
@@ -11,6 +13,7 @@ public class Endpoints {
     public String BPeConsSit  = "https://bpe.ns.eti.br/v1/bpe/status";
 
     // CT-e
+
     public String CTeEnvio  = "https://cte.ns.eti.br/cte/issue";
     public String CTeOSEnvio  = "https://cte.ns.eti.br/cte/issueos";
     public String CTeConsStatusProcessamento  = "https://cte.ns.eti.br/cte/issueStatus/300";
@@ -25,12 +28,14 @@ public class Endpoints {
     public String CTeListarNSNRecs  = "https://cte.ns.eti.br/util/list/nsnrecs";
 
     // DDF-e
+
     public String DDFeDesacordo  = "https://ddfe.ns.eti.br/events/cte/disagree";
     public String DDFeDownloadUnico  = "https://ddfe.ns.eti.br/dfe/unique";
     public String DDFeDownloadLote  = "https://ddfe.ns.eti.br/dfe/bunch";
     public String DDFeManifestacao  = "https://ddfe.ns.eti.br/events/manif";
 
     // MDF-e
+
     public String MDFeEnvio  = "https://mdfe.ns.eti.br/mdfe/issue";
     public String MDFeConsStatusProcessamento  = "https://mdfe.ns.eti.br/mdfe/issue/status";
     public String MDFeDownload  = "https://mdfe.ns.eti.br/mdfe/get";
@@ -45,6 +50,7 @@ public class Endpoints {
     public String MDFeIncluirDFe = "https://mdfe.ns.eti.br/mdfe/adddfe";
 
     // NFC-e
+
     public String NFCeEnvio  = "https://nfce.ns.eti.br/v1/nfce/issue";
     public String NFCeDownload  = "https://nfce.ns.eti.br/v1/nfce/get";
     public String NFCeCancelamento  = "https://nfce.ns.eti.br/v1/nfce/cancel";
@@ -53,6 +59,7 @@ public class Endpoints {
     public String NFCeInutilizacao  = "https://nfce.ns.eti.br/v1/nfce/inut";
 
     // NF-e
+
     public String NFeEnvio  = "https://nfe.ns.eti.br/nfe/issue";
     public String NFeConsStatusProcessamento  = "https://nfe.ns.eti.br/nfe/issue/status";
     public String NFeDownload  = "https://nfe.ns.eti.br/nfe/get";
@@ -67,4 +74,24 @@ public class Endpoints {
     public String NFeListarNSNRecs  = "https://nfe.ns.eti.br/util/list/nsnrecs";
     public String NFePrevia  = "https://nfe.ns.eti.br/util/preview/nfe";
 
+    // NF3e
+
+    public String NF3eEnvio = "https://nf3e.ns.eti.br/v1/nf3e/issue";
+    public String NF3eConsStatusProcessamento = "https://nf3e.ns.eti.br/v1/nf3e/issue/status";
+    public String NF3eDownload = "https://nf3e.ns.eti.br/v1/nf3e/get";
+    public String NF3eDownloadEvento = "https://nf3e.ns.eti.br/v1/nf3e/get/event";
+    public String NF3eCancelamento = "https://nf3e.ns.eti.br/v1/nf3e/cancel";
+    public String NF3eConsSit = "https://nf3e.ns.eti.br/v1/nf3e/status";
+    public String NF3eListarNSNRecs = "https://nf3e.ns.eti.br/v1/util/list/nsnrecs";
+
+    // GTVe
+
+    public String GTVeEnvio = "https://gtve.ns.eti.br/v1/gtve/issue";
+    public String GTVeConsStatusProcessamento = "https://gtve.ns.eti.br/v1/gtve/issue/status";
+    public String GTVeDownload = "https://gtve.ns.eti.br/v1/gtve/get";
+    public String GTVeCancelamento = "https://gtve.ns.eti.br/v1/gtve/cancel";
+    public String GTVeDownloadEvento = "https://gtve.ns.eti.br/v1/gtve/get/event";
+    public String GTVeConsSit = "https://gtve.ns.eti.br/v1/gtve/status";
+    public String GTVeListarNSNRecs = "https://gtve.ns.eti.br/v1/util/nsnrecs";
+    public String GTVeImportar = "https://gtve.ns.eti.br/v1/gtve/import";
 }
