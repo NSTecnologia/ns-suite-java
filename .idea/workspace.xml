@@ -5,9 +5,212 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6060879f-d038-4cfa-8cb2-11c0a58c0878" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/log/20210420.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/20210420.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmEmissaoTesteGTVe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmEmissaoTesteGTVe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmEmissaoTesteGTVe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmEmissaoTesteGTVe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/BPe/BPeJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/BPe/BPeJSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/CTe/CTeJSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/GTVe/GTVeJSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/MDFe/MDFeJSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/JSON/NFe/NFeJSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/compartilhados/Endpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/compartilhados/Endpoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/cte/CancelarReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/cte/ConsCadReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/cte/ConsSitReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/cte/ConsStatusProcessamentoReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/cte/CorrigirReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/cte/DownloadEventoReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/cte/DownloadReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/cte/InfGTVReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/cte/InutilizarReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/cte/ListarNSNRecReqCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/CancelarReqGTVe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/ConsSitReqGTVe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/ConsStatusProcessamentoReqGTVe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/DownloadEventoReqGTVe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/DownloadReqGTVe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/ImportarReqGTVe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/gtve/ListarNSNRecReqGTVe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/CancelarReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/ConsNaoEncerradosReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/ConsSitReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/ConsStatusProcessamentoReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/DownloadEventoReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/DownloadReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/EncerrarReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/IncCondutorReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/IncluirDFeReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/mdfe/ListarNSNRecReqMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nf3e/CancelarReqNF3e.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nf3e/ConsSitReqNF3e.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nf3e/ConsStatusProcessamentoReqNF3e.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nf3e/DownloadEventoReqNF3e.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nf3e/DownloadReqNF3e.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nf3e/ListarNSNRecReqNF3e.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/CancelarReqNFCe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/ConsSitReqNFCe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/DownloadEventoReqNFCe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/DownloadReqNFCe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/EnviarEmailReqNFCe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/Impressao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfce/InutilizarReqNFCe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/CancelarReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/ConsCadReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/ConsSitReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/ConsStatusProcessamentoReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/CorrigirReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/DownloadEventoReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/DownloadReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/EnviarEmailReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/InutilizarReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/requisicoes/nfe/ListarNSNRecReqNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/cte/EmitirSincronoRetCTe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/gtve/EmitirSincronoRetGTVe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/mdfe/EmitirSincronoRetMDFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/nf3e/EmitirSincronoRetNF3e.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/nfce/EmitirSincronoRetNFCe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/retornos/nfe/EmitirSincronoRetNFe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmEmissaoTesteGTVe$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmEmissaoTesteGTVe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmemissaoTesteNF3e$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmemissaoTesteNF3e.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/Agencia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/AutXML.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/BPe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/BPeJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/BPeJSON.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/Card.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/Comp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/Emit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/EnderAgencia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/EnderComp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/EnderEmit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/ICMS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/ICMS00.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/ICMS20.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/ICMS45.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/ICMS90.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/ICMSOutraUF.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/ICMSSN.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/ICMSUFFim.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/Ide.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/IdfTravessia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/Imp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/InfAdic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/InfBPe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/InfBPeSub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/InfPassageiro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/InfPassagem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/InfValorBPe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/InfViagem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/BPe/Pag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Adi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Arma.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$AutXML.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$CIDE.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$COFINS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$COFINSAliq.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$COFINSNT.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$COFINSOutr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$COFINSQtde.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$COFINSST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Cana.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Card.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Cobr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Comb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Compra.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$DI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Deduc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Dest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Det.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$DetExport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$DetPag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Dup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Emit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Encerrante.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$EnderDest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$EnderEmit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Entrega.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ExportInd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Exporta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Fat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ForDia.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMS00.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMS10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMS20.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMS30.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMS40.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMS51.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMS60.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMS70.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMS90.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMSPart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMSSN101.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMSSN102.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMSSN201.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMSSN202.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMSSN500.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMSSN900.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMSST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMSTot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ICMSUFDest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$II.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$IPI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$IPINT.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$IPITrib.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ISSQN.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ISSQNtot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Ide.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Imposto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ImpostoDevol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$InfAdic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$InfNFe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Lacre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Med.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$NFe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$NFref.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ObsCont.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ObsFisco.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$PIS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$PISAliq.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$PISNT.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$PISOutr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$PISQtde.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$PISST.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Pag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$ProcRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Prod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Rastro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Reboque.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$RefECF.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$RefNF.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$RefNFP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$RetTransp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$RetTrib.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Retirada.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Total.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Transp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Transporta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$VeicProd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$VeicTransp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON$Vol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NFe/NFeJSON.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/NSSuite$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/NSSuite$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/NSSuite$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/NSSuite$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/NSSuite$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/NSSuite$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/NSSuite$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/NSSuite$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/NSSuite$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/NSSuite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/NSSuite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/requisicoes/gtve/CancelarReqGTVe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/requisicoes/gtve/ConsSitReqGTVe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/requisicoes/gtve/ConsStatusProcessamentoReqGTVe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/requisicoes/gtve/DownloadEventoReqGTVe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/requisicoes/gtve/DownloadReqGTVe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/requisicoes/gtve/ImportarReqGTVe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/requisicoes/gtve/ListarNSNRecReqGTVe.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +251,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="415" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -57,10 +261,11 @@
     <property name="settings.editor.selected.configurable" value="kite.configurable" />
   </component>
   <component name="RunManager">
-    <configuration name="frmEmissaoTeste" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
+    <configuration name="frmBPe" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
       <option name="ALTERNATIVE_JRE_PATH" value="1.7" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="br.eti.ns.formsns.frmEmissaoTesteGTVe" />
+      <option name="MAIN_CLASS_NAME" value="br.eti.ns.formsns.formBPe" />
+      <module name="NSSuiteClientJava" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
