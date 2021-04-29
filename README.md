@@ -1,23 +1,24 @@
 # NSSuiteJava
 
-Este é um exemplo de comunicação com a API de BPe da NSTecnologia. Desenvolvido em Java, tem o intuito de exemplificar e facilitar o desenvolvimento da integração.
+This is an example of how to communicate with the NSTechnology BPe API. Developed in Java, it aims to exemplify and facilitate the development of integration.
 
-## Primeiros passos:
+## First Steps:
 
-### Integrando ao sistema:
+### Integrating with the system:
 
-Para utilizar as funções de comunicação com a API, você precisa realizar os seguintes passos:
 
-1. Extraia o conteúdo da pasta compactada que você baixou;
-2. Copie para sua aplicação a pasta src, na qual contem todos as classes que serão utilizadas;
-3. Abra o seu projeto e importe a pasta copiada.
-4. A aplicação utiliza as bibliotecas **jersey-client** e **jackson-databind** para realizar a comunicação com a API e fazer a manipulação de dados JSON, respectivamente. Ative as duas referencias em seu projeto, como mostrado abaixo:
+To use the functions of communicating with the API, you need to perform the following steps:
 
-**Pronto!** Agora, você já pode consumir a NS Suite API através do seu sistema. Todas as funcionalidades de comunicação foram implementadas na classe **NSSuite.java**.
+1. Extract the contents of the compressed folder you downloaded;
+2. Copy the src folder to your application, which contains all the classes that will be used;
+3. Open your project and import the copied folder.
+4. The application uses the **jersey-client** and **jackson-databind** libraries to communicate with the API and manipulate JSON data, respectively. Activate these two references in your project too.
+
+**Done!** Now, you can now consume the NS Suite API through your application. All communication features were implemented in the **NSSuite.java** class.
 
 ------
 
-## Emissão Sincrona:
+## Synchronous Issue process:
 
 ### Realizando uma Emissão Sincrona:
 
