@@ -94,6 +94,9 @@ public class NF3eJSON {
     @JsonProperty("cNIS")
     public String cNIS;
     public EnderDest enderDest;
+    @JsonProperty("NB")
+    public String nb;
+    public String xNomeAdicional;
   }
   
   public static class EnderDest {
@@ -123,6 +126,7 @@ public class NF3eJSON {
     public String tpModTar;
     public String latGPS;
     public String longGPS;
+    public String codRoteiroLeitura;
   }
 
   public static class gSub {
@@ -161,13 +165,14 @@ public class NF3eJSON {
 
   public static class gSCEE {
     public String tpPartComp;
-    public String vPotInst;
     public GConsumidor gConsumidor;
     public GSaldoCred gSaldoCred;
   }
 
   public static class GConsumidor {
     public String idAcessGer;
+    public String vPotInst;
+    public String tpFonteEnergia;
     public String enerAloc;
     public String tpPosTar;
   }
@@ -183,6 +188,7 @@ public class NF3eJSON {
 
   public static class NFDet { //1
     public String chNF3eAnt;
+    public String mod6HashAnt;
     public Det det;
   }
 
@@ -191,17 +197,15 @@ public class NF3eJSON {
     public GAjusteNF3eAnt gAjusteNF3eAnt;
     public DetItemAnt detItemAnt;
     public DetItem detItem;
-	public void add(Det det) {
-	}
-    
+	public void add(Det det) {}
   }
 
-  public static class GAjusteNF3eAnt { //3
+  public static class GAjusteNF3eAnt {
     public String tpAjuste;
     public String motAjuse;
   }
 
-  public static class DetItemAnt { //3
+  public static class DetItemAnt {
     public String nItemAnt;
     public String vItem;
     public String qFaturada;
@@ -211,20 +215,21 @@ public class NF3eJSON {
     public String pICMS;
     public String vICMS;
     public String vPIS;
-    public String vCOFINS;  
+    public String vCOFINS; 
+    public RetTrib retTrib; 
   }
 
-  public static class DetItem { //3 
+  public static class DetItem {
     public String nItemAnt;
     public GTarif gTarif;
     public GAdBand gAdBand;
     public prod prod;
-    public Imposto imposto; //4
+    public Imposto imposto;
     public GProcRef gProcRef; 
     public GContab gContab;
   }
 
-  public static class GTarif { //4
+  public static class GTarif {
     public String dIniTarif;
     public String dFimTarif;
     public String tpAto;
@@ -238,7 +243,7 @@ public class NF3eJSON {
     public String motDifTarif;
   }
 
-  public static class GAdBand { //4
+  public static class GAdBand {
     public String dIniAdBand;
     public String dFimAdBand;
     public String tpBand;
@@ -247,7 +252,7 @@ public class NF3eJSON {
     public String motDifBand;
   }
 
-  public static class prod { //4
+  public static class prod {
     public String indOrigemQtd;
     public GMedicao gMedicao;
     public String cProd;
@@ -259,20 +264,20 @@ public class NF3eJSON {
     public String qFaturada;
     public String vItem;
     public String vProd;
-    public String indDevolução;
+    public String indDevolucao;
     public String indPrecoACL;
   }
 
-  public static class GMedicao { //5
+  public static class GMedicao {
     public String nMed;
     public String nContrat;
-    public GMedida gMedida; //6
+    public GMedida gMedida;
     public String tpMotNaoLeitura;
   }
 
   public static class GMedida { 
     public String tpGrMed;
-    public String cPosTarif; //7
+    public String cPosTarif;
     public String uMed;
     public String vMedAnt;
     public String vMedAtu;
@@ -280,9 +285,10 @@ public class NF3eJSON {
     public String vMed;
     public String pPerdaTran;
     public String vMedPerdaTran;
+    public String vMedPerdaTec;
   }
 
-  public static class Imposto { //4
+  public static class Imposto {
     @JsonProperty("ICMS00")
     public ICMS00 iCMS00;
     @JsonProperty("ICMS10")
@@ -297,6 +303,9 @@ public class NF3eJSON {
     public ICMS90 iCMS90;
     public pIS PIS; 
     public cOFINS COFINS;
+    public pISEfet PISEfet;
+    public cOFINSEfet COFINSEfet; 
+    public RetTrib retTrib;
   }
 
   public static class ICMS00 {
@@ -363,12 +372,32 @@ public class NF3eJSON {
     public String vPIS;
   }
 
+  public static class pISEfet {
+    public String vBCPISEfet;
+    public String pPISEfet;
+    public String vPISEfet;
+  }
+
   public static class cOFINS {
     @JsonProperty("CST")
     public String cST;
     public String vBC;
     public String pCOFINS;
     public String vCOFINS;
+  }
+
+  public static class cOFINSEfet {
+    public String vBCCOFINSEfet;
+    public String pCOFINSEfet;
+    public String vCOFINSEfet;
+  }
+
+  public static class RetTrib {
+    public String vRetPIS;
+    public String vRetCofins;
+    public String vRetCSLL;
+    public String vBCIRRF;
+    public String vIRRF;
   }
 
   public static class GProcRef {
@@ -399,10 +428,20 @@ public class NF3eJSON {
   public static class Total {
     public String vProd;
     public String vCOFINS;
+    public String vCOFINSEfet;
     public String vPIS;
+    public String vPISEfet;
     public String vNF;
     @JsonProperty("ICMSTot")
     public ICMSTot iCMSTot;
+    public VRetTribTot vRetTribTot;
+  }
+
+  public static class VRetTribTot {
+    public String vRetPIS;
+    public String vRetCofins;
+    public String vRetCSLL;
+    public String vIRRF;
   }
 
   public static class ICMSTot {
@@ -413,9 +452,6 @@ public class NF3eJSON {
     public String vBCST;
     public String vST;
     public String vFCPST;
-    public String vCOFINS;
-    public String vPIS;
-    public String vNF;
   }
 
   public static class GFat {
@@ -429,8 +465,12 @@ public class NF3eJSON {
     public String codBanco;
     public String codAgencia;
     public EnderCorresp enderCorresp;
+    public GPIX gPix;
   }
 
+  public static class GPIX {
+    public String urlQRCodePIX;
+  }
   public static class EnderCorresp {
     public String xLgr;
     @JsonProperty("nro")
@@ -464,7 +504,6 @@ public class NF3eJSON {
     public String vFat;
     public String uMed;
     public String qtdDias;
-
     public void add(ArrayList<GGrandFat> listgGrandFat) {
     }
   }
@@ -516,24 +555,4 @@ public class NF3eJSON {
   public static class InfNF3eSupl {
     public String qrCodNF3e;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
