@@ -6,6 +6,8 @@
 + NFCe;
 + MDFe;
 + BPe;
++ NF3e;
++ GTVe;
 
 Simplificando todos os projetos utilizados em um único exemplo, deixando mais pratica e facil a integração com a NS API.
 
