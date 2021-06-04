@@ -283,6 +283,7 @@ public class frmemissaoTeste {
                 String motivo = respostaJSON.get("motivo").asText();
                 String nsNRec = respostaJSON.get("nsNRec").asText();
                 ArrayList<String> erros = mapper.readValue(respostaJSON.get("erros").toString(), new TypeReference<ArrayList<String>>(){});
+
                 if (statusEnvio.equals("200") || statusEnvio.equals("-6")){
                     if (statusConsulta.equals("200")) {
                         if (cStat.equals("100")) {
@@ -303,7 +304,6 @@ public class frmemissaoTeste {
             catch (Exception exception) {
                 exception.printStackTrace();
             }
-            
 	    System.out.println(retorno);
 
         });
@@ -313,12 +313,11 @@ public class frmemissaoTeste {
 
             CancelarReqNF3e cancelarReqNF3e = new CancelarReqNF3e();
 
-            cancelarReqNF3e.dhEvento = "2021-04-15T10:12:00-03:00";
-            cancelarReqNF3e.nProt = "143210003704794";
+            cancelarReqNF3e.dhEvento = "2021-06-04T10:05:00-03:00";
+            cancelarReqNF3e.nProt = "143210007831886";
             cancelarReqNF3e.tpAmb = "2";
             cancelarReqNF3e.xJust = "Cancelamento de NF3e para fins de teste em homologação";
-            cancelarReqNF3e.chNF3e = "43210407364617000135660000000510111000000015";
-            cancelarReqNF3e.chNF3e = "43210407364617000135660000000510111000000015";
+            cancelarReqNF3e.chNF3e = "43210607364617000135660000000510151000000011";
 
             try {
                 String retorno = NSSuite.cancelarDocumento("66", cancelarReqNF3e);
@@ -336,7 +335,7 @@ public class frmemissaoTeste {
             
 	    DownloadEventoReqNF3e downloadEventoReqNF3e = new DownloadEventoReqNF3e();
             downloadEventoReqNF3e.nSeqEvento = "1";
-            downloadEventoReqNF3e.chNF3e = "43210407364617000135660000000510111000000015";
+            downloadEventoReqNF3e.chNF3e = "43210607364617000135660000000510151000000011";
             downloadEventoReqNF3e.tpDown = "X";
             downloadEventoReqNF3e.tpAmb = "2";
             downloadEventoReqNF3e.tpEvento = "CANC";
@@ -354,7 +353,7 @@ public class frmemissaoTeste {
         btnConSituacaoNF3e.addActionListener(e -> {
 
             ConsSitReqNF3e consSitReqNF3e = new ConsSitReqNF3e();
-            consSitReqNF3e.chNF3e = "43210407364617000135660000000510111000000015";
+            consSitReqNF3e.chNF3e = "43210607364617000135660000000510151000000011";
             consSitReqNF3e.licencaCNPJ = "07364617000135";
             consSitReqNF3e.tpAmb = "2";
             
@@ -372,7 +371,7 @@ public class frmemissaoTeste {
 	btnListarNSNrec.addActionListener(e -> {
             
 	    ListarNSNRecReqNF3e listarNSNRecReqNF3e = new ListarNSNRecReqNF3e();
-            listarNSNRecReqNF3e.chNF3e = "43210407364617000135660000000510111000000015";
+            listarNSNRecReqNF3e.chNF3e = "43210607364617000135660000000510151000000011";
             listarNSNRecReqNF3e.tpAmb = "2";
             
 	    try {
@@ -389,7 +388,7 @@ public class frmemissaoTeste {
 	btnDownloadNF3e.addActionListener(e -> {
 
             DownloadReqNF3e downloadReqNF3e = new DownloadReqNF3e();
-            downloadReqNF3e.chNF3e = "43210407364617000135660000000510111000000015";
+            downloadReqNF3e.chNF3e = "43210607364617000135660000000510151000000011";
             downloadReqNF3e.tpDown = "X";
             downloadReqNF3e.tpAmb = "2";
             
@@ -407,6 +406,7 @@ public class frmemissaoTeste {
         JFrame frame = new JFrame("frmEmissaoTeste");
         frame.setContentPane(new frmemissaoTeste().panelMain);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
         frame.pack();
         frame.setVisible(true);
     }
