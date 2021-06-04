@@ -406,8 +406,9 @@ public class frmemissaoTeste {
         JFrame frame = new JFrame("frmEmissaoTeste");
         frame.setContentPane(new frmemissaoTeste().panelMain);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLocationRelativeTo(null);
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+
     }
 }

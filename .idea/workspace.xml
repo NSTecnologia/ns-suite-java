@@ -7,54 +7,7 @@
     <list default="true" id="6060879f-d038-4cfa-8cb2-11c0a58c0878" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmemissaoTeste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmemissaoTeste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$Acessante.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$Acessante.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$AutXML.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$AutXML.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$Dest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$Dest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$Det.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$Det.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$DetItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$DetItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$DetItemAnt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$DetItemAnt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$EnderCorresp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$EnderCorresp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$EnderDest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$EnderDest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GANEEL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GANEEL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GAdBand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GAdBand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GAjusteNF3eAnt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GAjusteNF3eAnt.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GConsumidor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GConsumidor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GContab.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GContab.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GFat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GFat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GGrandFat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GGrandFat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GHistFat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GHistFat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GMedicao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GMedicao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GMedida.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GMedida.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GNF.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GNF.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GProc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GProc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GProcRef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GProcRef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GRespTec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GRespTec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GSaldoCred.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GSaldoCred.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GTarif.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$GTarif.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ICMS00.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ICMS00.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ICMS10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ICMS10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ICMS20.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ICMS20.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ICMS40.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ICMS40.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ICMS51.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ICMS51.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ICMS90.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ICMS90.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ICMSTot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ICMSTot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$Imposto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$Imposto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$InfAdic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$InfAdic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$InfNF3eSupl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$InfNF3eSupl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$NFDet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$NFDet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ObsCont.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ObsCont.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ObsFisco.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ObsFisco.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ProcRef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$ProcRef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$Total.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$Total.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$cOFINS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$cOFINS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$gGrContrat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$gGrContrat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$gJudic.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$gJudic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$gMed.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$gMed.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$gSCEE.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$gSCEE.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$gSub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$gSub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$pIS.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$pIS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$prod.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON$prod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/JSON/NF3e/NF3eJSON.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmemissaoTeste.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmemissaoTeste.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622811819949</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Alterações para testes">
+      <created>1622812823907</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1622812823907</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
