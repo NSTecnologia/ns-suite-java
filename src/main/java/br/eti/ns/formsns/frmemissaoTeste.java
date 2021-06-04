@@ -312,11 +312,11 @@ public class frmemissaoTeste {
         // Cancelamento
         btnCancelarNF3e.addActionListener(e -> {
             CancelarReqNF3e cancelarReqNF3e = new CancelarReqNF3e();
-            cancelarReqNF3e.dhEvento = "2021-06-04T14:30:00-03:00";
-            cancelarReqNF3e.nProt = "143210007831896";
+            cancelarReqNF3e.dhEvento = "2021-06-04T16:21:00-03:00";
+            cancelarReqNF3e.nProt = "143210007831904";
             cancelarReqNF3e.tpAmb = "2";
             cancelarReqNF3e.xJust = "Cancelamento de NF3e para fins de teste em homologação";
-            cancelarReqNF3e.chNF3e = "43210607364617000135660000000510161000000019";
+            cancelarReqNF3e.chNF3e = "43210607364617000135660000000510201000000011";
             try {
                 String retorno = NSSuite.cancelarDocumento("66", cancelarReqNF3e);
                 System.out.println(retorno);
@@ -331,7 +331,7 @@ public class frmemissaoTeste {
         btnDownEventoNF3e.addActionListener(e -> {
 	    DownloadEventoReqNF3e downloadEventoReqNF3e = new DownloadEventoReqNF3e();
             downloadEventoReqNF3e.nSeqEvento = "1";
-            downloadEventoReqNF3e.chNF3e = "43210607364617000135660000000510161000000019";
+            downloadEventoReqNF3e.chNF3e = "43210607364617000135660000000510201000000011";
             downloadEventoReqNF3e.tpDown = "X";
             downloadEventoReqNF3e.tpAmb = "2";
             downloadEventoReqNF3e.tpEvento = "CANC";
@@ -347,7 +347,7 @@ public class frmemissaoTeste {
 	//Consultar Situacao
         btnConSituacaoNF3e.addActionListener(e -> {
             ConsSitReqNF3e consSitReqNF3e = new ConsSitReqNF3e();
-            consSitReqNF3e.chNF3e = "43210607364617000135660000000510161000000019";
+            consSitReqNF3e.chNF3e = "43210607364617000135660000000510201000000011";
             consSitReqNF3e.licencaCNPJ = "07364617000135";
             consSitReqNF3e.tpAmb = "2";
 	    try {
@@ -362,7 +362,7 @@ public class frmemissaoTeste {
 	//Listagem de nsNRec
 	btnListarNSNrec.addActionListener(e -> {
 	    ListarNSNRecReqNF3e listarNSNRecReqNF3e = new ListarNSNRecReqNF3e();
-            listarNSNRecReqNF3e.chNF3e = "43210607364617000135660000000510161000000019";
+            listarNSNRecReqNF3e.chNF3e = "43210607364617000135660000000510201000000011";
             listarNSNRecReqNF3e.tpAmb = "2";
 	    try {
                 String retorno = NSSuite.listarNSNRecs("66", listarNSNRecReqNF3e);
@@ -375,7 +375,7 @@ public class frmemissaoTeste {
         
 	btnDownloadNF3e.addActionListener(e -> {
             DownloadReqNF3e downloadReqNF3e = new DownloadReqNF3e();
-            downloadReqNF3e.chNF3e = "43210607364617000135660000000510161000000019";
+            downloadReqNF3e.chNF3e = "43210607364617000135660000000510201000000011";
             downloadReqNF3e.tpDown = "X";
             downloadReqNF3e.tpAmb = "2";
             
