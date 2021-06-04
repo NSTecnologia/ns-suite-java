@@ -7,6 +7,11 @@
     <list default="true" id="6060879f-d038-4cfa-8cb2-11c0a58c0878" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmemissaoTeste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/formsns/frmemissaoTeste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/eti/ns/nssuite/NSSuite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmemissaoTeste$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmemissaoTeste$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmemissaoTeste.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/formsns/frmemissaoTeste.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/NSSuite$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/NSSuite$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/NSSuite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/eti/ns/nssuite/NSSuite.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622814297185</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Alteracoes para teste">
+      <created>1622827493229</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1622827493229</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,7 +179,8 @@
     <MESSAGE value="Ajustes na função que realiza o download de evento" />
     <MESSAGE value="Ajustes no form de teste" />
     <MESSAGE value="Alterações para testes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alterações para testes" />
+    <MESSAGE value="Alteracoes para teste" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alteracoes para teste" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/nssuite$frmemissaoTeste.ic" NAME="frmemissaoTeste Coverage Results" MODIFIED="1614263985123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
