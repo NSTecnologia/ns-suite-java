@@ -31,9 +31,7 @@ public class frmemissaoTeste {
 
     public frmemissaoTeste() {
 
-        // NF3e
         btnEnviarNF3e.addActionListener(e -> {
-            JOptionPane.showMessageDialog(null,"Teste de emissão - NF3e");
 
             NF3eJSON nF3eJSON = new NF3eJSON();
             NF3e nF3e = new NF3e();
@@ -57,37 +55,37 @@ public class frmemissaoTeste {
             cOFINS COFINS = new cOFINS();
             NF3eJSON.Total total = new NF3eJSON.Total();
             NF3eJSON.ICMSTot ICMSTot = new NF3eJSON.ICMSTot();
+            NF3eJSON.VRetTribTot vRetTribTot = new NF3eJSON.VRetTribTot();
             GFat gFat = new GFat();
             EnderCorresp enderCorresp = new EnderCorresp();
             GANEEL gANEEL = new GANEEL();
             NF3eJSON.GHistFat gHistFat = new NF3eJSON.GHistFat();
             NF3eJSON.GGrandFat gGrandFat = new NF3eJSON.GGrandFat();
             ArrayList<GGrandFat> listgGrandFat = new ArrayList<GGrandFat>();
+            int i = 1; // Variavel para ser utilizada como contador no loop
             NF3eJSON.AutXML autXML = new NF3eJSON.AutXML();
             ArrayList<NF3eJSON.AutXML> listautXML = new ArrayList<NF3eJSON.AutXML>();
             NF3eJSON.InfAdic infAdic = new NF3eJSON.InfAdic();
             GRespTec gRespTec = new GRespTec();
-            int i = 1; //Variavel para ser utilizada como contador no loop
 
             nF3eJSON.nF3e = nF3e;
             nF3e.infNF3e = infNF3e;
             infNF3e.versao = "1.00";
-            // Cabeçalho da NF3e
+
             infNF3e.ide = ide;
             ide.cUF = "43";
-            ide.tpAmb = "2"; // Homologação
+            ide.tpAmb = "2";
             ide.mod = "66";
             ide.serie = "0";
-            ide.nNF = "51010";
+            ide.nNF = "51015";
             ide.cNF = "00000001";
             ide.cDV = "";
-            ide.dhEmi = "2021-04-14T14:44:33-03:00";
+            ide.dhEmi = "2021-06-04T09:46:33-03:00";
             ide.tpEmis = "1";
             ide.cMunFG = "4303509";
             ide.finNF3e = "1";
             ide.verProc = "1.0.0";
 
-            // Dados do emitente
             infNF3e.emit = emit;
             emit.cNPJ = "07364617000135";
             emit.iE = "0170108708";
@@ -104,7 +102,6 @@ public class frmemissaoTeste {
             enderEmit.fone = "5136712053";
             enderEmit.email = "email@email.com.br";
 
-            // Dados do destinatário
             infNF3e.dest = dest;
             dest.xNome = "Teste de Emissão da Silva";
             dest.cPF = "00269925074";
@@ -121,7 +118,6 @@ public class frmemissaoTeste {
             enderDest.fone = "51999999999";
             enderDest.email = "fernando.konflanz@nstecnologia.com.br";
 
-            // Dados do Acessante
             infNF3e.acessante = acessante;
             acessante.idAcesso = "43037003";
             acessante.tpAcesso = "0";
@@ -134,7 +130,6 @@ public class frmemissaoTeste {
             infNF3e.NFdet = NFdet;
             NFdet.det = det;
 
-            // Dados do produto da NF3e
             det.add(det);
             det.nItem = "1";
             det.detItem = detItem;
@@ -169,14 +164,15 @@ public class frmemissaoTeste {
             prod.qFaturada = "10";
             prod.vItem = "3.00000000";
             prod.vProd = "30.00000000";
+
             detItem.imposto = imposto;
+
             imposto.iCMS90 = iCMS90;
             iCMS90.cST = "90";
             iCMS90.vBC = "30.00";
             iCMS90.pICMS = "18.00";
             iCMS90.vICMS = "5.40";
 
-            //Dados do imposto da NF3e
             imposto.PIS = PIS;
             PIS.cST = "01";
             PIS.vBC = "30.00";
@@ -189,12 +185,14 @@ public class frmemissaoTeste {
             COFINS.pCOFINS = "7.6000";
             COFINS.vCOFINS = "2.28";
 
-            // Totais da NF3e
             infNF3e.total = total;
             total.vProd = "30.00";
             total.vCOFINS = "2.28";
             total.vPIS = "0.49";
             total.vNF = "30.00";
+            total.vCOFINSEfet = "0.00";
+            total.vPISEfet = "0.00";
+
             total.iCMSTot = ICMSTot;
             ICMSTot.vBC = "30.00";
             ICMSTot.vICMS = "5.40";
@@ -204,7 +202,13 @@ public class frmemissaoTeste {
             ICMSTot.vST = "0.00";
             ICMSTot.vFCPST = "0.00";
 
-            //Informacoes da fatura da NF3e
+            total.vRetTribTot =  vRetTribTot;
+            vRetTribTot.vRetPIS = "0.00";
+            vRetTribTot.vRetCofins = "0.00";
+            vRetTribTot.vRetCSLL = "0.00";
+            vRetTribTot.vIRRF = "0.00";
+
+
             infNF3e.gFat = gFat;
             gFat.CompetFat = "201911";
             gFat.dVencFat = "2019-11-27";
@@ -230,8 +234,6 @@ public class frmemissaoTeste {
             gHistFat.gGrandFat = listgGrandFat;
 
             while (i <= 13) {
-
-                // E necessario informar as 13 ultimas faturas
                 listgGrandFat.add(gGrandFat);
                 gGrandFat.CompetFat = "201911";
                 gGrandFat.vFat = "30.00";
@@ -240,44 +242,37 @@ public class frmemissaoTeste {
                 i++;
             }
 
-            // Permissao para acesso ao download do XML
             infNF3e.autXML = autXML;
             autXML.add(autXML);
             autXML.cNPJ = "07364617000135";
 
-            // Informacoes adicionas da NF3e
             infNF3e.infAdic = infAdic;
             infAdic.infAdFisco = "Dados de interesse do fiscal";
             infAdic.infCpl = "Observacoes, emissao de teste da NS";
 
-            //Informações do responsavel tecnico
             infNF3e.gRespTec = gRespTec;
             gRespTec.cNPJ = "07364617000135";
             gRespTec.xContato = "Fernando Konflanz";
             gRespTec.email = "fernando.konflanz@nstecnologia.com.br";
             gRespTec.fone = "51996359538";
-
-            // Faz a serializacao do objeto JSON que foi populado
-
-            ObjectMapper mapper = new ObjectMapper();
+            
+	    ObjectMapper mapper = new ObjectMapper();
             String json = "";
-            try {
+            
+	    try {
                 json = mapper.writeValueAsString(nF3eJSON);
-            } catch (JsonProcessingException jsonProcessingException) {
+            } 
+	    catch (JsonProcessingException jsonProcessingException) {
                 jsonProcessingException.printStackTrace();
             }
 
-            // Para finalidades de testes, apresenta o json a ser enviado para a API.
             System.out.println(json);
-
             String retorno = null;
 
             try {
 
-                // Faz a chamada da funcao para fazer a emissao sincrona da NF3e
                 retorno = NSSuite.emitirNF3eSincrono(json, "json", "07364617000135", "X", "2", "C:/Notas/NF3e", false);
 
-                // Le os dados do retorno, fazendo um tratamento para posterior armazenamento dos dados retornados
                 JsonNode respostaJSON = mapper.readTree(retorno);
                 String statusEnvio = respostaJSON.get("statusEnvio").asText();
                 String statusConsulta = respostaJSON.get("statusConsulta").asText();
@@ -305,160 +300,109 @@ public class frmemissaoTeste {
                     JOptionPane.showMessageDialog(null, motivo + "\n" + erros.toString());
                 }
             }
-
             catch (Exception exception) {
                 exception.printStackTrace();
             }
-
-            // Para fins de teste, apresenta o retorno da API
-            //JOptionPane.showMessageDialog(null, retorno);
-
-            // Para fins de teste, apresenta o json retornado pela API
-            System.out.println(retorno);
+            
+	    System.out.println(retorno);
 
         });
 
-        // Exemplo de como cancelar uma NF3e
+        // Cancelamento
         btnCancelarNF3e.addActionListener(e -> {
-            JOptionPane.showMessageDialog(null,"Cancelamento - NF3e");
 
-            // Atribuicao dos parametros
             CancelarReqNF3e cancelarReqNF3e = new CancelarReqNF3e();
 
-            cancelarReqNF3e.dhEvento = "2021-04-14T11:23:00-03:00";
-            cancelarReqNF3e.nProt = "143210003704655";
+            cancelarReqNF3e.dhEvento = "2021-04-15T10:12:00-03:00";
+            cancelarReqNF3e.nProt = "143210003704794";
             cancelarReqNF3e.tpAmb = "2";
             cancelarReqNF3e.xJust = "Cancelamento de NF3e para fins de teste em homologação";
-            cancelarReqNF3e.chNF3e = "43210407364617000135660000000510021000000016";
-
+            cancelarReqNF3e.chNF3e = "43210407364617000135660000000510111000000015";
+            cancelarReqNF3e.chNF3e = "43210407364617000135660000000510111000000015";
 
             try {
-                // Chamada da funcao
                 String retorno = NSSuite.cancelarDocumento("66", cancelarReqNF3e);
-
-                // Para fins de teste, apresenta o json retornado pela API
-                //JOptionPane.showMessageDialog(null, retorno);
                 System.out.println(retorno);
 
             }
-
             catch (Exception exception) {
                 exception.printStackTrace();
 
             }
-
-
         });
-
-        // Exemplo de como fazer o download do evento da NF3e, neste caso, o cancelamento
+	
+	//Download de Evento
         btnDownEventoNF3e.addActionListener(e -> {
-            JOptionPane.showMessageDialog(null,"Download de Evento - NF3e");
-
-            // Atribuicao dos parametros
-            DownloadEventoReqNF3e downloadEventoReqNF3e = new DownloadEventoReqNF3e();
+            
+	    DownloadEventoReqNF3e downloadEventoReqNF3e = new DownloadEventoReqNF3e();
             downloadEventoReqNF3e.nSeqEvento = "1";
-            downloadEventoReqNF3e.chNF3e = "43210407364617000135660000000510021000000016";
+            downloadEventoReqNF3e.chNF3e = "43210407364617000135660000000510111000000015";
             downloadEventoReqNF3e.tpDown = "X";
             downloadEventoReqNF3e.tpAmb = "2";
             downloadEventoReqNF3e.tpEvento = "CANC";
-
-
-            try {
-                // Chamada da funcao
+            
+	    try {
                 String retorno = NSSuite.downloadEventoESalvar("66",downloadEventoReqNF3e,"C:/Notas/NF3e",downloadEventoReqNF3e.chNF3e,downloadEventoReqNF3e.nSeqEvento,false);
-
-                // Para fins de teste, apresenta o json retornado pela API
-                //JOptionPane.showMessageDialog(null, retorno);
                 System.out.println(retorno);
             }
-
             catch (Exception exception) {
                 exception.printStackTrace();
-
             }
-
         });
-
-        // Exemplo de como consultar a situacao da NF3e
+	
+	//Consultar Situacao
         btnConSituacaoNF3e.addActionListener(e -> {
-            JOptionPane.showMessageDialog(null,"Consulta Situação - NF3e");
 
-            // Atribuicao dos parametros
             ConsSitReqNF3e consSitReqNF3e = new ConsSitReqNF3e();
-            consSitReqNF3e.chNF3e = "43210407364617000135660000000510021000000016";
+            consSitReqNF3e.chNF3e = "43210407364617000135660000000510111000000015";
             consSitReqNF3e.licencaCNPJ = "07364617000135";
             consSitReqNF3e.tpAmb = "2";
-
-
-            try {
-                // Chamada da funcao
-                String retorno = NSSuite.consultarSituacaoDocumento("66", consSitReqNF3e);
-
-                // Para fins de teste, apresenta o json retornado pela API
-                //JOptionPane.showMessageDialog(null, retorno);
+            
+	    try {
+		String retorno = NSSuite.consultarSituacaoDocumento("66", consSitReqNF3e);
                 System.out.println(retorno);
             }
-
             catch (Exception exception) {
                 exception.printStackTrace();
 
             }
-
         });
-
-        // Exemplo de como listar o nsNRec de uma NF3e
-        btnListarNSNrec.addActionListener(e -> {
-            JOptionPane.showMessageDialog(null,"Listagem de nsNRec - NF3e");
-
-            // Atribuicao dos parametros
-            ListarNSNRecReqNF3e listarNSNRecReqNF3e = new ListarNSNRecReqNF3e();
-            listarNSNRecReqNF3e.chNF3e = "43210407364617000135660000000510021000000016";
+        
+	//Listagem de nsNRec
+	btnListarNSNrec.addActionListener(e -> {
+            
+	    ListarNSNRecReqNF3e listarNSNRecReqNF3e = new ListarNSNRecReqNF3e();
+            listarNSNRecReqNF3e.chNF3e = "43210407364617000135660000000510111000000015";
             listarNSNRecReqNF3e.tpAmb = "2";
-
-
-            try {
-                // Chamada da funcao
+            
+	    try {
                 String retorno = NSSuite.listarNSNRecs("66", listarNSNRecReqNF3e);
-
-                // Para fins de teste, apresenta o json retornado pela API
-                //JOptionPane.showMessageDialog(null, retorno);
                 System.out.println(retorno);
             }
-
             catch (Exception exception) {
                 exception.printStackTrace();
 
             }
 
         });
+        
+	btnDownloadNF3e.addActionListener(e -> {
 
-        // Exemplo de como fazer o Download e Salvar uma NF3e
-        btnDownloadNF3e.addActionListener(e -> {
-            JOptionPane.showMessageDialog(null,"Download de nsNRec - NF3e");
-
-            // Atribuicao dos parametros
             DownloadReqNF3e downloadReqNF3e = new DownloadReqNF3e();
-            downloadReqNF3e.chNF3e = "43210407364617000135660000000510021000000016";
+            downloadReqNF3e.chNF3e = "43210407364617000135660000000510111000000015";
             downloadReqNF3e.tpDown = "X";
             downloadReqNF3e.tpAmb = "2";
-
-
-            try {
-                // Chamada da funcao
+            
+	    try {
                 String retorno = NSSuite.downloadDocumentoESalvar("66", downloadReqNF3e,"C:/Notas/NF3e",downloadReqNF3e.chNF3e+"-NF3e",false);
-
-                // Para fins de teste, apresenta o json retornado pela API
-                //JOptionPane.showMessageDialog(null, retorno);
                 System.out.println(retorno);
             }
-
             catch (Exception exception) {
                 exception.printStackTrace();
-
             }
-
         });
     };
+    
     public static void main (String[] args) {
         JFrame frame = new JFrame("frmEmissaoTeste");
         frame.setContentPane(new frmemissaoTeste().panelMain);
