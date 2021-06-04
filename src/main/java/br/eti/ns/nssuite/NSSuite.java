@@ -41,7 +41,7 @@ public class NSSuite {
                 respostaServidor = target.request(MediaType.TEXT_PLAIN)
                         .header("X-AUTH-TOKEN", token)
                         .post(Entity.text(conteudo));
-            } 
+            }
             else if (tpConteudo.equals("xml")) {
                 respostaServidor = target.request(MediaType.APPLICATION_XML)
                         // pode ser enviado também no json junto com os dados da nfce
@@ -54,7 +54,7 @@ public class NSSuite {
                         .header("X-AUTH-TOKEN", token)
                         .post(Entity.json(conteudo));
             }
-        } 
+        }
         catch (Exception e) {
             return Response.serverError().entity(e.getMessage()).build().toString();
         }

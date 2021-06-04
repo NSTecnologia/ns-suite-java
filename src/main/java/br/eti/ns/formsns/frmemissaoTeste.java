@@ -77,10 +77,10 @@ public class frmemissaoTeste {
             ide.tpAmb = "2";
             ide.mod = "66";
             ide.serie = "0";
-            ide.nNF = "51017";
+            ide.nNF = "51020";
             ide.cNF = "00000001";
             ide.cDV = "";
-            ide.dhEmi = "2021-06-04T14:30:33-03:00";
+            ide.dhEmi = "2021-06-04T15:00:33-03:00";
             ide.tpEmis = "1";
             ide.cMunFG = "4303509";
             ide.finNF3e = "1";
@@ -91,6 +91,7 @@ public class frmemissaoTeste {
             emit.iE = "0170108708";
             emit.xNome = "News Systems Ltda";
             emit.xFant = "TESTE DE EMISSAO";
+
             emit.enderEmit = enderEmit;
             enderEmit.xLgr = "Av. Antonio Duro";
             enderEmit.nro = "870";
@@ -106,6 +107,7 @@ public class frmemissaoTeste {
             dest.xNome = "Teste de Emissão da Silva";
             dest.cPF = "00269925074";
             dest.indIEDest = "9";
+
             dest.enderDest = enderDest;
             enderDest.xLgr = "Av. Anthero Salustiano Silveira";
             enderDest.nro = "510";
@@ -132,8 +134,11 @@ public class frmemissaoTeste {
 
             det.add(det);
             det.nItem = "1";
+
             det.detItem = detItem;
+
             detItem.gTarif = gTarif;
+
             gTarif.dIniTarif = "2020-07-27";
             gTarif.dFimTarif = "2020-07-28";
             gTarif.tpAto = "1";
@@ -257,6 +262,7 @@ public class frmemissaoTeste {
 
 	    ObjectMapper mapper = new ObjectMapper();
             String json = "";
+
 	    try {
                 json = mapper.writeValueAsString(nF3eJSON);
             } 
