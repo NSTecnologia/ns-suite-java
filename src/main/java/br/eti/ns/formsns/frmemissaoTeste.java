@@ -77,10 +77,10 @@ public class frmemissaoTeste {
             ide.tpAmb = "2";
             ide.mod = "66";
             ide.serie = "0";
-            ide.nNF = "51015";
+            ide.nNF = "51017";
             ide.cNF = "00000001";
             ide.cDV = "";
-            ide.dhEmi = "2021-06-04T09:46:33-03:00";
+            ide.dhEmi = "2021-06-04T14:30:33-03:00";
             ide.tpEmis = "1";
             ide.cMunFG = "4303509";
             ide.finNF3e = "1";
@@ -208,7 +208,6 @@ public class frmemissaoTeste {
             vRetTribTot.vRetCSLL = "0.00";
             vRetTribTot.vIRRF = "0.00";
 
-
             infNF3e.gFat = gFat;
             gFat.CompetFat = "201911";
             gFat.dVencFat = "2019-11-27";
@@ -255,22 +254,19 @@ public class frmemissaoTeste {
             gRespTec.xContato = "Fernando Konflanz";
             gRespTec.email = "fernando.konflanz@nstecnologia.com.br";
             gRespTec.fone = "51996359538";
-            
+
 	    ObjectMapper mapper = new ObjectMapper();
             String json = "";
-            
 	    try {
                 json = mapper.writeValueAsString(nF3eJSON);
             } 
 	    catch (JsonProcessingException jsonProcessingException) {
                 jsonProcessingException.printStackTrace();
             }
-
             System.out.println(json);
             String retorno = null;
 
             try {
-
                 retorno = NSSuite.emitirNF3eSincrono(json, "json", "07364617000135", "X", "2", "C:/Notas/NF3e", false);
 
                 JsonNode respostaJSON = mapper.readTree(retorno);
@@ -305,24 +301,19 @@ public class frmemissaoTeste {
                 exception.printStackTrace();
             }
 	    System.out.println(retorno);
-
         });
 
         // Cancelamento
         btnCancelarNF3e.addActionListener(e -> {
-
             CancelarReqNF3e cancelarReqNF3e = new CancelarReqNF3e();
-
-            cancelarReqNF3e.dhEvento = "2021-06-04T10:05:00-03:00";
-            cancelarReqNF3e.nProt = "143210007831886";
+            cancelarReqNF3e.dhEvento = "2021-06-04T14:30:00-03:00";
+            cancelarReqNF3e.nProt = "143210007831896";
             cancelarReqNF3e.tpAmb = "2";
             cancelarReqNF3e.xJust = "Cancelamento de NF3e para fins de teste em homologação";
-            cancelarReqNF3e.chNF3e = "43210607364617000135660000000510151000000011";
-
+            cancelarReqNF3e.chNF3e = "43210607364617000135660000000510161000000019";
             try {
                 String retorno = NSSuite.cancelarDocumento("66", cancelarReqNF3e);
                 System.out.println(retorno);
-
             }
             catch (Exception exception) {
                 exception.printStackTrace();
@@ -332,14 +323,12 @@ public class frmemissaoTeste {
 	
 	//Download de Evento
         btnDownEventoNF3e.addActionListener(e -> {
-            
 	    DownloadEventoReqNF3e downloadEventoReqNF3e = new DownloadEventoReqNF3e();
             downloadEventoReqNF3e.nSeqEvento = "1";
-            downloadEventoReqNF3e.chNF3e = "43210607364617000135660000000510151000000011";
+            downloadEventoReqNF3e.chNF3e = "43210607364617000135660000000510161000000019";
             downloadEventoReqNF3e.tpDown = "X";
             downloadEventoReqNF3e.tpAmb = "2";
             downloadEventoReqNF3e.tpEvento = "CANC";
-            
 	    try {
                 String retorno = NSSuite.downloadEventoESalvar("66",downloadEventoReqNF3e,"C:/Notas/NF3e",downloadEventoReqNF3e.chNF3e,downloadEventoReqNF3e.nSeqEvento,false);
                 System.out.println(retorno);
@@ -351,44 +340,36 @@ public class frmemissaoTeste {
 	
 	//Consultar Situacao
         btnConSituacaoNF3e.addActionListener(e -> {
-
             ConsSitReqNF3e consSitReqNF3e = new ConsSitReqNF3e();
-            consSitReqNF3e.chNF3e = "43210607364617000135660000000510151000000011";
+            consSitReqNF3e.chNF3e = "43210607364617000135660000000510161000000019";
             consSitReqNF3e.licencaCNPJ = "07364617000135";
             consSitReqNF3e.tpAmb = "2";
-            
 	    try {
 		String retorno = NSSuite.consultarSituacaoDocumento("66", consSitReqNF3e);
                 System.out.println(retorno);
             }
             catch (Exception exception) {
                 exception.printStackTrace();
-
             }
         });
         
 	//Listagem de nsNRec
 	btnListarNSNrec.addActionListener(e -> {
-            
 	    ListarNSNRecReqNF3e listarNSNRecReqNF3e = new ListarNSNRecReqNF3e();
-            listarNSNRecReqNF3e.chNF3e = "43210607364617000135660000000510151000000011";
+            listarNSNRecReqNF3e.chNF3e = "43210607364617000135660000000510161000000019";
             listarNSNRecReqNF3e.tpAmb = "2";
-            
 	    try {
                 String retorno = NSSuite.listarNSNRecs("66", listarNSNRecReqNF3e);
                 System.out.println(retorno);
             }
             catch (Exception exception) {
                 exception.printStackTrace();
-
             }
-
         });
         
 	btnDownloadNF3e.addActionListener(e -> {
-
             DownloadReqNF3e downloadReqNF3e = new DownloadReqNF3e();
-            downloadReqNF3e.chNF3e = "43210607364617000135660000000510151000000011";
+            downloadReqNF3e.chNF3e = "43210607364617000135660000000510161000000019";
             downloadReqNF3e.tpDown = "X";
             downloadReqNF3e.tpAmb = "2";
             
@@ -409,6 +390,5 @@ public class frmemissaoTeste {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-
     }
 }
