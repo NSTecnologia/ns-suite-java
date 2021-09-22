@@ -59,19 +59,19 @@ public class NSSuite {
             if (tpConteudo.equals("txt")) {
                 respostaServidor = target.request(MediaType.TEXT_PLAIN)
                         .header("X-AUTH-TOKEN", token)
+                        .header("Content-Type","text/plain;charset=utf-8")
                         .post(Entity.text(conteudo));
             } 
             else if (tpConteudo.equals("xml")) {
                 respostaServidor = target.request(MediaType.APPLICATION_XML)
-                        // pode ser enviado também no json junto com os dados da nfce
                         .header("X-AUTH-TOKEN", token)
+                        .header("Content-Type","application/xml;charset=utf-8")
                         .post(Entity.xml(conteudo));
             } 
             else {
                 respostaServidor = target.request(MediaType.APPLICATION_JSON)
-
-                        // pode ser enviado também no json junto com os dados da nfce
                         .header("X-AUTH-TOKEN", token)
+                        .header("Content-Type","application/json;charset=utf-8")
                         .post(Entity.json(conteudo));
             }
         } 
