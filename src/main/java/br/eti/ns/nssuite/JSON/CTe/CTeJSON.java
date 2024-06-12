@@ -5,9 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 public class CTeJSON {
+
     @JsonProperty("CTe")
-    public CTe cTe;
+    public CTe CTe;
     public InfModal infModal;
+
 
     public static class Toma3 {
         public String toma;
@@ -47,7 +49,7 @@ public class CTeJSON {
         public String cUF;
         public String cCT;
         @JsonProperty("CFOP")
-        public String cFOP;
+        public String CFOP;
         public String natOp;
         public String mod;
         public String serie;
@@ -63,17 +65,17 @@ public class CTeJSON {
         public String cMunEnv;
         public String xMunEnv;
         @JsonProperty("UFEnv")
-        public String uFEnv;
+        public String UFEnv;
         public String modal;
         public String tpServ;
         public String cMunIni;
         public String xMunIni;
         @JsonProperty("UFIni")
-        public String uFIni;
+        public String UFIni;
         public String cMunFim;
         public String xMunFim;
         @JsonProperty("UFFim")
-        public String uFFim;
+        public String UFFim;
         public String retira;
         public String xDetRetira;
         public String indIEToma;
@@ -153,8 +155,7 @@ public class CTeJSON {
         public String origCalc;
         public String destCalc;
         public String xObs;
-        @JsonProperty("ObsCont")
-        public List<ObsCont> obsCont;
+        public ObsCont ObsCont;
         @JsonProperty("ObsFisco")
         public List<ObsFisco> obsFisco;
     }
@@ -167,22 +168,23 @@ public class CTeJSON {
         public String cMun;
         public String xMun;
         @JsonProperty("CEP")
-        public String cEP;
+        public String CEP;
         @JsonProperty("UF")
-        public String uF;
+        public String UF;
         public String fone;
     }
 
     public static class Emit {
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         @JsonProperty("IE")
-        public String iE;
+        public String IE;
         @JsonProperty("IEST")
         public String iEST;
         public String xNome;
         public String xFant;
         public EnderEmit enderEmit;
+        public String CRT;
     }
 
     public static class EnderReme {
@@ -193,9 +195,9 @@ public class CTeJSON {
         public String cMun;
         public String xMun;
         @JsonProperty("CEP")
-        public String cEP;
+        public String CEP;
         @JsonProperty("UF")
-        public String uF;
+        public String UF;
         public String cPais;
         public String xPais;
     }
@@ -204,7 +206,7 @@ public class CTeJSON {
         @JsonProperty("CNPJ")
         public String cNPJ;
         @JsonProperty("CPF")
-        public String cPF;
+        public String CPF;
         @JsonProperty("IE")
         public String iE;
         public String xNome;
@@ -280,18 +282,18 @@ public class CTeJSON {
         @JsonProperty("CEP")
         public String cEP;
         @JsonProperty("UF")
-        public String uF;
+        public String UF;
         public String cPais;
         public String xPais;
     }
 
     public static class Dest {
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         @JsonProperty("CPF")
         public String cPF;
         @JsonProperty("IE")
-        public String iE;
+        public String IE;
         public String xNome;
         public String fone;
         @JsonProperty("ISUF")
@@ -364,7 +366,7 @@ public class CTeJSON {
 
     public static class ICMSSN {
         @JsonProperty("CST")
-        public String cST;
+        public String CST;
         public String indSN;
     }
 
@@ -382,7 +384,7 @@ public class CTeJSON {
         @JsonProperty("ICMSOutraUF")
         public ICMSOutraUF iCMSOutraUF;
         @JsonProperty("ICMSSN")
-        public ICMSSN iCMSSN;
+        public ICMSSN ICMSSN;
     }
 
     public static class ICMSUFFim {
@@ -398,7 +400,7 @@ public class CTeJSON {
 
     public static class Imp {
         @JsonProperty("ICMS")
-        public ICMS iCMS;
+        public ICMS ICMS;
         public String vTotTrib;
         public String infAdFisco;
         @JsonProperty("ICMSUFFim")
@@ -632,11 +634,11 @@ public class CTeJSON {
         public InfCteComp infCteComp;
         public InfCteAnu infCteAnu;
         public List<AutXML> autXML;
-        public InfRespTec infRespTec;
     }
 
     public static class CTe {
         public InfCte infCte;
+        public InfRespTec infRespTec;
     }
 
     public static class EmiOcc {
@@ -660,7 +662,7 @@ public class CTeJSON {
     public static class Rodo {
         public String xmlns;
         @JsonProperty("RNTRC")
-        public String rNTRC;
+        public String RNTRC;
         public List<Occ> occ;
     }
 

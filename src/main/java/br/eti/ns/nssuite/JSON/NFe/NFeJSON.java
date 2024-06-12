@@ -8,14 +8,14 @@ import java.util.List;
 
 public class NFeJSON {
   @JsonProperty("NFe")
-  public NFe nFe;
+  public NFe NFe;
 
   public static class RefNF {
     public String cUF;
     @JsonProperty("AAMM")
-    public String aAMM;
+    public String AAMM;
     @JsonProperty("CNPJ")
-    public String cNPJ;
+    public String CNPJ;
     public String mod;
     public String serie;
     public String nNF;
@@ -24,13 +24,13 @@ public class NFeJSON {
   public static class RefNFP {
     public String cUF;
     @JsonProperty("AAMM")
-    public String aAMM;
+    public String AAMM;
     @JsonProperty("CNPJ")
-    public String cNPJ;
+    public String CNPJ;
     @JsonProperty("CPF")
-    public String cPF;
+    public String CPF;
     @JsonProperty("IE")
-    public String iE;
+    public String IE;
     public String mod;
     public String serie;
     public String nNF;
@@ -75,7 +75,7 @@ public class NFeJSON {
     public String dhCont;
     public String xJust;
     @JsonProperty("NFref")
-    public List<NFref> nFref;
+    public List<NFref> NFref;
   }
 
   public static class EnderEmit {
@@ -86,9 +86,9 @@ public class NFeJSON {
     public String cMun;
     public String xMun;
     @JsonProperty("UF")
-    public String uF;
+    public String UF;
     @JsonProperty("CEP")
-    public String cEP;
+    public String CEP;
     public String cPais;
     public String xPais;
     public String fone;
@@ -96,22 +96,22 @@ public class NFeJSON {
 
   public static class Emit {
     @JsonProperty("CNPJ")
-    public String cNPJ;
+    public String CNPJ;
     @JsonProperty("CPF")
-    public String cPF;
+    public String CPF;
     public String xNome;
     public String xFant;
     public EnderEmit enderEmit;
     @JsonProperty("IE")
-    public String iE;
+    public String IE;
     @JsonProperty("IEST")
-    public String iEST;
+    public String IEST;
     @JsonProperty("IM")
-    public String iM;
+    public String IM;
     @JsonProperty("CNAE")
-    public String cNAE;
+    public String CNAE;
     @JsonProperty("CRT")
-    public String cRT;
+    public String CRT;
   }
 
   public static class EnderDest {
@@ -122,9 +122,9 @@ public class NFeJSON {
     public String cMun;
     public String xMun;
     @JsonProperty("UF")
-    public String uF;
+    public String UF;
     @JsonProperty("CEP")
-    public String cEP;
+    public String CEP;
     public String cPais;
     public String xPais;
     public String fone;
@@ -132,27 +132,27 @@ public class NFeJSON {
 
   public static class Dest {
     @JsonProperty("CNPJ")
-    public String cNPJ;
+    public String CNPJ;
     @JsonProperty("CPF")
-    public String cPF;
+    public String CPF;
     public String idEstrangeiro;
     public String xNome;
     public EnderDest enderDest;
     public String indIEDest;
     @JsonProperty("IE")
-    public String iE;
+    public String IE;
     @JsonProperty("ISUF")
-    public String iSUF;
+    public String ISUF;
     @JsonProperty("IM")
-    public String iM;
+    public String IM;
     public String email;
   }
 
   public static class Retirada {
     @JsonProperty("CNPJ")
-    public String cNPJ;
+    public String CNPJ;
     @JsonProperty("CPF")
-    public String cPF;
+    public String CPF;
     public String xLgr;
     public String nro;
     public String xCpl;
@@ -160,14 +160,14 @@ public class NFeJSON {
     public String cMun;
     public String xMun;
     @JsonProperty("UF")
-    public String uF;
+    public String UF;
   }
 
   public static class Entrega {
     @JsonProperty("CNPJ")
-    public String cNPJ;
+    public String CNPJ;
     @JsonProperty("CPF")
-    public String cPF;
+    public String CPF;
     public String xLgr;
     public String nro;
     public String xCpl;
@@ -175,14 +175,14 @@ public class NFeJSON {
     public String cMun;
     public String xMun;
     @JsonProperty("UF")
-    public String uF;
+    public String UF;
   }
 
   public static class AutXML {
     @JsonProperty("CNPJ")
-    public String cNPJ;
+    public String CNPJ;
     @JsonProperty("CPF")
-    public String cPF;
+    public String CPF;
   }
 
   public static class Rastro {
@@ -206,15 +206,15 @@ public class NFeJSON {
     public String dDI;
     public String xLocDesemb;
     @JsonProperty("UFDesemb")
-    public String uFDesemb;
+    public String UFDesemb;
     public String dDesemb;
     public String tpViaTransp;
     public String vAFRMM;
     public String tpIntermedio;
     @JsonProperty("CNPJ")
-    public String cNPJ;
+    public String CNPJ;
     @JsonProperty("UFTerceiro")
-    public String uFTerceiro;
+    public String UFTerceiro;
     public String cExportador;
     public Adi adi;
   }
@@ -243,7 +243,7 @@ public class NFeJSON {
     public String tpComb;
     public String nMotor;
     @JsonProperty("CMT")
-    public String cMT;
+    public String CMT;
     public String dist;
     public String anoMod;
     public String anoFab;
@@ -251,7 +251,7 @@ public class NFeJSON {
     public String tpVeic;
     public String espVeic;
     @JsonProperty("VIN")
-    public String vIN;
+    public String VIN;
     public String condVeic;
     public String cMod;
     public String cCorDENATRAN;
@@ -293,12 +293,12 @@ public class NFeJSON {
     public String pGNi;
     public String vPart;
     @JsonProperty("CODIF")
-    public String cODIF;
+    public String CODIF;
     public String qTemp;
     @JsonProperty("UFCons")
-    public String uFCons;
+    public String UFCons;
     @JsonProperty("CIDE")
-    public CIDE cIDE;
+    public CIDE CIDE;
     public Encerrante encerrante;
   }
 
@@ -307,19 +307,19 @@ public class NFeJSON {
     public String cEAN;
     public String xProd;
     @JsonProperty("NCM")
-    public String nCM;
+    public String NCM;
     @JsonProperty("NVE")
-    public String nVE;
+    public String NVE;
     @JsonProperty("CEST")
-    public String cEST;
+    public String CEST;
     public String indEscala;
     @JsonProperty("CNPJFab")
-    public String cNPJFab;
+    public String CNPJFab;
     public String cBenef;
     @JsonProperty("EXTIPI")
-    public String eXTIPI;
+    public String EXTIPI;
     @JsonProperty("CFOP")
-    public String cFOP;
+    public String CFOP;
     public String uCom;
     public String qCom;
     public String vUnCom;
@@ -335,7 +335,7 @@ public class NFeJSON {
     public String indTot;
     public List<Rastro> rastro;
     @JsonProperty("DI")
-    public List<DI> dI;
+    public List<DI> DI;
     public List<DetExport> detExport;
     public String xPed;
     public String nItemPed;
@@ -350,7 +350,7 @@ public class NFeJSON {
   public static class ICMS00 {
     public String orig;
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String modBC;
     public String vBC;
     public String pICMS;
@@ -362,7 +362,7 @@ public class NFeJSON {
   public static class ICMS10 {
     public String orig;
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String modBC;
     public String vBC;
     public String pICMS;
@@ -384,7 +384,7 @@ public class NFeJSON {
   public static class ICMS20 {
     public String orig;
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String modBC;
     public String pRedBC;
     public String vBC;
@@ -400,7 +400,7 @@ public class NFeJSON {
   public static class ICMS30 {
     public String orig;
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String modBCST;
     public String pMVAST;
     public String pRedBCST;
@@ -417,7 +417,7 @@ public class NFeJSON {
   public static class ICMS40 {
     public String orig;
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String vICMSDeson;
     public String motDesICMS;
   }
@@ -425,7 +425,7 @@ public class NFeJSON {
   public static class ICMS51 {
     public String orig;
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String modBC;
     public String pRedBC;
     public String vBC;
@@ -442,7 +442,7 @@ public class NFeJSON {
   public static class ICMS60 {
     public String orig;
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String vBCSTRet;
     public String pST;
     public String vICMSSTRet;
@@ -454,7 +454,7 @@ public class NFeJSON {
   public static class ICMS70 {
     public String orig;
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String modBC;
     public String pRedBC;
     public String vBC;
@@ -479,7 +479,7 @@ public class NFeJSON {
   public static class ICMS90 {
     public String orig;
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String modBC;
     public String vBC;
     public String pRedBC;
@@ -504,7 +504,7 @@ public class NFeJSON {
   public static class ICMSPart {
     public String orig;
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String modBC;
     public String vBC;
     public String pRedBC;
@@ -518,13 +518,13 @@ public class NFeJSON {
     public String vICMSST;
     public String pBCOp;
     @JsonProperty("UFST")
-    public String uFST;
+    public String UFST;
   }
 
   public static class ICMSST {
     public String orig;
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String vBCSTRet;
     public String vICMSSTRet;
     public String vBCSTDest;
@@ -534,7 +534,7 @@ public class NFeJSON {
   public static class ICMSSN101 {
     public String orig;
     @JsonProperty("CSOSN")
-    public String cSOSN;
+    public String CSOSN;
     public String pCredSN;
     public String vCredICMSSN;
   }
@@ -542,13 +542,13 @@ public class NFeJSON {
   public static class ICMSSN102 {
     public String orig;
     @JsonProperty("CSOSN")
-    public String cSOSN;
+    public String CSOSN;
   }
 
   public static class ICMSSN201 {
     public String orig;
     @JsonProperty("CSOSN")
-    public String cSOSN;
+    public String CSOSN;
     public String modBCST;
     public String pMVAST;
     public String pRedBCST;
@@ -565,7 +565,7 @@ public class NFeJSON {
   public static class ICMSSN202 {
     public String orig;
     @JsonProperty("CSOSN")
-    public String cSOSN;
+    public String CSOSN;
     public String modBCST;
     public String pMVAST;
     public String pRedBCST;
@@ -580,7 +580,7 @@ public class NFeJSON {
   public static class ICMSSN500 {
     public String orig;
     @JsonProperty("CSOSN")
-    public String cSOSN;
+    public String CSOSN;
     public String vBCSTRet;
     public String pST;
     public String vICMSSTRet;
@@ -592,7 +592,7 @@ public class NFeJSON {
   public static class ICMSSN900 {
     public String orig;
     @JsonProperty("CSOSN")
-    public String cSOSN;
+    public String CSOSN;
     public String modBC;
     public String vBC;
     public String pRedBC;
@@ -625,46 +625,46 @@ public class NFeJSON {
 
   public static class ICMS {
     @JsonProperty("ICMS00")
-    public ICMS00 iCMS00;
+    public ICMS00 ICMS00;
     @JsonProperty("ICMS10")
-    public ICMS10 iCMS10;
+    public ICMS10 ICMS10;
     @JsonProperty("ICMS20")
-    public ICMS20 iCMS20;
+    public ICMS20 ICMS20;
     @JsonProperty("ICMS30")
-    public ICMS30 iCMS30;
+    public ICMS30 ICMS30;
     @JsonProperty("ICMS40")
-    public ICMS40 iCMS40;
+    public ICMS40 ICMS40;
     @JsonProperty("ICMS51")
-    public ICMS51 iCMS51;
+    public ICMS51 ICMS51;
     @JsonProperty("ICMS60")
-    public ICMS60 iCMS60;
+    public ICMS60 ICMS60;
     @JsonProperty("ICMS70")
-    public ICMS70 iCMS70;
+    public ICMS70 ICMS70;
     @JsonProperty("ICMS90")
-    public ICMS90 iCMS90;
+    public ICMS90 ICMS90;
     @JsonProperty("ICMSPart")
-    public ICMSPart iCMSPart;
+    public ICMSPart ICMSPart;
     @JsonProperty("ICMSST")
-    public ICMSST iCMSST;
+    public ICMSST ICMSST;
     @JsonProperty("ICMSSN101")
-    public ICMSSN101 iCMSSN101;
+    public ICMSSN101 ICMSSN101;
     @JsonProperty("ICMSSN102")
-    public ICMSSN102 iCMSSN102;
+    public ICMSSN102 ICMSSN102;
     @JsonProperty("ICMSSN201")
-    public ICMSSN201 iCMSSN201;
+    public ICMSSN201 ICMSSN201;
     @JsonProperty("ICMSSN202")
-    public ICMSSN202 iCMSSN202;
+    public ICMSSN202 ICMSSN202;
     @JsonProperty("ICMSSN500")
-    public ICMSSN500 iCMSSN500;
+    public ICMSSN500 ICMSSN500;
     @JsonProperty("ICMSSN900")
-    public ICMSSN900 iCMSSN900;
+    public ICMSSN900 ICMSSN900;
     //@JsonProperty("ICMSUFDest")
     //public ICMSUFDest iCMSUFDest;
   }
 
   public static class IPITrib {
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String vBC;
     public String pIPI;
     public String qUnid;
@@ -674,20 +674,20 @@ public class NFeJSON {
 
   public static class IPINT {
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
   }
 
   public static class IPI {
     //public String clEnq;
     @JsonProperty("CNPJProd")
-    public String cNPJProd;
+    public String CNPJProd;
     public String cSelo;
     public String qSelo;
     public String cEnq;
     @JsonProperty("IPITrib")
-    public IPITrib iPITrib;
+    public IPITrib IPITrib;
     @JsonProperty("IPINT")
-    public IPINT iPINT;
+    public IPINT IPINT;
     //public String vIPIDevol;
   }
 
@@ -700,7 +700,7 @@ public class NFeJSON {
 
   public static class PISAliq {
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String vBC;
     public String pPIS;
     public String vPIS;
@@ -708,7 +708,7 @@ public class NFeJSON {
 
   public static class PISQtde {
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String qBCProd;
     public String vAliqProd;
     public String vPIS;
@@ -716,12 +716,12 @@ public class NFeJSON {
 
   public static class PISNT {
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
   }
 
   public static class PISOutr {
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String vBC;
     public String pPIS;
     public String qBCProd;
@@ -731,13 +731,13 @@ public class NFeJSON {
 
   public static class PIS {
     @JsonProperty("PISAliq")
-    public PISAliq pISAliq;
+    public PISAliq PISAliq;
     @JsonProperty("PISQtde")
-    public PISQtde pISQtde;
+    public PISQtde PISQtde;
     @JsonProperty("PISNT")
-    public PISNT pISNT;
+    public PISNT PISNT;
     @JsonProperty("PISOutr")
-    public PISOutr pISOutr;
+    public PISOutr PISOutr;
   }
 
   public static class PISST {
@@ -750,7 +750,7 @@ public class NFeJSON {
 
   public static class COFINSAliq {
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String vBC;
     public String pCOFINS;
     public String vCOFINS;
@@ -758,7 +758,7 @@ public class NFeJSON {
 
   public static class COFINSQtde {
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String qBCProd;
     public String vAliqProd;
     public String vCOFINS;
@@ -766,12 +766,12 @@ public class NFeJSON {
 
   public static class COFINSNT {
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
   }
 
   public static class COFINSOutr {
     @JsonProperty("CST")
-    public String cST;
+    public String CST;
     public String vBC;
     public String pCOFINS;
     public String qBCProd;
@@ -781,13 +781,13 @@ public class NFeJSON {
 
   public static class COFINS {
     @JsonProperty("COFINSAliq")
-    public COFINSAliq cOFINSAliq;
+    public COFINSAliq COFINSAliq;
     @JsonProperty("COFINSQtde")
-    public COFINSQtde cOFINSQtde;
+    public COFINSQtde COFINSQtde;
     @JsonProperty("COFINSNT")
-    public COFINSNT cOFINSNT;
+    public COFINSNT COFINSNT;
     @JsonProperty("COFINSOutr")
-    public COFINSOutr cOFINSOutr;
+    public COFINSOutr COFINSOutr;
   }
 
   public static class COFINSST {
@@ -820,30 +820,31 @@ public class NFeJSON {
   public static class Imposto {
     public String vTotTrib;
     @JsonProperty("ICMS")
-    public ICMS iCMS;
+    public ICMS ICMS;
     @JsonProperty("IPI")
-    public IPI iPI;
+    public IPI IPI;
     @JsonProperty("II")
-    public II iI;
+    public II II;
     @JsonProperty("PIS")
-    public PIS pIS;
+    public PIS PIS;
     @JsonProperty("PISST")
-    public PISST pISST;
+    public PISST PISST;
     @JsonProperty("COFINS")
-    public COFINS cOFINS;
+    public COFINS COFINS;
     @JsonProperty("COFINSST")
-    public COFINSST cOFINSST;
+    public COFINSST COFINSST;
     @JsonProperty("ISSQN")
-    public ISSQN iSSQN;
+    public ISSQN ISSQN;
   }
 
   public static class ImpostoDevol {
     public String pDevol;
     @JsonProperty("IPI")
-    public IPI iPI;
+    public IPI IPI;
   }
 
   public static class Det {
+    public List<Det> det;
     public Prod prod;
     public Imposto imposto;
     public ImpostoDevol impostoDevol;
@@ -904,24 +905,24 @@ public class NFeJSON {
 
   public static class Total {
     @JsonProperty("ICMSTot")
-    public ICMSTot iCMSTot;
+    public ICMSTot ICMSTot;
     @JsonProperty("ISSQNtot")
-    public ISSQNtot iSSQNtot;
+    public ISSQNtot ISSQNtot;
     public RetTrib retTrib;
   }
 
   public static class Transporta {
     @JsonProperty("CNPJ")
-    public String cNPJ;
+    public String CNPJ;
     @JsonProperty("CPF")
-    public String cPF;
+    public String CPF;
     public String xNome;
     @JsonProperty("IE")
-    public String iE;
+    public String IE;
     public String xEnder;
     public String xMun;
     @JsonProperty("UF")
-    public String uF;
+    public String UF;
   }
 
   public static class RetTransp {
@@ -930,24 +931,24 @@ public class NFeJSON {
     public String pICMSRet;
     public String vICMSRet;
     @JsonProperty("CFOP")
-    public String cFOP;
+    public String CFOP;
     public String cMunFG;
   }
 
   public static class VeicTransp {
     public String placa;
     @JsonProperty("UF")
-    public String uF;
+    public String UF;
     @JsonProperty("RNTC")
-    public String rNTC;
+    public String RNTC;
   }
 
   public static class Reboque {
     public String placa;
     @JsonProperty("UF")
-    public String uF;
+    public String UF;
     @JsonProperty("RNTC")
-    public String rNTC;
+    public String RNTC;
   }
 
   public static class Lacre {
@@ -995,7 +996,7 @@ public class NFeJSON {
 
   public static class Card {
     @JsonProperty("CNPJ")
-    public String cNPJ;
+    public String CNPJ;
     public String tBand;
     public String cAut;
     public String tpIntegra;
@@ -1015,7 +1016,7 @@ public class NFeJSON {
 
   public static class InfIntermed {
   @JsonProperty("CNPJ")
-  public String cNPJ;
+  public String CNPJ;
   public String idCadIntTran;
 }
 
@@ -1044,7 +1045,7 @@ public class NFeJSON {
 
   public static class Exporta {
     @JsonProperty("UFSaidaPais")
-    public String uFSaidaPais;
+    public String UFSaidaPais;
     public String xLocExporta;
     public String xLocDespacho;
   }
@@ -1086,7 +1087,7 @@ public class NFeJSON {
     public Retirada retirada;
     public Entrega entrega;
     public List<AutXML> autXML;
-    public ArrayList<NF3eJSON.Det> det;
+    public List<Det> det;
     public Total total;
     public Transp transp;
     public Cobr cobr;
@@ -1096,10 +1097,25 @@ public class NFeJSON {
     public Exporta exporta;
     public Compra compra;
     public Cana cana;
+    public InfRespTec infRespTec;
   }
+
+  public static class InfRespTec {
+		public String CNPJ;
+		public String xContato;
+		public String email;
+		public String fone;
+	}
+
 
   public static class NFe {
     public InfNFe infNFe;
+  }
+
+
+  public String toJsonString() {
+    // TODO Auto-generated method stub
+    throw new UnsupportedOperationException("Unimplemented method 'toJsonString'");
   }
 
 }

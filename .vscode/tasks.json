@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "javac",
+            "args": [
+                "-cp",
+                "src/main/java/br/eti/ns/nssuite/lib/org.json-chargebee-1.0.jar",
+                "src/main/java/br/eti/ns/nssuite/EmissaoTeste.java"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BPeJSON {
     @JsonProperty("BPe")
-    public BPe bPe;
+    public BPe BPe;
 
     public static class InfBPe
     {
@@ -51,10 +51,10 @@ public class BPeJSON {
         public String tpBPe;
         public String indPres;
         @JsonProperty("UFIni")
-        public String uFIni;
+        public String UFIni;
         public String cMunIni;
         @JsonProperty("UFFim")
-        public String uFFim;
+        public String UFFim;
         public String cMunFim;
         public String chCont;
         public String xJust;
@@ -71,7 +71,7 @@ public class BPeJSON {
         @JsonProperty("CEP")
         public String cEP;
         @JsonProperty("UF")
-        public String uF;
+        public String UF;
         public String fone;
         public String email;
     }
@@ -79,22 +79,22 @@ public class BPeJSON {
     public static class Emit
     {
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         @JsonProperty("IE")
-        public String iE;
+        public String IE;
         @JsonProperty("IEST")
-        public String iEST;
+        public String IEST;
         public String xNome;
         public String xFant;
         @JsonProperty("IM")
-        public String iM;
+        public String IM;
         @JsonProperty("CNAE")
-        public String cNAE;
+        public String CNAE;
         @JsonProperty("CRT")
-        public String cRT;
+        public String CRT;
         public EnderEmit enderEmit;
         @JsonProperty("TAR")
-        public String tAR;
+        public String TAR;
     }
 
     public static class EnderComp
@@ -108,7 +108,7 @@ public class BPeJSON {
         @JsonProperty("CEP")
         public String cEP;
         @JsonProperty("UF")
-        public String uF;
+        public String UF;
         public String cPais;
         public String xPais;
         public String fone;
@@ -119,13 +119,15 @@ public class BPeJSON {
     {
         public String xNome;
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         @JsonProperty("CPF")
-        public String cPF;
+        public String CPF;
         public String idEstrangeiro;
         @JsonProperty("IE")
-        public String iE;
+        public String IE;
         public EnderComp enderComp;
+        public String tpComp;
+        public String vComp;
     }
 
     public static class EnderAgencia
@@ -139,7 +141,7 @@ public class BPeJSON {
         @JsonProperty("CEP")
         public String cEP;
         @JsonProperty("UF")
-        public String uF;
+        public String UF;
         public String fone;
         public String email;
     }
@@ -148,7 +150,7 @@ public class BPeJSON {
     {
         public String xNome;
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         public EnderAgencia enderAgencia;
     }
 
@@ -162,7 +164,7 @@ public class BPeJSON {
     {
         public String xNome;
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         @JsonProperty("CPF")
         public String cPF;
         public String tpDoc;
@@ -214,18 +216,13 @@ public class BPeJSON {
         public String tpDesconto;
         public String xDesconto;
         @JsonProperty("Comp")
-        public Comp comp;
-
-        public static class Comp {
-            public String tpComp;
-            public String vComp;
-        }
+        public List<Comp> Comp;
     }
 
     public static class ICMS00
     {
         @JsonProperty("CST")
-        public String cST;
+        public String CST;
         public String vBC;
         public String pICMS;
         public String vICMS;
@@ -292,7 +289,7 @@ public class BPeJSON {
     public static class ICMS
     {
         @JsonProperty("ICMS00")
-        public ICMS00 iCMS00;
+        public ICMS00 ICMS00;
         @JsonProperty("ICMS20")
         public ICMS20 iCMS20;
         @JsonProperty("ICMS45")
@@ -303,21 +300,21 @@ public class BPeJSON {
         public ICMSOutraUF iCMSOutraUF;
         @JsonProperty("ICMSSN")
         public ICMSSN iCMSSN;
-        @JsonProperty("ICMSUFFim")
-        public ICMSUFFim iCMSUFFim;
     }
 
     public static class Imp
     {
         @JsonProperty("ICMS")
-        public ICMS iCMS;
+        public ICMS ICMS;
+        @JsonProperty("ICMSUFFim")
+        public ICMSUFFim ICMSUFFim;
     }
 
     public static class Card
     {
         public String tpIntegra;
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         public String tBand;
         public String cAut;
     }
@@ -325,14 +322,14 @@ public class BPeJSON {
     public static class AutXML
     {
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         @JsonProperty("CPF")
-        public String cPF;
+        public String CPF;
     }
 
     public static class InfRespTec {
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         public String xContato;
         public String email;
         public String fone;

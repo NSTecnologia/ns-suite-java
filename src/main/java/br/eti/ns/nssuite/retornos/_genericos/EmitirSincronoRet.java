@@ -11,5 +11,6 @@ public class EmitirSincronoRet {
     public String nProt;
     public String motivo;
     public String nsNRec;
+    public String chNFe;
     public ArrayList<String> erros;
 }

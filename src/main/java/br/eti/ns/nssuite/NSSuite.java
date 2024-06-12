@@ -44,7 +44,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 public class NSSuite {
-    private static String token = "ADQWREQW561D32AWS1D6";
+    private static String token = "SEU_TOKEN_AQUI";
     private static ObjectMapper objectMapper = new ObjectMapper();
     private static Endpoints endpoints = new Endpoints();
     private static Parametros parametros = new Parametros();
@@ -844,9 +844,10 @@ public class NSSuite {
                     respostaJSON = objectMapper.readTree(resposta);
                     statusDownload = respostaJSON.get("status").asText();
 
-                    if (!statusDownload.equals("200")) motivo = respostaJSON.get("motivo").asText();
-                }else{
+                    if (!statusDownload.equals("200"))
                     motivo = respostaJSON.get("motivo").asText();
+                }else{
+                    motivo = respostaJSON.get("xMotivo").asText();
                 }
             }else if (statusConsulta.equals("-2")){
 
@@ -856,6 +857,7 @@ public class NSSuite {
             }else{
                 motivo = respostaJSON.get("motivo").asText();
             }
+            //termina o if de status de envio
         }else if ( statusEnvio.equals("-7")){
 
             motivo = respostaJSON.get("motivo").asText();
@@ -1231,7 +1233,9 @@ public class NSSuite {
                 urlConsulta = endpoints.BPeConsStatusProcessamento;
                 break;
             }
-            case "67": {
+            case "67":
+            case "57":
+            {
                 urlConsulta = endpoints.CTeConsStatusProcessamento;
                 break;
             }
@@ -1275,7 +1279,9 @@ public class NSSuite {
                 urlDownload = endpoints.BPeDownload;
                 break;
             }
-            case "67": {
+            case "67": 
+            case "57":
+            {
                 urlDownload = endpoints.CTeDownload;
                 break;
             }
