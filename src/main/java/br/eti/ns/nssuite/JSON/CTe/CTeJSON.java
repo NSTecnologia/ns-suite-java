@@ -1,15 +1,12 @@
 package br.eti.ns.nssuite.JSON.CTe;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.util.List;
 
 public class CTeJSON {
-
     @JsonProperty("CTe")
     public CTe CTe;
     public InfModal infModal;
-
 
     public static class Toma3 {
         public String toma;
@@ -23,9 +20,9 @@ public class CTeJSON {
         public String cMun;
         public String xMun;
         @JsonProperty("CEP")
-        public String cEP;
+        public String CEP;
         @JsonProperty("UF")
-        public String uF;
+        public String UF;
         public String cPais;
         public String xPais;
     }
@@ -33,11 +30,11 @@ public class CTeJSON {
     public static class Toma4 {
         public String toma;
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         @JsonProperty("CPF")
-        public String cPF;
+        public String CPF;
         @JsonProperty("IE")
-        public String iE;
+        public String IE;
         public String xNome;
         public String xFant;
         public String fone;
@@ -83,6 +80,7 @@ public class CTeJSON {
         public Toma4 toma4;
         public String dhCont;
         public String xJust;
+        public gCompraGov gCompraGov;
     }
 
     public static class Pass {
@@ -150,14 +148,14 @@ public class CTeJSON {
         public String xCaracSer;
         public String xEmi;
         public Fluxo fluxo;
-        @JsonProperty("Entrega")
-        public Entrega entrega;
+        public Entrega Entrega;
         public String origCalc;
         public String destCalc;
         public String xObs;
-        public ObsCont ObsCont;
+        @JsonProperty("ObsCont")
+        public List<ObsCont> ObsCont;
         @JsonProperty("ObsFisco")
-        public List<ObsFisco> obsFisco;
+        public List<ObsFisco> ObsFisco;
     }
 
     public static class EnderEmit {
@@ -180,11 +178,10 @@ public class CTeJSON {
         @JsonProperty("IE")
         public String IE;
         @JsonProperty("IEST")
-        public String iEST;
+        public String IEST;
         public String xNome;
         public String xFant;
         public EnderEmit enderEmit;
-        public String CRT;
     }
 
     public static class EnderReme {
@@ -202,13 +199,13 @@ public class CTeJSON {
         public String xPais;
     }
 
-    public static class Rem {
+    public static class Remetente {
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         @JsonProperty("CPF")
         public String CPF;
         @JsonProperty("IE")
-        public String iE;
+        public String IE;
         public String xNome;
         public String xFant;
         public String fone;
@@ -224,20 +221,20 @@ public class CTeJSON {
         public String cMun;
         public String xMun;
         @JsonProperty("CEP")
-        public String cEP;
+        public String CEP;
         @JsonProperty("UF")
-        public String uF;
+        public String UF;
         public String cPais;
         public String xPais;
     }
 
     public static class Exped {
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         @JsonProperty("CPF")
-        public String cPF;
+        public String CPF;
         @JsonProperty("IE")
-        public String iE;
+        public String IE;
         public String xNome;
         public String fone;
         public EnderExped enderExped;
@@ -252,20 +249,20 @@ public class CTeJSON {
         public String cMun;
         public String xMun;
         @JsonProperty("CEP")
-        public String cEP;
+        public String CEP;
         @JsonProperty("UF")
-        public String uF;
+        public String UF;
         public String cPais;
         public String xPais;
     }
 
     public static class Receb {
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         @JsonProperty("CPF")
-        public String cPF;
+        public String CPF;
         @JsonProperty("IE")
-        public String iE;
+        public String IE;
         public String xNome;
         public String fone;
         public EnderReceb enderReceb;
@@ -280,7 +277,7 @@ public class CTeJSON {
         public String cMun;
         public String xMun;
         @JsonProperty("CEP")
-        public String cEP;
+        public String CEP;
         @JsonProperty("UF")
         public String UF;
         public String cPais;
@@ -291,13 +288,13 @@ public class CTeJSON {
         @JsonProperty("CNPJ")
         public String CNPJ;
         @JsonProperty("CPF")
-        public String cPF;
+        public String CPF;
         @JsonProperty("IE")
         public String IE;
         public String xNome;
         public String fone;
         @JsonProperty("ISUF")
-        public String iSUF;
+        public String ISUF;
         public EnderDest enderDest;
         public String email;
     }
@@ -311,12 +308,12 @@ public class CTeJSON {
         public String vTPrest;
         public String vRec;
         @JsonProperty("Comp")
-        public List<Comp> comp;
+        public List<Comp> Comp;
     }
 
     public static class ICMS00 {
         @JsonProperty("CST")
-        public String cST;
+        public String CST;
         public String vBC;
         public String pICMS;
         public String vICMS;
@@ -324,7 +321,7 @@ public class CTeJSON {
 
     public static class ICMS20 {
         @JsonProperty("CST")
-        public String cST;
+        public String CST;
         public String pRedBC;
         public String vBC;
         public String pICMS;
@@ -333,12 +330,12 @@ public class CTeJSON {
 
     public static class ICMS45 {
         @JsonProperty("CST")
-        public String cST;
+        public String CST;
     }
 
     public static class ICMS60 {
         @JsonProperty("CST")
-        public String cST;
+        public String CST;
         public String vBCSTRet;
         public String vICMSSTRet;
         public String pICMSSTRet;
@@ -347,7 +344,7 @@ public class CTeJSON {
 
     public static class ICMS90 {
         @JsonProperty("CST")
-        public String cST;
+        public String CST;
         public String pRedBC;
         public String vBC;
         public String pICMS;
@@ -357,7 +354,7 @@ public class CTeJSON {
 
     public static class ICMSOutraUF {
         @JsonProperty("CST")
-        public String cST;
+        public String CST;
         public String pRedBCOutraUF;
         public String vBCOutraUF;
         public String pICMSOutraUF;
@@ -372,17 +369,17 @@ public class CTeJSON {
 
     public static class ICMS {
         @JsonProperty("ICMS00")
-        public ICMS00 iCMS00;
+        public ICMS00 ICMS00;
         @JsonProperty("ICMS20")
-        public ICMS20 iCMS20;
+        public ICMS20 ICMS20;
         @JsonProperty("ICMS45")
-        public ICMS45 iCMS45;
+        public ICMS45 ICMS45;
         @JsonProperty("ICMS60")
-        public ICMS60 iCMS60;
+        public ICMS60 ICMS60;
         @JsonProperty("ICMS90")
-        public ICMS90 iCMS90;
+        public ICMS90 ICMS90;
         @JsonProperty("ICMSOutraUF")
-        public ICMSOutraUF iCMSOutraUF;
+        public ICMSOutraUF ICMSOutraUF;
         @JsonProperty("ICMSSN")
         public ICMSSN ICMSSN;
     }
@@ -404,7 +401,10 @@ public class CTeJSON {
         public String vTotTrib;
         public String infAdFisco;
         @JsonProperty("ICMSUFFim")
-        public ICMSUFFim iCMSUFFim;
+        public ICMSUFFim ICMSUFFim;
+        public String vTotDFe;
+        @JsonProperty("IBSCBS")
+        public IBSCBS IBSCBS;
     }
 
     public static class InfQ {
@@ -420,27 +420,8 @@ public class CTeJSON {
         public String vCargaAverb;
     }
 
-    public static class LacUnidCarga {
-        public String nLacre;
-    }
-
-    public static class InfUnidCarga {
-        public String tpUnidCarga;
-        public String idUnidCarga;
-        public List<LacUnidCarga> lacUnidCarga;
-        public String qtdRat;
-    }
-
     public static class LacUnidTransp {
         public String nLacre;
-    }
-
-    public static class InfUnidTransp {
-        public String tpUnidTransp;
-        public String idUnidTransp;
-        public List<LacUnidTransp> lacUnidTransp;
-        public List<InfUnidCarga> infUnidCarga;
-        public String qtdRat;
     }
 
     public static class InfNF {
@@ -459,21 +440,38 @@ public class CTeJSON {
         public String nCFOP;
         public String nPeso;
         @JsonProperty("PIN")
-        public String pIN;
+        public String PIN;
         public String dPrev;
         public List<InfUnidCarga> infUnidCarga;
         public List<InfUnidTransp> infUnidTransp;
-        public String unidRat;
     }
 
     public static class InfNFe {
         public String chave;
         @JsonProperty("PIN")
-        public String pIN;
+        public String PIN;
         public String dPrev;
         public List<InfUnidCarga> infUnidCarga;
         public List<InfUnidTransp> infUnidTransp;
-        public String unidRat;
+    }
+
+    public static class LacUnidCarga {
+        public String nLacre;
+    }
+
+    public static class InfUnidCarga {
+        public String tpUnidCarga;
+        public String idUnidCarga;
+        public List<LacUnidCarga> lacUnidCarga;
+        public String qtdRat;
+    }
+
+    public static class InfUnidTransp {
+        public String tpUnidTransp;
+        public String idUnidTransp;
+        public List<LacUnidTransp> lacUnidTransp;
+        public List<InfUnidCarga> infUnidCarga;
+        public String qtdRat;
     }
 
     public static class InfOutro {
@@ -512,13 +510,13 @@ public class CTeJSON {
 
     public static class EmiDocAnt {
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         @JsonProperty("CPF")
-        public String cPF;
+        public String CPF;
         @JsonProperty("IE")
-        public String iE;
+        public String IE;
         @JsonProperty("UF")
-        public String uF;
+        public String UF;
         public String xNome;
         public List<IdDocAnt> idDocAnt;
     }
@@ -556,9 +554,9 @@ public class CTeJSON {
 
     public static class RefNF {
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         @JsonProperty("CPF")
-        public String cPF;
+        public String CPF;
         public String mod;
         public String serie;
         public String subserie;
@@ -584,12 +582,12 @@ public class CTeJSON {
         public String xObs;
     }
 
-    public static class InfCTeMultimodal {
+    public static class InfCteMultimodal {
         public String chCTeMultimodal;
     }
 
     public static class InfServVinc {
-        public List<InfCTeMultimodal> infCTeMultimodal;
+        public List<InfCteMultimodal> infCteMultimodal;
     }
 
     public static class InfCTeNorm {
@@ -614,9 +612,9 @@ public class CTeJSON {
 
     public static class AutXML {
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         @JsonProperty("CPF")
-        public String cPF;
+        public String CPF;
     }
 
     public static class InfCte {
@@ -624,7 +622,7 @@ public class CTeJSON {
         public Ide ide;
         public Compl compl;
         public Emit emit;
-        public Rem rem;
+        public Remetente rem;
         public Exped exped;
         public Receb receb;
         public Dest dest;
@@ -634,21 +632,21 @@ public class CTeJSON {
         public InfCteComp infCteComp;
         public InfCteAnu infCteAnu;
         public List<AutXML> autXML;
+        public InfRespTec infRespTec;
     }
 
     public static class CTe {
         public InfCte infCte;
-        public InfRespTec infRespTec;
     }
 
     public static class EmiOcc {
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         public String cInt;
         @JsonProperty("IE")
-        public String iE;
+        public String IE;
         @JsonProperty("UF")
-        public String uF;
+        public String UF;
         public String fone;
     }
 
@@ -668,12 +666,12 @@ public class CTeJSON {
 
     public static class NatCarga {
         public String xDime;
-        public String cInfManu;
+        public List<String> cInfManu;
     }
 
     public static class Tarifa {
         @JsonProperty("CL")
-        public String cL;
+        public String CL;
         public String cTar;
         public String vTar;
     }
@@ -691,6 +689,7 @@ public class CTeJSON {
 
     public static class Aereo {
         public String nMinu;
+        @JsonProperty("nOCA")
         public String nOCA;
         public String dPrevAereo;
         public NatCarga natCarga;
@@ -704,14 +703,6 @@ public class CTeJSON {
 
     public static class Lacre {
         public String nLacre;
-    }
-
-    public static class InfRespTec {
-        @JsonProperty("CNPJ")
-        public String cnpj;
-        public String xContato;
-        public String email;
-        public String fone;
     }
 
     public static class DetCont {
@@ -739,17 +730,17 @@ public class CTeJSON {
         public String cMun;
         public String xMun;
         @JsonProperty("CEP")
-        public String cEP;
+        public String CEP;
         @JsonProperty("UF")
-        public String uF;
+        public String UF;
     }
 
     public static class FerroEnv {
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
         public String cInt;
         @JsonProperty("IE")
-        public String iE;
+        public String IE;
         public String xNome;
         public EnderFerro enderFerro;
     }
@@ -772,12 +763,17 @@ public class CTeJSON {
         public String vTar;
         public String dIni;
         public String dFim;
+        public String classDuto;
+        public String tpContratacao;
+        public String codPontoEntrada;
+        public String codPontoSaida;
+        public String nContrato;
     }
 
     public static class InfSeg {
         public String xSeg;
         @JsonProperty("CNPJ")
-        public String cNPJ;
+        public String CNPJ;
     }
 
     public static class Seg {
@@ -788,19 +784,114 @@ public class CTeJSON {
 
     public static class Multimodal {
         @JsonProperty("COTM")
-        public String cOTM;
+        public String COTM;
         public String indNegociavel;
         public Seg seg;
     }
 
     public static class InfModal {
+        public String versaoModal;
         public Rodo rodo;
         public Aereo aereo;
         public Aquav aquav;
         public Ferrov ferrov;
         public Duto duto;
         public Multimodal multimodal;
-        public String versaoModal;
     }
 
+    public static class InfRespTec {
+        @JsonProperty("CNPJ")
+        public String CNPJ;
+        public String xContato;
+        public String email;
+        public String fone;
+    }
+
+    public static class IBSCBS {
+        @JsonProperty("CST")
+        public String CST;
+        public String cClassTrib;
+        public String indDoacao;
+        public gIBSCBS gIBSCBS;
+        public gEstornoCred gEstornoCred;
+    }
+
+    public static class gIBSCBS {
+        public String vBC;
+        public String vIBS;
+        public gIBSUF gIBSUF;
+        public gIBSMun gIBSMun;
+        public gCBS gCBS;
+        public gTribRegular gTribRegular;
+        public gTribCompraGov gTribCompraGov;
+    }
+
+    public static class gIBSUF {
+        public String pIBSUF;
+        public String vIBSUF;
+        public gDif gDif;
+        public gDevTrib gDevTrib;
+        public gRed gRed;
+    }
+
+    public static class gDif {
+        public String pDif;
+        public String vDif;
+    }
+
+    public static class gDevTrib {
+        public String vDevTrib;
+    }
+
+    public static class gRed {
+        public String pRedAliq;
+        public String pAliqEfet;
+    }
+
+    public static class gIBSMun {
+        public String pIBSMun;
+        public String vIBSMun;
+        public gDif gDif;
+        public gDevTrib gDevTrib;
+        public gRed gRed;
+    }
+
+    public static class gCBS {
+        public String pCBS;
+        public String vCBS;
+        public gDif gDif;
+        public gDevTrib gDevTrib;
+        public gRed gRed;
+    }
+
+    public static class gTribRegular {
+        @JsonProperty("CSTReg")
+        public String CSTReg;
+        public String cClassTribReg;
+        public String pAliqEfetRegIBSUF;
+        public String vTribRegIBSUF;
+        public String pAliqEfetRegIBSMun;
+        public String vTribRegIBSMun;
+        public String pAliqEfetRegCBS;
+        public String vTribRegCBS;
+    }
+
+    public static class gEstornoCred {
+        public gEstornoCred vIBSEstCred;
+        public gEstornoCred vCBSEstCred;
+    }
+
+    public static class gTribCompraGov {
+        public String pAliqIBSUF;
+        public String vTribIBSUF;
+        public String pAliqIBSMun;
+        public String vTribIBSMun;
+        public String pAliqCBS;
+        public String vTribCBS;
+    }
+
+    public static class gCompraGov {
+        public String tpEnteGov;
+        public String pRedutor;
+    }
 }
