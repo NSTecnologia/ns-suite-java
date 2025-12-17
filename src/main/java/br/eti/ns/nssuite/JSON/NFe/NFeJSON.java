@@ -7,6 +7,8 @@ public class NFeJSON {
     @JsonProperty("NFe")
     public NFe NFe;
 
+    // --- Classes de Referência ---
+
     public static class RefNF {
         public String cUF;
         public String AAMM;
@@ -37,9 +39,12 @@ public class NFeJSON {
     public static class NFref {
         public String refNFe;
         public RefNF refNF;
+        public String refNFeSig;
         public RefNFP refNFP;
         public RefECF refECF;
     }
+
+    // --- Identificação ---
 
     public static class Ide {
         public String cUF;
@@ -66,6 +71,7 @@ public class NFeJSON {
         public String dhCont;
         public String xJust;
         public List<NFref> NFref;
+        // Campos novos
         public String cMunFGIBS;
         public String tpNFDebito;
         public String tpNFCredito;
@@ -73,6 +79,8 @@ public class NFeJSON {
         public gCompraGov gCompraGov;
         public gPagAntecipado gPagAntecipado;
     }
+
+    // --- Emitente e Destinatário ---
 
     public static class EnderEmit {
         public String xLgr;
@@ -157,6 +165,15 @@ public class NFeJSON {
         public String xMun;
         @JsonProperty("UF")
         public String UF;
+        @JsonProperty("CEP")
+        public String CEP;
+        public String cPais;
+        public String xPais;
+        public String fone;
+        public String email;
+        public String xNome;
+        @JsonProperty("IE")
+        public String IE;
     }
 
     public static class Entrega {
@@ -172,6 +189,15 @@ public class NFeJSON {
         public String xMun;
         @JsonProperty("UF")
         public String UF;
+        @JsonProperty("CEP")
+        public String CEP;
+        public String cPais;
+        public String xPais;
+        public String fone;
+        public String email;
+        public String xNome;
+        @JsonProperty("IE")
+        public String IE;
     }
 
     public static class AutXML {
@@ -180,6 +206,8 @@ public class NFeJSON {
         @JsonProperty("CPF")
         public String CPF;
     }
+
+    // --- Detalhamento Produtos/Serviços ---
 
     public static class Rastro {
         public String nLote;
@@ -210,7 +238,7 @@ public class NFeJSON {
         public String CNPJ;
         public String UFTerceiro;
         public String cExportador;
-        public Adi adi;
+        public List<Adi> adi;
     }
 
     public static class ExportInd {
@@ -256,6 +284,7 @@ public class NFeJSON {
     public static class Med {
         public String cProdANVISA;
         public String vPMC;
+        public String xMotivoIsencao;
     }
 
     public static class Arma {
@@ -292,7 +321,25 @@ public class NFeJSON {
         public String UFCons;
         @JsonProperty("CIDE")
         public CIDE CIDE;
+        public String pBio;
         public Encerrante encerrante;
+    }
+
+    public static class InfProdEmb {
+        public String xEmb;
+        public String qVolEmb;
+        public String uEmb;
+    }
+
+    public static class infProdNFF {
+        public String cProdFisco;
+        public String cOperNFF;
+    }
+
+    public static class gCred {
+        public String cCredPresumido;
+        public String pCredPresumido;
+        public String vCredPresumido;
     }
 
     public static class Prod {
@@ -346,22 +393,7 @@ public class NFeJSON {
         public InfProdEmb infProdEmb;
     }
 
-    public static class InfProdEmb {
-        public String xEmb;
-        public String qVolEmb;
-        public String uEmb;
-    }
-
-    public static class infProdNFF {
-        public String cProdFisco;
-        public String cOperNFF;
-    }
-
-    public static class gCred {
-        public String cCredPresumido;
-        public String pCredPresumido;
-        public String vCredPresumido;
-    }
+    // --- Grupos de ICMS ---
 
     public static class ICMS00 {
         public String orig;
@@ -373,6 +405,15 @@ public class NFeJSON {
         public String vICMS;
         public String pFCP;
         public String vFCP;
+    }
+
+    public static class ICMS02 {
+        public String orig;
+        @JsonProperty("CST")
+        public String CST;
+        public String qBCMono;
+        public String adRemICMS;
+        public String vICMSMono;
     }
 
     public static class ICMS10 {
@@ -395,6 +436,22 @@ public class NFeJSON {
         public String vBCFCPST;
         public String pFCPST;
         public String vFCPST;
+        public String vICMSSTDeson;
+        public String motDesICMSST;
+    }
+
+    public static class ICMS15 {
+        public String orig;
+        @JsonProperty("CST")
+        public String CST;
+        public String qBCMon;
+        public String adRemICMS;
+        public String vICMSMono;
+        public String qBCMonoReten;
+        public String adRemICMSReten;
+        public String vICMSMonoReten;
+        public String pRedAdRem;
+        public String motRedAdRem;
     }
 
     public static class ICMS20 {
@@ -411,6 +468,7 @@ public class NFeJSON {
         public String vFCP;
         public String vICMSDeson;
         public String motDesICMS;
+        public String indDeduzDeson;
     }
 
     public static class ICMS30 {
@@ -428,6 +486,7 @@ public class NFeJSON {
         public String vFCPST;
         public String vICMSDeson;
         public String motDesICMS;
+        public String indDeduzDeson;
     }
 
     public static class ICMS40 {
@@ -436,6 +495,27 @@ public class NFeJSON {
         public String CST;
         public String vICMSDeson;
         public String motDesICMS;
+        public String indDeduzDeson;
+    }
+    
+    // ICMS41 e ICMS50 compartilham estrutura com 40 em muitos JSONs, mas no PHP foram declarados.
+    // Usaremos classes separadas para fidelidade.
+    public static class ICMS41 {
+        public String orig;
+        @JsonProperty("CST")
+        public String CST;
+        public String vICMSDeson;
+        public String motDesICMS;
+        public String indDeduzDeson;
+    }
+
+    public static class ICMS50 {
+        public String orig;
+        @JsonProperty("CST")
+        public String CST;
+        public String vICMSDeson;
+        public String motDesICMS;
+        public String indDeduzDeson;
     }
 
     public static class ICMS51 {
@@ -453,6 +533,21 @@ public class NFeJSON {
         public String vBCFCP;
         public String pFCP;
         public String vFCP;
+        public String pFCPDif;
+        public String vFCPDif;
+        public String vFCPEfet;
+    }
+
+    public static class ICMS53 {
+        public String orig;
+        @JsonProperty("CST")
+        public String CST;
+        public String qBCMono;
+        public String adRemICMS;
+        public String vICMSMonoOp;
+        public String pDif;
+        public String vICMSMonoDif;
+        public String vICMSMono;
     }
 
     public static class ICMS60 {
@@ -465,6 +560,20 @@ public class NFeJSON {
         public String vBCFCPSTRet;
         public String pFCPSTRet;
         public String vFCPSTRet;
+        public String pRedBCEfet;
+        public String vBCEfet;
+        public String pICMSEfet;
+        public String vICMSEfet;
+        public String vICMSSubstituto;
+    }
+
+    public static class ICMS61 {
+        public String orig;
+        @JsonProperty("CST")
+        public String CST;
+        public String qBCMonoRet;
+        public String adRemICMSRet;
+        public String vICMSMonoRet;
     }
 
     public static class ICMS70 {
@@ -490,6 +599,9 @@ public class NFeJSON {
         public String vFCPST;
         public String vICMSDeson;
         public String motDesICMS;
+        public String vICMSSTDeson;
+        public String motDesICMSST;
+        public String indDeduzDeson;
     }
 
     public static class ICMS90 {
@@ -515,6 +627,9 @@ public class NFeJSON {
         public String vFCPST;
         public String vICMSDeson;
         public String motDesICMS;
+        public String vICMSSTDeson;
+        public String motDesICMSST;
+        public String indDeduzDeson;
     }
 
     public static class ICMSPart {
@@ -534,6 +649,9 @@ public class NFeJSON {
         public String vICMSST;
         public String pBCOp;
         public String UFST;
+        public String vBCFCPST;
+        public String pFCPST;
+        public String vFCPST;
     }
 
     public static class ICMSST {
@@ -544,6 +662,15 @@ public class NFeJSON {
         public String vICMSSTRet;
         public String vBCSTDest;
         public String vICMSSTDest;
+        public String vBCFCPSTRet;
+        public String pFCPSTRet;
+        public String vFCPSTRet;
+        public String pST;
+        public String vICMSSubstituto;
+        public String pRedBCEfet;
+        public String vBCEfet;
+        public String pICMSEfet;
+        public String vICMSEfet;
     }
 
     public static class ICMSSN101 {
@@ -602,6 +729,11 @@ public class NFeJSON {
         public String vBCFCPSTRet;
         public String pFCPSTRet;
         public String vFCPSTRet;
+        public String pRedBCEfet;
+        public String vBCEfet;
+        public String pICMSEfet;
+        public String vICMSEfet;
+        public String vICMSSubstituto;
     }
 
     public static class ICMSSN900 {
@@ -641,18 +773,30 @@ public class NFeJSON {
     public static class ICMS {
         @JsonProperty("ICMS00")
         public ICMS00 ICMS00;
+        @JsonProperty("ICMS02")
+        public ICMS02 ICMS02;
         @JsonProperty("ICMS10")
         public ICMS10 ICMS10;
+        @JsonProperty("ICMS15")
+        public ICMS15 ICMS15;
         @JsonProperty("ICMS20")
         public ICMS20 ICMS20;
         @JsonProperty("ICMS30")
         public ICMS30 ICMS30;
         @JsonProperty("ICMS40")
         public ICMS40 ICMS40;
+        @JsonProperty("ICMS41")
+        public ICMS41 ICMS41;
+        @JsonProperty("ICMS50")
+        public ICMS50 ICMS50;
         @JsonProperty("ICMS51")
         public ICMS51 ICMS51;
+        @JsonProperty("ICMS53")
+        public ICMS53 ICMS53;
         @JsonProperty("ICMS60")
         public ICMS60 ICMS60;
+        @JsonProperty("ICMS61")
+        public ICMS61 ICMS61;
         @JsonProperty("ICMS70")
         public ICMS70 ICMS70;
         @JsonProperty("ICMS90")
@@ -674,6 +818,8 @@ public class NFeJSON {
         @JsonProperty("ICMSSN900")
         public ICMSSN900 ICMSSN900;
     }
+
+    // --- IPI, PIS, COFINS, ISSQN ---
 
     public static class IPITrib {
         @JsonProperty("CST")
@@ -756,6 +902,7 @@ public class NFeJSON {
         public String qBCProd;
         public String vAliqProd;
         public String vPIS;
+        public String indSomaPISST;
     }
 
     public static class COFINSAliq {
@@ -806,6 +953,7 @@ public class NFeJSON {
         public String qBCProd;
         public String vAliqProd;
         public String vCOFINS;
+        public String indSomaCOFINSST;
     }
 
     public static class ISSQN {
@@ -825,6 +973,196 @@ public class NFeJSON {
         public String cPais;
         public String nProcesso;
         public String indIncentivo;
+    }
+
+    // --- Impostos e Reforma Tributária (IBS/CBS/IS) ---
+
+    public static class IS {
+        @JsonProperty("CSTIS")
+        public String CSTIS;
+        public String cClassTribIS;
+        public String vBCIS;
+        public String pIS;
+        public String pISEspec;
+        public String uTrib;
+        public String qTrib;
+        public String vIS;
+    }
+    
+    // Classes de IBS/CBS usadas nos ITENS (Det)
+
+    public static class gDif {
+        public String pDif;
+        public String vDif;
+    }
+
+    public static class gDevTrib {
+        public String vDevTrib;
+    }
+
+    public static class gRed {
+        public String pRedAliq;
+        public String pAliqEfet;
+    }
+
+    public static class gIBSUF {
+        public String pIBSUF;
+        public String vIBSUF;
+        public gDif gDif;
+        public gDevTrib gDevTrib;
+        public gRed gRed;
+    }
+
+    public static class gIBSMun {
+        public String pIBSMun;
+        public String vIBSMun;
+        public gDif gDif;
+        public gDevTrib gDevTrib;
+        public gRed gRed;
+    }
+
+    public static class gCBS {
+        public String pCBS;
+        public String vCBS;
+        public gDif gDif;
+        public gDevTrib gDevTrib;
+        public gRed gRed;
+    }
+
+    public static class gTribRegular {
+        @JsonProperty("CSTReg")
+        public String CSTReg;
+        public String cClassTribReg;
+        public String pAliqEfetRegIBSUF;
+        public String vTribRegIBSUF;
+        public String pAliqEfetRegIBSMun;
+        public String vTribRegIBSMun;
+        public String pAliqEfetRegCBS;
+        public String vTribRegCBS;
+    }
+
+    public static class gTribCompraGov {
+        public String pAliqIBSUF;
+        public String vTribIBSUF;
+        public String pAliqIBSMun;
+        public String vTribIBSMun;
+        public String pAliqCBS;
+        public String vTribCBS;
+    }
+    
+    public static class gIBSCredPres {
+        public String cCredPres;
+        public String pCredPres;
+        public String vCredPres;
+        public String vCredPresCondSus;
+    }
+
+    public static class gCBSCredPres {
+        public String cCredPres;
+        public String pCredPres;
+        public String vCredPres;
+        public String vCredPresCondSus;
+    }
+    
+    public static class gIBSCBS {
+        public String vBC;
+        public String vIBS;
+        public gIBSUF gIBSUF;
+        public gIBSMun gIBSMun;
+        public gCBS gCBS;
+        public gTribRegular gTribRegular;
+        public gIBSCredPres gIBSCredPress;
+        public gCBSCredPres gCBSCredPres;
+        public gTribCompraGov gTribCompraGov;
+    }
+
+    public static class gMonoPadrao {
+        public String qBCMono;
+        public String adRemIBS;
+        public String adRemCBS;
+        public String vIBSMono;
+        public String vCBSMono;
+    }
+
+    public static class gMonoReten {
+        public String qBCMonoReten;
+        public String adRemIBSReten;
+        public String adRemCBSReten;
+        public String vIBSMonoReten;
+        public String vCBSMonoReten;
+    }
+
+    public static class gMonoRet {
+        public String qBCMonoRet;
+        public String adRemIBSReten;
+        public String adRemCBSReten;
+        public String vIBSMonoRet;
+        public String vCBSMonoRet;
+    }
+
+    public static class gMonoDif {
+        public String pDifCBS;
+        public String pDifIBS;
+        public String vIBSMonoDif;
+        public String vCBSMonoDif;
+        public String vTotIBSMonoItem;
+        public String vTotCBSMonoItem;
+    }
+
+    public static class gIBSCBSMono {
+        public String qBCMono;
+        public String adRemIBS;
+        public String adRemCBS;
+        public String vIBSMono;
+        public String vCBSMono;
+        public gMonoPadrao gMonoPadrao;
+        public gMonoReten gMonoReten;
+        public gMonoRet gMonoRet;
+        public gMonoDif gMonoDif;
+    }
+
+    public static class gTransfCred {
+        public String vIBS;
+        public String vCBS;
+    }
+
+    public static class gCredPresIBSZFM {
+        public String competApur;
+        public String vCredPresIBSZFM;
+        public String tpCredPresIBSZFM;
+    }
+
+    public static class gAjusteCompet {
+        public String competApur;
+        public String vIBS;
+        public String vCBS;
+    }
+
+    public static class gEstornoCred {
+        // No PHP parece recursivo ou tipado incorretamente, mantendo fiel ao exemplo
+        public gEstornoCred vIBSEstCred;
+        public gEstornoCred vCBSEstCred;
+    }
+
+    public static class gCredPresoper {
+        public String vBCCredPres;
+        public String cCredPres;
+        public gIBSCredPres gIBSCredPres;
+        public gCBSCredPres gCBSCredPres;
+    }
+
+    public static class IBSCBS {
+        @JsonProperty("CST")
+        public String CST;
+        public String cClassTrib;
+        public String indDoacao;
+        public gIBSCBS gIBSCBS;
+        public gIBSCBSMono gIBSCBSMono;
+        public gTransfCred gTransfCred;
+        public gCredPresIBSZFM gCredPresIBSZFM;
+        public gAjusteCompet gAjusteCompet;
+        public gEstornoCred gEstornoCred;
+        public gCredPresoper gCredPresOper;
     }
 
     public static class Imposto {
@@ -869,6 +1207,11 @@ public class NFeJSON {
         public IPIDevol IPI;
     }
 
+    public static class DFeReferenciado {
+        public String chaveAcesso;
+        public String nItem;
+    }
+
     public static class Det {
         public Prod prod;
         public Imposto imposto;
@@ -879,6 +1222,8 @@ public class NFeJSON {
         @JsonProperty("DFeReferenciado")
         public DFeReferenciado DFeReferenciado;
     }
+
+    // --- Totais ---
 
     public static class ICMSTot {
         public String vBC;
@@ -904,6 +1249,13 @@ public class NFeJSON {
         public String vOutro;
         public String vNF;
         public String vTotTrib;
+        // Campos novos no PHP
+        public String qBCMono;
+        public String vICMSMono;
+        public String qBCMonoReten;
+        public String vICMSMonoReten;
+        public String qBCMonoRet;
+        public String vICMSMonoRet;
     }
 
     public static class ISSQNtot {
@@ -931,6 +1283,57 @@ public class NFeJSON {
         public String vRetPrev;
     }
 
+    // Estruturas de IBS/CBS para o grupo TOTAL (Diferem das do Item no PHP)
+    
+    public static class gIBSUFTot {
+        public String vIBSUF;
+        public String vDif;
+        public String vDevTrib;
+    }
+    
+    public static class gIBSMunTot {
+        public String vIBSMun;
+        public String vDif;
+        public String vDevTrib;
+    }
+    
+    public static class gIBSTot {
+        public gIBSUFTot gIBSUF;
+        public gIBSMunTot gIBSMun;
+        public String vIBS;
+        public String vCredPres;
+        public String vCredPresCondSus;
+    }
+    
+    public static class gCBSTot {
+        public String vDif;
+        public String vDevTrib;
+        public String vCBS;
+        public String vCredPres;
+        public String vCredPresCondSus;
+    }
+
+    public static class gMono {
+        public String vIBSMono;
+        public String vCBSMono;
+        public String vIBSMonoReten;
+        public String vCBSMonoReten;
+        public String vIBSMonoRet;
+        public String vCBSMonoRet;
+    }
+
+    public static class ISTot {
+        public String vIS;
+    }
+
+    public static class IBSCBSTot {
+        public String vBCIBSCBS;
+        public gIBSTot gIBS;
+        public gCBSTot gCBS;
+        public gEstornoCred gEstornoCred;
+        public gMono gMono;
+    }
+
     public static class Total {
         @JsonProperty("ICMSTot")
         public ICMSTot ICMSTot;
@@ -943,6 +1346,8 @@ public class NFeJSON {
         @JsonProperty("IBSCBSTot")
         public IBSCBSTot IBSCBSTot;
     }
+
+    // --- Transporte ---
 
     public static class Transporta {
         @JsonProperty("CNPJ")
@@ -1009,6 +1414,8 @@ public class NFeJSON {
         public List<Vol> vol;
     }
 
+    // --- Cobrança ---
+
     public static class Fat {
         public String nFat;
         public String vOrig;
@@ -1027,18 +1434,26 @@ public class NFeJSON {
         public List<Dup> dup;
     }
 
+    // --- Pagamento ---
+
     public static class Card {
         @JsonProperty("CNPJ")
         public String CNPJ;
         public String tBand;
         public String cAut;
         public String tpIntegra;
+        public String CNPJReceb;
+        public String idTermPag;
     }
 
     public static class DetPag {
         public String indPag;
         public String tPag;
         public String vPag;
+        public String xPag;
+        public String dPag;
+        public String CNPJPag;
+        public String UFPag;
         public Card card;
     }
 
@@ -1046,6 +1461,8 @@ public class NFeJSON {
         public List<DetPag> detPag;
         public String vTroco;
     }
+
+    // --- Informações Adicionais ---
 
     public static class InfIntermed {
         @JsonProperty("CNPJ")
@@ -1066,6 +1483,7 @@ public class NFeJSON {
     public static class ProcRef {
         public String nProc;
         public String indProc;
+        public String tpAto;
     }
 
     public static class InfAdic {
@@ -1109,6 +1527,49 @@ public class NFeJSON {
         public String ref;
         public List<ForDia> forDia;
         public List<Deduc> deduc;
+        public String qTotMes;
+        public String qTotAnt;
+        public String qTotGer;
+        public String vFor;
+        public String vTotDed;
+        public String vLiqFor;
+    }
+    
+    // --- Estrutura Principal ---
+
+    public static class Infresptec {
+        @JsonProperty("CNPJ")
+        public String CNPJ;
+        public String xContato;
+        public String email;
+        public String fone;
+    }
+
+    public static class defensivo {
+        public String nReceituario;
+        public String CPFRespTec;
+    }
+
+    public static class agropecuario {
+        public defensivo defensivo;
+        public String guiaTransito;
+    }
+
+    public static class guiaTransito {
+        public String tpGuia;
+        public String UFGuia;
+        public String serieGuia;
+        public String nGuia;
+    }
+
+    public static class gCompraGov {
+        public String tpEnteGov;
+        public String pRedutor;
+        public String tpOperGov;
+    }
+
+    public static class gPagAntecipado {
+        public String refNFe;
     }
 
     public static class InfNFe {
@@ -1137,259 +1598,8 @@ public class NFeJSON {
         public InfNFe infNFe;
     }
 
-    public static class Infresptec {
-        @JsonProperty("CNPJ")
-        public String CNPJ;
-        public String xContato;
-        public String email;
-        public String fone;
-    }
-
-    public static class agropecuario {
-        public defensivo defensivo;
-        public String guiaTransito;
-    }
-
-    public static class guiaTransito {
-        public String tpGuia;
-        public String UFGuia;
-        public String serieGuia;
-        public String nGuia;
-    }
-
-    public static class defensivo {
-        public String nReceituario;
-        public String CPFRespTec;
-    }
-
-    public static class gCompraGov {
-        public String tpEnteGov;
-        public String pRedutor;
-        public String tpOperGov;
-    }
-
-    public static class gPagAntecipado {
-        public String refNFe;
-    }
-
-    public static class DFeReferenciado {
-        public String chaveAcesso;
-        public String nItem;
-    }
-
-    public static class IS {
-        @JsonProperty("CSTIS")
-        public String CSTIS;
-        public String cClassTribIS;
-        public String vBCIS;
-        public String pIS;
-        public String pISEspec;
-        public String uTrib;
-        public String qTrib;
-        public String vIS;
-    }
-
-    public static class IBSCBS {
-        @JsonProperty("CST")
-        public String CST;
-        public String cClassTrib;
-        public String indDoacao;
-        public gIBSCBS gIBSCBS;
-        public gIBSCBSMono gIBSCBSMono;
-        public gTransfCred gTransfCred;
-        public gCredPresIBSZFM gCredPresIBSZFM;
-        public gAjusteCompet gAjusteCompet;
-        public gEstornoCred gEstornoCred;
-        public gCredPresoper gCredPresOper;
-    }
-
-    public static class gIBSCBS {
-        public String vBC;
-        public String vIBS;
-        public gIBSUF gIBSUF;
-        public gIBSMun gIBSMun;
-        public gCBS gCBS;
-        public gTribRegular gTribRegular;
-        public gIBSCredPres gIBSCredPress;
-        public gCBSCredPres gCBSCredPres;
-        public gTribCompraGov gTribCompraGov;
-    }
-
-    public static class gIBSUF {
-        public String pIBSUF;
-        public String vIBSUF;
-        public gDif gDif;
-        public gDevTrib gDevTrib;
-        public gRed gRed;
-    }
-
-    public static class gDif {
-        public String pDif;
-        public String vDif;
-    }
-
-    public static class gDevTrib {
-        public String vDevTrib;
-    }
-
-    public static class gRed {
-        public String pRedAliq;
-        public String pAliqEfet;
-    }
-
-    public static class gIBSMun {
-        public String pIBSMun;
-        public String vIBSMun;
-        public gDif gDif;
-        public gDevTrib gDevTrib;
-        public gRed gRed;
-    }
-
-    public static class gCBS {
-        public String pCBS;
-        public String vCBS;
-        public gDif gDif;
-        public gDevTrib gDevTrib;
-        public gRed gRed;
-    }
-
-    public static class gTribRegular {
-        @JsonProperty("CSTReg")
-        public String CSTReg;
-        public String cClassTribReg;
-        public String pAliqEfetRegIBSUF;
-        public String vTribRegIBSUF;
-        public String pAliqEfetRegIBSMun;
-        public String vTribRegIBSMun;
-        public String pAliqEfetRegCBS;
-        public String vTribRegCBS;
-    }
-
-    public static class gTribCompraGov {
-        public String pAliqIBSUF;
-        public String vTribIBSUF;
-        public String pAliqIBSMun;
-        public String vTribIBSMun;
-        public String pAliqCBS;
-        public String vTribCBS;
-    }
-
-    public static class gIBSCBSMono {
-        public String vTotIBSMonoItem;
-        public String vTotCBSMonoItem;
-        public gMonoPadrao gMonoPadrao;
-        public gMonoReten gMonoReten;
-        public gMonoRet gMonoRet;
-        public gMonoDif gMonoDif;
-    }
-
-    public static class gMonoPadrao {
-        public String qBCMono;
-        public String adRemIBS;
-        public String adRemCBS;
-        public String vIBSMono;
-        public String vCBSMono;
-    }
-
-    public static class gMonoReten {
-        public String qBCMonoReten;
-        public String adRemIBSReten;
-        public String adRemCBSReten;
-        public String vIBSMonoReten;
-        public String vCBSMonoReten;
-    }
-
-    public static class gMonoRet {
-        public String qBCMonoRet;
-        public String adRemIBSReten;
-        public String adRemCBSReten;
-        public String vIBSMonoRet;
-        public String vCBSMonoRet;
-    }
-
-    public static class gMonoDif {
-        public String pDifCBS;
-        public String pDifIBS;
-        public String vIBSMonoDif;
-        public String vCBSMonoDif;
-        public String vTotIBSMonoItem;
-        public String vTotCBSMonoItem;
-    }
-
-    public static class gTransfCred {
-        public String vIBS;
-        public String vCBS;
-    }
-
-    public static class gCredPresIBSZFM {
-        public String competApur;
-        public String vCredPresIBSZFM;
-        public String tpCredPresIBSZFM;
-    }
-
-    public static class gAjusteCompet {
-        public String competApur;
-        public String vIBS;
-        public String vCBS;
-    }
-
-    public static class gEstornoCred {
-        public gEstornoCred vIBSEstCred;
-        public gEstornoCred vCBSEstCred;
-    }
-
-    public static class gCredPresoper {
-        public String vBCCredPres;
-        public String cCredPres;
-        public gIBSCredPres gIBSCredPres;
-        public gCBSCredPres gCBSCredPres;
-    }
-
-    public static class gIBSCredPres {
-        public String cCredPres;
-        public String pCredPres;
-        public String vCredPres;
-        public String vCredPresCondSus;
-    }
-
-    public static class gCBSCredPres {
-        public String cCredPres;
-        public String pCredPres;
-        public String vCredPres;
-        public String vCredPresCondSus;
-    }
-
-    public static class ISTot {
-        public String vIS;
-    }
-
-    public static class IBSCBSTot {
-        public String vBCIBSCBS;
-        public gIBS gIBS;
-        public gCBS gCBS;
-        public gEstornoCred gEstornoCred;
-        public gMono gMono;
-    }
-
-    public static class gIBS {
-        public gIBSUF gIBSUF;
-        public gIBSMun gIBSMun;
-        public String vIBS;
-        public String vCredPres;
-        public String vCredPresCondSus;
-    }
-
-    public static class gMono {
-        public String vIBSMono;
-        public String vCBSMono;
-        public String vIBSMonoReten;
-        public String vCBSMonoReten;
-        public String vIBSMonoRet;
-        public String vCBSMonoRet;
-    }
-
     public String toJsonString() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'toJsonString'");
-  }
+        // Implementação conforme sua biblioteca de JSON preferida (ex: Jackson)
+        throw new UnsupportedOperationException("Unimplemented method 'toJsonString'");
+    }
 }
